@@ -1,0 +1,307 @@
+# Component Usage Examples
+
+## ArticleLayout + FAQSection + CTA Example
+
+```tsx
+import { ArticleLayout } from '@/components/ArticleLayout';
+import { FAQSection } from '@/components/FAQSection';
+import { CTA } from '@/components/CTA';
+
+const faqItems = [
+  {
+    question: 'What is a cannabis club?',
+    answer: 'A cannabis club is a private, member-based social space where adults can consume cannabis legally in Madrid. Clubs operate under Spanish cannabis laws which decriminalize personal consumption.',
+  },
+  {
+    question: 'How do I get an invitation?',
+    answer: 'You can get an invitation through existing members or by contacting clubs directly. Many clubs have online invitation systems or membership applications on their websites.',
+  },
+  {
+    question: 'What is the membership cost?',
+    answer: 'Membership costs vary widely from €50 to €200+ depending on the club. Most clubs offer different tier memberships with various benefits.',
+  },
+  {
+    question: 'Can tourists join?',
+    answer: 'Yes, most clubs welcome international visitors. You may need a valid ID and proof of age (21+). Some clubs have specific procedures for tourists.',
+  },
+  {
+    question: 'Is cannabis legal in Madrid?',
+    answer: 'Cannabis consumption is decriminalized in Spain for personal use in private spaces. Public consumption can result in fines. Growing small amounts for personal use is also decriminalized.',
+  },
+];
+
+export default function CannabisClubsGuide() {
+  return (
+    <ArticleLayout
+      title="Cannabis Clubs in Madrid: Your Complete Guide"
+      subtitle="Everything you need to know about joining, navigating, and enjoying Madrid's thriving cannabis social scene"
+      image="/images/cannabis-clubs-header.jpg"
+      readingTime={12}
+      lastUpdated="March 9, 2024"
+      breadcrumbs={[
+        { label: 'Home', href: '/' },
+        { label: 'Guides', href: '/guides' },
+        { label: 'Cannabis Clubs', href: '/guides/cannabis-clubs' },
+      ]}
+      tableOfContents={[
+        { id: 'what-are', label: 'What Are Cannabis Clubs?', level: 2 },
+        { id: 'how-to-join', label: 'How to Join', level: 2 },
+        { id: 'membership', label: 'Membership & Costs', level: 2 },
+        { id: 'etiquette', label: 'Club Etiquette', level: 2 },
+        { id: 'safety', label: 'Safety & Legal Info', level: 2 },
+      ]}
+      publishedAt="2024-02-15T10:00:00Z"
+      modifiedAt="2024-03-09T12:00:00Z"
+      cta={{
+        variant: 'inline',
+        headline: 'Ready to Get Invited?',
+        text: 'Connect with verified Madrid cannabis clubs and start your experience today.',
+      }}
+      relatedArticles={[
+        {
+          title: 'Cannabis Laws in Spain & Madrid',
+          href: '/guides/spanish-cannabis-laws',
+          excerpt: 'Understanding decriminalization, regulations, and your legal rights...',
+          image: '/images/spanish-laws.jpg',
+        },
+        {
+          title: 'Best Neighborhoods for Cannabis Culture',
+          href: '/guides/madrid-neighborhoods',
+          excerpt: 'Explore the districts with the most vibrant cannabis communities...',
+          image: '/images/neighborhoods.jpg',
+        },
+        {
+          title: 'Safety Tips for Cannabis Tourism',
+          href: '/guides/cannabis-tourism-safety',
+          excerpt: 'Essential information for travelers exploring Madrid\'s scene...',
+          image: '/images/safety-tips.jpg',
+        },
+      ]}
+    >
+      <h2 id="what-are">What Are Cannabis Clubs?</h2>
+      <p>
+        Cannabis clubs are private, member-based social spaces where adults can legally consume cannabis in Madrid. Unlike traditional bars or lounges, these clubs are typically non-profit associations that operate under specific Spanish legal frameworks. They provide a safe, social environment for cannabis enthusiasts to connect, share experiences, and enjoy their hobby in a community setting.
+      </p>
+      <p>
+        The clubs vary widely in size, atmosphere, and amenities. Some are intimate spaces with just a few members, while others are large venues with multiple rooms, gaming areas, and food services. All clubs maintain strict membership requirements to ensure legal compliance and a positive community environment.
+      </p>
+
+      <h2 id="how-to-join">How to Join a Cannabis Club</h2>
+      <p>
+        Joining a cannabis club in Madrid is a straightforward process, though procedures vary slightly between clubs:
+      </p>
+      <ol>
+        <li><strong>Find a club</strong> through local recommendations, online directories, or the Weed Madrid guide</li>
+        <li><strong>Get an invitation</strong> from an existing member or contact the club directly</li>
+        <li><strong>Submit application</strong> with required documents (ID, proof of age, address)</li>
+        <li><strong>Pay membership fee</strong> and agree to club rules</li>
+        <li><strong>Receive membership card</strong> and club access information</li>
+      </ol>
+      <p>
+        Most clubs welcome tourists and can process invitations quickly. The entire process typically takes 1-2 days. International visitors should bring a passport or valid ID.
+      </p>
+
+      <h2 id="membership">Membership & Costs</h2>
+      <p>
+        Membership costs in Madrid cannabis clubs range significantly based on the club's location, amenities, and member benefits. Understanding pricing structure helps you choose the right club for your needs and budget.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Club Type</th>
+            <th>Entry Fee</th>
+            <th>Monthly</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Budget-Friendly</td>
+            <td>€40-80</td>
+            <td>€30-50</td>
+            <td>Casual visitors, students</td>
+          </tr>
+          <tr>
+            <td>Mid-Range</td>
+            <td>€100-150</td>
+            <td>€50-80</td>
+            <td>Regular users, tourists</td>
+          </tr>
+          <tr>
+            <td>Premium</td>
+            <td>€200+</td>
+            <td>€100+</td>
+            <td>Connoisseurs, exclusive access</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Most clubs also offer discounts for longer memberships (annual vs. monthly). Some tourist-focused clubs offer day passes or short-term membership options.
+      </p>
+
+      <h2 id="etiquette">Club Etiquette</h2>
+      <p>
+        Respecting club norms ensures a positive experience for everyone. Here are key etiquette guidelines:
+      </p>
+      <ul>
+        <li>Follow the club's specific house rules and regulations</li>
+        <li>Be respectful of other members and staff</li>
+        <li>Don't bring cannabis in or out of the club (it's provided)</li>
+        <li>Respect smoking/consumption areas and ventilation policies</li>
+        <li>Keep noise levels reasonable, especially in shared spaces</li>
+        <li>Don't take photos or videos without permission</li>
+        <li>Pay your dues on time</li>
+        <li>Report any issues to management promptly</li>
+      </ul>
+
+      <h2 id="safety">Safety & Legal Information</h2>
+      <blockquote>
+        <strong>Important:</strong> While cannabis consumption is decriminalized in Spain, it remains illegal. Decriminalization means reduced penalties, not legalization. Always verify current laws and club legitimacy.
+      </blockquote>
+      <p>
+        Cannabis consumption in Spain is decriminalized for personal use in private spaces. This means that while it's not technically legal, possession of small amounts for personal consumption won't result in criminal charges. However, public consumption can result in significant fines (€300-600).
+      </p>
+      <p>
+        Cannabis clubs operate in a legal gray area. The Spanish courts have ruled that club operations are legal as private associations, but regulations vary by region and municipality. Always choose established, well-reviewed clubs to ensure you're in a legitimate, safe environment.
+      </p>
+
+      {/* FAQ Section */}
+      <FAQSection
+        items={faqItems}
+        title="Frequently Asked Questions"
+        subtitle="Common questions about cannabis clubs, membership, and procedures"
+        includeSchema={true}
+      />
+
+      {/* Banner CTA at bottom */}
+    </ArticleLayout>
+  );
+}
+```
+
+## Standalone FAQSection Example
+
+```tsx
+import { FAQSection } from '@/components/FAQSection';
+
+const tourismFAQs = [
+  {
+    question: 'Can tourists easily access cannabis clubs?',
+    answer: 'Yes, most clubs welcome international visitors. You\'ll need a valid passport and proof of age (21+). Many clubs have streamlined processes for tourists including online invitations.',
+  },
+  {
+    question: 'What should I bring to a club?',
+    answer: 'Bring your passport or ID, proof of age, and money for membership and purchases. Clubs typically provide everything else. Don\'t bring cannabis in or out.',
+  },
+  {
+    question: 'Are there any risks I should know about?',
+    answer: 'While clubs are generally safe, ensure you\'re visiting legitimate, established venues. Avoid street dealers. Stay in designated areas and follow club rules. Never drive under the influence.',
+  },
+];
+
+export default function CannabisClubFAQ() {
+  return (
+    <div className="max-w-4xl mx-auto px-6 py-12">
+      <FAQSection
+        items={tourismFAQs}
+        title="Tourist FAQ"
+        subtitle="Questions about visiting cannabis clubs as a traveler"
+      />
+    </div>
+  );
+}
+```
+
+## Standalone CTA Examples
+
+```tsx
+import { CTA } from '@/components/CTA';
+
+export default function CTAShowcase() {
+  return (
+    <div className="space-y-12 p-6 max-w-4xl mx-auto">
+      {/* Inline CTA - use within article content */}
+      <section>
+        <h3 className="text-2xl font-bold mb-4">Inline CTA (Card Style)</h3>
+        <CTA
+          variant="inline"
+          headline="Discover Madrid's Cannabis Culture"
+          text="Get direct access to verified clubs and connect with the community."
+        />
+      </section>
+
+      {/* Banner CTA - use at page bottom */}
+      <section>
+        <h3 className="text-2xl font-bold mb-4">Banner CTA (Full Width)</h3>
+        <CTA
+          variant="banner"
+          headline="Ready to Experience Madrid?"
+          text="Join thousands of travelers and locals exploring the best cannabis clubs in the city."
+        />
+      </section>
+    </div>
+  );
+}
+```
+
+## SchemaMarkup Examples
+
+```tsx
+import { ArticleSchema, BreadcrumbSchema, FAQSchema } from '@/components/SchemaMarkup';
+
+// In your page's head or document:
+export default function Page() {
+  return (
+    <>
+      <ArticleSchema
+        title="Cannabis Clubs in Madrid"
+        description="Complete guide to joining and navigating Madrid's cannabis clubs"
+        datePublished="2024-02-15T00:00:00Z"
+        dateModified="2024-03-09T00:00:00Z"
+        image="https://madridcannabisguide.com/clubs.jpg"
+        url="https://madridcannabisguide.com/guides/clubs"
+      />
+
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: '/' },
+          { name: 'Guides', url: '/guides' },
+          { name: 'Clubs', url: '/guides/clubs' },
+        ]}
+      />
+
+      <main>
+        {/* Your content */}
+      </main>
+    </>
+  );
+}
+```
+
+---
+
+## Design System Colors Reference
+
+```
+Primary: Emerald Green
+  - #065f46 (dark)
+  - #10b981 (medium)
+  - #34d399 (light)
+
+Accent: Warm Amber
+  - #f59e0b
+
+Background: Dark Green-Black
+  - #0a0f0d
+
+Surface: Darker Surface
+  - #111916
+
+Text: Warm White
+  - #e8ece9
+
+Border: Dark Border
+  - #1a2420
+```
+
+All components use these colors via Tailwind utility classes (e.g., `text-emerald-100`, `bg-amber-500`).
