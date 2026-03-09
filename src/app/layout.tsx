@@ -1,7 +1,22 @@
 import type { Metadata } from "next";
+import { Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ReadingProgress from "@/components/ReadingProgress";
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-heading",
+  display: "swap",
+  weight: ["500", "600", "700"],
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Madrid Cannabis Guide — Your Complete Guide to Cannabis in Madrid (2026)",
@@ -79,7 +94,8 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-[var(--color-bg-primary)] text-[var(--color-text-primary)] antialiased font-sans">
+      <body className={`${spaceGrotesk.variable} ${inter.variable} bg-[var(--color-bg-primary)] text-[var(--color-text-primary)] antialiased font-body`}>
+        <ReadingProgress />
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />

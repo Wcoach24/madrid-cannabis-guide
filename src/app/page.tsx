@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FAQSchema } from "@/components/SchemaMarkup";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const CLD = "https://res.cloudinary.com/dhuc2wmhp/image/upload";
 
@@ -100,7 +101,7 @@ export default function Home() {
         {/* HERO SECTION */}
         <section className="relative overflow-hidden py-20 px-4 sm:py-32 md:py-40">
           {/* Hero background image */}
-          <div className="absolute inset-0 -z-20">
+          <div className="absolute inset-0 -z-30">
             <Image
               src={`${CLD}/f_auto,q_auto,w_1400/madrid-cannabis-guide/hero-madrid-gran-via`}
               alt="Madrid Gran Via at night with illuminated buildings — cannabis guide hero"
@@ -111,11 +112,13 @@ export default function Home() {
             />
           </div>
           {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 -z-10 bg-[var(--color-bg-primary)]/80" />
+          <div className="absolute inset-0 -z-20 bg-[var(--color-bg-primary)]/80" />
+          {/* Cannabis leaf pattern overlay */}
+          <div className="absolute inset-0 -z-10 bg-cannabis-pattern" />
           {/* Gradient accents */}
           <div className="absolute inset-0 -z-10 overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-cannabis-medium)] rounded-full mix-blend-screen opacity-5 blur-3xl" />
-            <div className="absolute -bottom-32 left-0 w-96 h-96 bg-[var(--color-accent-amber)] rounded-full mix-blend-screen opacity-5 blur-3xl" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-cannabis-medium)] rounded-full mix-blend-screen opacity-8 blur-3xl animate-float" />
+            <div className="absolute -bottom-32 left-0 w-96 h-96 bg-[var(--color-accent-amber)] rounded-full mix-blend-screen opacity-8 blur-3xl animate-float" style={{ animationDelay: '3s' }} />
           </div>
 
           <div className="max-w-7xl mx-auto text-center">
@@ -149,7 +152,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="https://www.weedmadrid.com/invite/vallehermoso-club-social-madrid"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold bg-[var(--color-accent-amber)] text-[var(--color-bg-primary)] hover:bg-[#f5a820] transition-colors duration-200 hover-glow"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold bg-[var(--color-accent-amber)] text-[var(--color-bg-primary)] hover:bg-[#f5a820] transition-all duration-200 hover-glow animate-pulse-glow"
               >
                 Get Club Invitation <span>→</span>
               </a>
@@ -164,17 +167,20 @@ export default function Home() {
         </section>
 
         {/* QUICK LINKS GRID */}
-        <section className="py-20 px-4 border-t border-[var(--color-border)]">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold mb-16 text-center text-[var(--color-text-primary)]">
-              Essential Guides
-            </h2>
+        <section className="py-20 px-4 border-t border-[var(--color-border)] relative">
+          <div className="absolute inset-0 bg-cannabis-pattern opacity-50" />
+          <div className="max-w-7xl mx-auto relative">
+            <ScrollReveal>
+              <h2 className="text-4xl font-bold mb-16 text-center text-[var(--color-text-primary)]">
+                Essential Guides
+              </h2>
+            </ScrollReveal>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {GUIDE_CARDS.map((card) => (
+              {GUIDE_CARDS.map((card, index) => (
+                <ScrollReveal key={card.href} delay={index * 100}>
                 <article
-                  key={card.href}
-                  className="group rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] hover:border-[var(--color-cannabis-medium)] transition-all duration-300 hover-glow flex flex-col overflow-hidden"
+                  className="group rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] card-hover flex flex-col overflow-hidden"
                 >
                   {/* Card Image */}
                   <div className="relative h-48 w-full overflow-hidden">
@@ -204,6 +210,7 @@ export default function Home() {
                     </Link>
                   </div>
                 </article>
+                </ScrollReveal>
               ))}
             </div>
           </div>
@@ -212,22 +219,24 @@ export default function Home() {
         {/* WHY MADRID SECTION */}
         <section className="py-20 px-4 border-t border-[var(--color-border)] bg-gradient-to-b from-transparent via-[var(--color-bg-secondary)]/30 to-transparent">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold mb-8 text-center text-[var(--color-text-primary)]">
-              Why Madrid for Cannabis?
-            </h2>
+            <ScrollReveal>
+              <h2 className="text-4xl font-bold mb-8 text-center text-[var(--color-text-primary)]">
+                Why Madrid for Cannabis?
+              </h2>
 
-            <p className="text-lg text-[var(--color-text-secondary)] max-w-3xl mx-auto text-center mb-16">
-              Madrid has become one of Europe's most popular destinations for
-              cannabis tourism. With a vibrant cannabis social club scene, rich
-              culture, world-class food and nightlife, and a relaxed attitude
-              toward cannabis consumption, Madrid offers an unforgettable
-              experience.
-            </p>
+              <p className="text-lg text-[var(--color-text-secondary)] max-w-3xl mx-auto text-center mb-16">
+                Madrid has become one of Europe&#39;s most popular destinations for
+                cannabis tourism. With a vibrant cannabis social club scene, rich
+                culture, world-class food and nightlife, and a relaxed attitude
+                toward cannabis consumption, Madrid offers an unforgettable
+                experience.
+              </p>
+            </ScrollReveal>
 
             {/* Stats/Facts */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Stat 1 */}
-              <div className="p-8 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] text-center hover:border-[var(--color-cannabis-medium)] transition-colors">
+              <div className="p-8 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] text-center card-hover">
                 <div className="text-5xl font-bold text-[var(--color-cannabis-medium)] mb-4">
                   500+
                 </div>
@@ -237,7 +246,7 @@ export default function Home() {
               </div>
 
               {/* Stat 2 */}
-              <div className="p-8 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] text-center hover:border-[var(--color-cannabis-medium)] transition-colors">
+              <div className="p-8 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] text-center card-hover">
                 <div className="text-5xl font-bold text-[var(--color-accent-amber)] mb-4">
                   €6-10
                 </div>
@@ -247,7 +256,7 @@ export default function Home() {
               </div>
 
               {/* Stat 3 */}
-              <div className="p-8 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] text-center hover:border-[var(--color-cannabis-medium)] transition-colors">
+              <div className="p-8 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] text-center card-hover">
                 <div className="text-5xl font-bold text-[var(--color-cannabis-light)] mb-4">
                   24/7
                 </div>
@@ -276,9 +285,11 @@ export default function Home() {
         {/* HOW IT WORKS SECTION */}
         <section className="py-20 px-4 border-t border-[var(--color-border)]">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold mb-16 text-center text-[var(--color-text-primary)]">
-              Your Path to Madrid's Cannabis Scene
-            </h2>
+            <ScrollReveal>
+              <h2 className="text-4xl font-bold mb-16 text-center text-[var(--color-text-primary)]">
+                Your Path to Madrid&#39;s Cannabis Scene
+              </h2>
+            </ScrollReveal>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
               {/* Connecting lines (desktop only) */}
@@ -566,7 +577,10 @@ export default function Home() {
 
         {/* FINAL CTA SECTION */}
         <section className="py-20 px-4 border-t border-[var(--color-border)]">
-          <div className="max-w-6xl mx-auto relative overflow-hidden rounded-2xl p-12 md:p-20 bg-gradient-to-r from-[var(--color-cannabis-medium)]/20 to-[var(--color-accent-amber)]/20 border border-[var(--color-border)]">
+          <ScrollReveal>
+          <div className="max-w-6xl mx-auto relative overflow-hidden rounded-2xl p-12 md:p-20 bg-gradient-to-r from-[var(--color-cannabis-medium)]/20 to-[var(--color-accent-amber)]/20 border border-[var(--color-border)] animate-gradient">
+            {/* Cannabis pattern */}
+            <div className="absolute inset-0 bg-cannabis-pattern" />
             {/* Gradient overlay */}
             <div className="absolute inset-0 -z-10 overflow-hidden">
               <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-accent-amber)] rounded-full mix-blend-screen opacity-10 blur-3xl" />
@@ -589,6 +603,7 @@ export default function Home() {
               </a>
             </div>
           </div>
+          </ScrollReveal>
         </section>
 
         {/* BACKLINK SECTION */}
