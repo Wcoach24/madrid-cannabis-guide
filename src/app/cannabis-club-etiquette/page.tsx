@@ -137,7 +137,7 @@ export default function CannabisClubEtiquettePage() {
             <div className="p-6 rounded-lg bg-[#111916] border border-emerald-900/30">
               <h3 className="text-lg font-semibold text-emerald-300 mb-3">The Core Principle</h3>
               <p>
-                Cannabis clubs operate in a legal gray area. They work because members act responsibly and maintain discretion. Breaking etiquette rules puts the entire club at risk. When you join, you're part of a community that has to police itself and self-regulate.
+                Cannabis clubs operate in a <Link href="/cannabis-laws-spain" className="text-emerald-400 underline underline-offset-2 hover:text-emerald-300 transition-colors">legal gray area</Link>. They work because members act responsibly and maintain discretion. Breaking etiquette rules puts the entire club at risk. When you join, you're part of a community that has to police itself and self-regulate.
               </p>
             </div>
 
@@ -174,7 +174,7 @@ export default function CannabisClubEtiquettePage() {
                 <div>
                   <h3 className="text-xl font-semibold text-[#e8ece9] mb-2">Don't Bring Non-Members</h3>
                   <p className="text-[#e8ece9]/70">
-                    Clubs have membership policies for a reason. You can't just bring random friends. If someone wants to join, they need to go through the official process: getting their own invitation, signing membership paperwork, and paying any fees. Many clubs explicitly ban this with penalties.
+                    Clubs have membership policies for a reason. You can't just bring random friends. If someone wants to join, they need to go through the official process: <Link href="/how-to-join-cannabis-club" className="text-emerald-400 underline underline-offset-2 hover:text-emerald-300 transition-colors">getting their own invitation</Link>, signing membership paperwork, and paying any fees. Many clubs explicitly ban this with penalties.
                   </p>
                 </div>
               </div>
@@ -617,6 +617,18 @@ export default function CannabisClubEtiquettePage() {
               </h3>
               <p className="text-[#e8ece9]/70">
                 Compare cannabis culture, prices, and experiences between two top cities.
+              </p>
+            </Link>
+
+            <Link
+              href="/best-neighborhoods-cannabis-madrid"
+              className="p-6 rounded-lg bg-[#111916] border border-[#1a2420] hover:border-emerald-500/50 hover:bg-[#111916]/80 transition-all group"
+            >
+              <h3 className="text-lg font-semibold text-[#e8ece9] mb-2 group-hover:text-emerald-400 transition-colors">
+                Best Neighborhoods →
+              </h3>
+              <p className="text-[#e8ece9]/70">
+                Find the best areas for cannabis clubs by district in Madrid.
               </p>
             </Link>
           </div>

@@ -25,10 +25,10 @@ export const metadata: Metadata = {
       'Complete guide to joining a cannabis social club in Madrid. Learn membership requirements and the full process.',
     images: [
       {
-        url: 'https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/hero-madrid-gran-via',
+        url: 'https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/friends-welcome-join-v2',
         width: 1200,
         height: 630,
-        alt: 'How to Join Cannabis Club Madrid',
+        alt: 'How to Join a Cannabis Club in Madrid — Step-by-Step Guide',
       },
     ],
   },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'How to Join Cannabis Club Madrid',
     description: 'Step-by-step guide to joining a cannabis club in Madrid.',
-    images: ['https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/hero-madrid-gran-via'],
+    images: ['https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/friends-welcome-join-v2'],
   },
   metadataBase: new URL('https://madridcannabisguide.com'),
 };
@@ -157,7 +157,7 @@ export default function HowToJoinCannabisClubPage() {
                 </div>
 
                 <p className="leading-relaxed text-sm italic border-t border-[#1a2420] pt-6">
-                  Cannabis social clubs are vastly different from street dealers. They're organized, safe, legal (in a gray area), and focused on responsible community consumption.
+                  Cannabis social clubs are vastly different from street dealers. They're organized, safe, <Link href="/cannabis-laws-spain" className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2">legal (in a gray area)</Link>, and focused on responsible community consumption. Make sure to read our <Link href="/cannabis-club-etiquette" className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2">etiquette guide</Link> before your first visit.
                 </p>
               </div>
             </section>
@@ -540,7 +540,7 @@ export default function HowToJoinCannabisClubPage() {
                 </div>
 
                 <p className="text-sm leading-relaxed italic">
-                  Compared to street dealers or tourist-targeted vendors, cannabis clubs are incredibly affordable and transparent about pricing.
+                  Compared to street dealers or tourist-targeted vendors, cannabis clubs are incredibly affordable and transparent about pricing. For a detailed breakdown, see our <Link href="/prices-what-to-expect" className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2">complete price guide</Link>.
                 </p>
               </div>
             </section>
@@ -554,40 +554,68 @@ export default function HowToJoinCannabisClubPage() {
               />
             </div>
 
+            {/* External Links Section */}
+            <section className="rounded-lg border border-amber-900/30 bg-gradient-to-br from-amber-950/20 to-emerald-950/10 p-8 sm:p-10 mt-16">
+              <h3 className="mb-4 text-xl font-bold text-amber-100">Skip the Research — Get Connected Now</h3>
+              <p className="mb-6 text-sm text-[#e8ece9]/70">Ready to join a cannabis club today? Get an instant invitation to a verified club in Madrid's best neighborhood.</p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://www.weedmadrid.com/invite/vallehermoso-club-social-madrid"
+                  target="_blank"
+                  rel="noopener"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 px-6 py-3 text-sm font-semibold text-white transition-colors"
+                >
+                  🎫 Get Your Club Invitation
+                </a>
+                <a
+                  href="https://www.weedmadrid.com"
+                  target="_blank"
+                  rel="noopener"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-emerald-700/50 hover:bg-emerald-950/30 px-6 py-3 text-sm font-semibold text-emerald-100 transition-colors"
+                >
+                  📋 Browse Club Directory
+                </a>
+              </div>
+            </section>
+
             {/* Internal Links */}
             <section className="rounded-lg border border-[#1a2420] bg-[#111916]/50 p-8 sm:p-10 mt-16">
-              <h3 className="mb-6 text-lg font-semibold text-emerald-100">Related Articles</h3>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <Link
-                  href="/cannabis-laws-spain"
-                  className="group flex items-center gap-3 rounded-lg p-4 border border-emerald-900/30 hover:border-emerald-700/50 hover:bg-emerald-950/20 transition-all"
-                >
+              <h3 className="mb-6 text-lg font-semibold text-emerald-100">Continue Reading</h3>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <Link href="/cannabis-laws-spain" className="group flex items-center gap-3 rounded-lg p-4 border border-emerald-900/30 hover:border-emerald-700/50 hover:bg-emerald-950/20 transition-all">
                   <div className="text-xl">⚖️</div>
                   <div className="flex-1 min-w-0">
-                    <h4 className="font-semibold text-[#e8ece9] group-hover:text-emerald-100 transition-colors line-clamp-2">
-                      Cannabis Laws in Spain
-                    </h4>
+                    <h4 className="font-semibold text-[#e8ece9] group-hover:text-emerald-100 transition-colors line-clamp-2">Cannabis Laws in Spain</h4>
                     <p className="text-xs text-[#e8ece9]/60 mt-1">Legal framework and what's allowed</p>
                   </div>
-                  <svg className="h-5 w-5 text-emerald-400 flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
                 </Link>
-
-                <Link
-                  href="/best-neighborhoods-cannabis-madrid"
-                  className="group flex items-center gap-3 rounded-lg p-4 border border-emerald-900/30 hover:border-emerald-700/50 hover:bg-emerald-950/20 transition-all"
-                >
+                <Link href="/cannabis-club-etiquette" className="group flex items-center gap-3 rounded-lg p-4 border border-emerald-900/30 hover:border-emerald-700/50 hover:bg-emerald-950/20 transition-all">
+                  <div className="text-xl">🤝</div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-semibold text-[#e8ece9] group-hover:text-emerald-100 transition-colors line-clamp-2">Cannabis Club Etiquette</h4>
+                    <p className="text-xs text-[#e8ece9]/60 mt-1">Rules, tips & what to expect</p>
+                  </div>
+                </Link>
+                <Link href="/best-neighborhoods-cannabis-madrid" className="group flex items-center gap-3 rounded-lg p-4 border border-emerald-900/30 hover:border-emerald-700/50 hover:bg-emerald-950/20 transition-all">
                   <div className="text-xl">📍</div>
                   <div className="flex-1 min-w-0">
-                    <h4 className="font-semibold text-[#e8ece9] group-hover:text-emerald-100 transition-colors line-clamp-2">
-                      Best Neighborhoods
-                    </h4>
+                    <h4 className="font-semibold text-[#e8ece9] group-hover:text-emerald-100 transition-colors line-clamp-2">Best Neighborhoods</h4>
                     <p className="text-xs text-[#e8ece9]/60 mt-1">Where to find clubs in Madrid</p>
                   </div>
-                  <svg className="h-5 w-5 text-emerald-400 flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                </Link>
+                <Link href="/prices-what-to-expect" className="group flex items-center gap-3 rounded-lg p-4 border border-emerald-900/30 hover:border-emerald-700/50 hover:bg-emerald-950/20 transition-all">
+                  <div className="text-xl">💰</div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-semibold text-[#e8ece9] group-hover:text-emerald-100 transition-colors line-clamp-2">Prices & What to Expect</h4>
+                    <p className="text-xs text-[#e8ece9]/60 mt-1">Complete cost guide 2026</p>
+                  </div>
+                </Link>
+                <Link href="/madrid-vs-amsterdam" className="group flex items-center gap-3 rounded-lg p-4 border border-emerald-900/30 hover:border-emerald-700/50 hover:bg-emerald-950/20 transition-all">
+                  <div className="text-xl">🆚</div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-semibold text-[#e8ece9] group-hover:text-emerald-100 transition-colors line-clamp-2">Madrid vs Amsterdam</h4>
+                    <p className="text-xs text-[#e8ece9]/60 mt-1">Which city is better for cannabis?</p>
+                  </div>
                 </Link>
               </div>
             </section>

@@ -25,10 +25,10 @@ export const metadata: Metadata = {
       'Complete guide to cannabis laws in Spain 2026. Learn what\'s legal, penalties for violations, and more.',
     images: [
       {
-        url: 'https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/hero-madrid-gran-via',
+        url: 'https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/spanish-congress-laws-v2',
         width: 1200,
         height: 630,
-        alt: 'Cannabis Laws in Spain',
+        alt: 'Cannabis Laws in Spain 2026 — Legal Guide for Tourists',
       },
     ],
   },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: 'Cannabis Laws in Spain 2026',
     description:
       'Complete guide to cannabis laws in Spain 2026. Learn what\'s legal and what\'s not.',
-    images: ['https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/hero-madrid-gran-via'],
+    images: ['https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/spanish-congress-laws-v2'],
   },
   metadataBase: new URL('https://madridcannabisguide.com'),
 };
@@ -167,7 +167,7 @@ export default function CannabisCannabisLawsPage() {
 
               <div className="space-y-6 text-[#e8ece9]/80">
                 <p className="leading-relaxed">
-                  Cannabis social clubs are the only legal way to consume cannabis in Spain. They exist in a complex legal space that authorities have largely tolerated, especially in regions like Catalonia and Madrid.
+                  Cannabis social clubs are the only legal way to consume cannabis in Spain. They exist in a complex legal space that authorities have largely tolerated, especially in regions like Catalonia and Madrid. If you're interested in joining one, read our <Link href="/how-to-join-cannabis-club" className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2">step-by-step guide to joining a cannabis club</Link>.
                 </p>
 
                 <h3 className="text-xl font-semibold text-[#e8ece9]">How They Legally Operate</h3>
@@ -234,7 +234,7 @@ export default function CannabisCannabisLawsPage() {
                   <ul className="space-y-3 text-sm">
                     <li className="flex gap-3">
                       <span className="text-emerald-400 flex-shrink-0">→</span>
-                      <span>Join a registered cannabis social club with an invitation from a member</span>
+                      <span>Join a registered cannabis social club with an <Link href="/how-to-join-cannabis-club" className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2">invitation from a member</Link></span>
                     </li>
                     <li className="flex gap-3">
                       <span className="text-emerald-400 flex-shrink-0">→</span>
@@ -370,7 +370,7 @@ export default function CannabisCannabisLawsPage() {
                 </div>
 
                 <p className="text-sm leading-relaxed italic pt-6 border-t border-[#1a2420]">
-                  <strong>Bottom line:</strong> If you're visiting Madrid, you're in a good position—the city has a solid cannabis club infrastructure and growing acceptance. Always ask about local rules before traveling to other regions.
+                  <strong>Bottom line:</strong> If you're visiting Madrid, you're in a good position—the city has a solid cannabis club infrastructure and growing acceptance. Check our <Link href="/best-neighborhoods-cannabis-madrid" className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2">neighborhood guide</Link> to find the best areas, and learn about <Link href="/prices-what-to-expect" className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2">expected prices</Link> before visiting.
                 </p>
               </div>
             </section>
@@ -435,40 +435,68 @@ export default function CannabisCannabisLawsPage() {
               />
             </div>
 
+            {/* External Links Section */}
+            <section className="rounded-lg border border-amber-900/30 bg-gradient-to-br from-amber-950/20 to-emerald-950/10 p-8 sm:p-10 mt-16">
+              <h3 className="mb-4 text-xl font-bold text-amber-100">Ready to Experience It Legally?</h3>
+              <p className="mb-6 text-sm text-[#e8ece9]/70">Now that you understand the legal framework, take the next step and join a verified cannabis social club in Madrid.</p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://www.weedmadrid.com/invite/vallehermoso-club-social-madrid"
+                  target="_blank"
+                  rel="noopener"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 px-6 py-3 text-sm font-semibold text-white transition-colors"
+                >
+                  🎫 Get Your Club Invitation
+                </a>
+                <a
+                  href="https://www.weedmadrid.com"
+                  target="_blank"
+                  rel="noopener"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-emerald-700/50 hover:bg-emerald-950/30 px-6 py-3 text-sm font-semibold text-emerald-100 transition-colors"
+                >
+                  📋 Browse Club Directory
+                </a>
+              </div>
+            </section>
+
             {/* Internal Links */}
             <section className="rounded-lg border border-[#1a2420] bg-[#111916]/50 p-8 sm:p-10 mt-16">
-              <h3 className="mb-6 text-lg font-semibold text-emerald-100">Related Articles</h3>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <Link
-                  href="/how-to-join-cannabis-club"
-                  className="group flex items-center gap-3 rounded-lg p-4 border border-emerald-900/30 hover:border-emerald-700/50 hover:bg-emerald-950/20 transition-all"
-                >
+              <h3 className="mb-6 text-lg font-semibold text-emerald-100">Continue Reading</h3>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <Link href="/how-to-join-cannabis-club" className="group flex items-center gap-3 rounded-lg p-4 border border-emerald-900/30 hover:border-emerald-700/50 hover:bg-emerald-950/20 transition-all">
                   <div className="text-xl">👥</div>
                   <div className="flex-1 min-w-0">
-                    <h4 className="font-semibold text-[#e8ece9] group-hover:text-emerald-100 transition-colors line-clamp-2">
-                      How to Join a Cannabis Club
-                    </h4>
+                    <h4 className="font-semibold text-[#e8ece9] group-hover:text-emerald-100 transition-colors line-clamp-2">How to Join a Cannabis Club</h4>
                     <p className="text-xs text-[#e8ece9]/60 mt-1">Step-by-step membership guide</p>
                   </div>
-                  <svg className="h-5 w-5 text-emerald-400 flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
                 </Link>
-
-                <Link
-                  href="/cannabis-club-etiquette"
-                  className="group flex items-center gap-3 rounded-lg p-4 border border-emerald-900/30 hover:border-emerald-700/50 hover:bg-emerald-950/20 transition-all"
-                >
+                <Link href="/cannabis-club-etiquette" className="group flex items-center gap-3 rounded-lg p-4 border border-emerald-900/30 hover:border-emerald-700/50 hover:bg-emerald-950/20 transition-all">
                   <div className="text-xl">🤝</div>
                   <div className="flex-1 min-w-0">
-                    <h4 className="font-semibold text-[#e8ece9] group-hover:text-emerald-100 transition-colors line-clamp-2">
-                      Cannabis Club Etiquette
-                    </h4>
-                    <p className="text-xs text-[#e8ece9]/60 mt-1">Rules and respect guidelines</p>
+                    <h4 className="font-semibold text-[#e8ece9] group-hover:text-emerald-100 transition-colors line-clamp-2">Cannabis Club Etiquette</h4>
+                    <p className="text-xs text-[#e8ece9]/60 mt-1">Rules, tips & what to expect</p>
                   </div>
-                  <svg className="h-5 w-5 text-emerald-400 flex-shrink-0 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                </Link>
+                <Link href="/best-neighborhoods-cannabis-madrid" className="group flex items-center gap-3 rounded-lg p-4 border border-emerald-900/30 hover:border-emerald-700/50 hover:bg-emerald-950/20 transition-all">
+                  <div className="text-xl">📍</div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-semibold text-[#e8ece9] group-hover:text-emerald-100 transition-colors line-clamp-2">Best Neighborhoods</h4>
+                    <p className="text-xs text-[#e8ece9]/60 mt-1">Where to find clubs in Madrid</p>
+                  </div>
+                </Link>
+                <Link href="/prices-what-to-expect" className="group flex items-center gap-3 rounded-lg p-4 border border-emerald-900/30 hover:border-emerald-700/50 hover:bg-emerald-950/20 transition-all">
+                  <div className="text-xl">💰</div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-semibold text-[#e8ece9] group-hover:text-emerald-100 transition-colors line-clamp-2">Prices & What to Expect</h4>
+                    <p className="text-xs text-[#e8ece9]/60 mt-1">Complete cost guide 2026</p>
+                  </div>
+                </Link>
+                <Link href="/madrid-vs-amsterdam" className="group flex items-center gap-3 rounded-lg p-4 border border-emerald-900/30 hover:border-emerald-700/50 hover:bg-emerald-950/20 transition-all">
+                  <div className="text-xl">🆚</div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-semibold text-[#e8ece9] group-hover:text-emerald-100 transition-colors line-clamp-2">Madrid vs Amsterdam</h4>
+                    <p className="text-xs text-[#e8ece9]/60 mt-1">Which city is better for cannabis?</p>
+                  </div>
                 </Link>
               </div>
             </section>

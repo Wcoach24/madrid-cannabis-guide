@@ -137,7 +137,7 @@ export default function PricesWhatToExpectPage() {
             <div className="p-6 rounded-lg bg-[#111916] border border-[#1a2420]">
               <h3 className="text-xl font-semibold text-emerald-400 mb-3">The "Contribution" Model</h3>
               <p>
-                Cannabis clubs don't sell cannabis—they sell "contributions." This legal distinction is important. When you pay €10 for a gram, you're technically making a "contribution" to the club's operating costs, not purchasing a product. This gray area legal structure allows clubs to operate. Understanding this model helps explain why prices are what they are.
+                Cannabis clubs don't sell cannabis—they sell "contributions." This <Link href="/cannabis-laws-spain" className="text-emerald-400 underline underline-offset-2 hover:text-emerald-300 transition-colors">legal distinction</Link> is important. When you pay €10 for a gram, you're technically making a "contribution" to the club's operating costs, not purchasing a product. This gray area legal structure allows clubs to operate. Understanding this model helps explain why prices are what they are.
               </p>
             </div>
 
@@ -217,7 +217,7 @@ export default function PricesWhatToExpectPage() {
           <div className="mt-8 p-6 rounded-lg bg-emerald-950/20 border border-emerald-900/50">
             <h4 className="font-semibold text-emerald-300 mb-2">💡 Pro Tip: Tourist Membership</h4>
             <p className="text-[#e8ece9]/70">
-              Many clubs offer €0 or €5 temporary memberships for tourists. You only pay once. Ask when joining if they have a tourist discount or first-visit special. It's common practice.
+              Many clubs offer €0 or €5 temporary memberships for tourists. You only pay once. Ask when <Link href="/how-to-join-cannabis-club" className="text-emerald-400 underline underline-offset-2 hover:text-emerald-300 transition-colors">joining a club</Link> if they have a tourist discount or first-visit special. It's common practice.
             </p>
           </div>
         </div>
@@ -628,6 +628,18 @@ export default function PricesWhatToExpectPage() {
               </h3>
               <p className="text-[#e8ece9]/70">
                 Compare prices, culture, and experiences between two top cities.
+              </p>
+            </Link>
+
+            <Link
+              href="/best-neighborhoods-cannabis-madrid"
+              className="p-6 rounded-lg bg-[#111916] border border-[#1a2420] hover:border-emerald-500/50 hover:bg-[#111916]/80 transition-all group"
+            >
+              <h3 className="text-lg font-semibold text-[#e8ece9] mb-2 group-hover:text-emerald-400 transition-colors">
+                Best Neighborhoods →
+              </h3>
+              <p className="text-[#e8ece9]/70">
+                Find the best areas for cannabis clubs by district in Madrid.
               </p>
             </Link>
           </div>

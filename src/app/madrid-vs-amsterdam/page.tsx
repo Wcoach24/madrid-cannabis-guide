@@ -133,7 +133,7 @@ export default function MadridVsAmsterdamPage() {
             <div className="p-6 rounded-lg bg-emerald-950/20 border border-emerald-900/50">
               <h3 className="text-lg font-semibold text-emerald-300 mb-3">The Bottom Line</h3>
               <p>
-                Madrid wins for quality and value. Amsterdam wins for convenience and variety. If you had to choose one for 2026, Madrid is the better choice for authentic experience and better pricing. But both cities are worth experiencing.
+                Madrid wins for quality and value. Amsterdam wins for convenience and variety. If you had to choose one for 2026, Madrid is the better choice for authentic experience and <Link href="/prices-what-to-expect" className="text-emerald-400 underline underline-offset-2 hover:text-emerald-300 transition-colors">better pricing</Link>. But both cities are worth experiencing.
               </p>
             </div>
           </div>
@@ -248,7 +248,7 @@ export default function MadridVsAmsterdamPage() {
                 🔑 Madrid: Requires Invitation, More Rewarding
               </h3>
               <p className="text-[#e8ece9]/80 mb-4">
-                Madrid clubs require membership or invitation. More friction to entry, but worth it. You'll interact with locals, join a real community, and have a more authentic experience. Once in, access is easier for future visits.
+                Madrid clubs require <Link href="/how-to-join-cannabis-club" className="text-emerald-400 underline underline-offset-2 hover:text-emerald-300 transition-colors">membership or invitation</Link>. More friction to entry, but worth it. You'll interact with locals, join a real community, and have a more authentic experience. Once in, access is easier for future visits.
               </p>
               <ul className="text-[#e8ece9]/70 space-y-2">
                 <li>⚠️ Requires membership process</li>
@@ -671,6 +671,18 @@ export default function MadridVsAmsterdamPage() {
               </h3>
               <p className="text-[#e8ece9]/70">
                 Understand the legal framework behind Spain's social clubs.
+              </p>
+            </Link>
+
+            <Link
+              href="/best-neighborhoods-cannabis-madrid"
+              className="p-6 rounded-lg bg-[#111916] border border-[#1a2420] hover:border-emerald-500/50 hover:bg-[#111916]/80 transition-all group"
+            >
+              <h3 className="text-lg font-semibold text-[#e8ece9] mb-2 group-hover:text-emerald-400 transition-colors">
+                Best Neighborhoods →
+              </h3>
+              <p className="text-[#e8ece9]/70">
+                Find the best areas for cannabis clubs by district in Madrid.
               </p>
             </Link>
           </div>
