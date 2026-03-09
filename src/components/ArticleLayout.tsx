@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import Image from 'next/image';
 import { ArticleSchema, BreadcrumbSchema } from './SchemaMarkup';
 
 interface Breadcrumb {
@@ -17,6 +18,7 @@ interface ArticleLayoutProps {
   subtitle: string;
   children: ReactNode;
   image?: string;
+  imageAlt?: string;
   readingTime?: number;
   lastUpdated?: string;
   breadcrumbs?: Breadcrumb[];
@@ -57,6 +59,7 @@ export function ArticleLayout({
   subtitle,
   children,
   image,
+  imageAlt,
   readingTime,
   lastUpdated,
   breadcrumbs = [{ label: 'Home', href: '/' }],
@@ -192,11 +195,14 @@ export function ArticleLayout({
         <div className="lg:col-span-2">
           {/* Featured Image */}
           {image && (
-            <div className="mb-10 rounded-lg overflow-hidden border border-emerald-900/30">
-              <img
+            <div className="relative mb-10 rounded-lg overflow-hidden border border-emerald-900/30 aspect-[16/9]">
+              <Image
                 src={image}
-                alt={title}
-                className="w-full h-auto object-cover"
+                alt={imageAlt || title}
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 66vw"
               />
             </div>
           )}

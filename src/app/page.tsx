@@ -1,5 +1,65 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FAQSchema } from "@/components/SchemaMarkup";
+
+const CLD = "https://res.cloudinary.com/dhuc2wmhp/image/upload";
+
+const GUIDE_CARDS = [
+  {
+    emoji: "🏛️",
+    title: "Cannabis Laws in Spain",
+    description:
+      "Understand the legal landscape of cannabis in Spain, what's allowed and what's not, and how social clubs operate within the law.",
+    href: "/cannabis-laws-spain",
+    image: `${CLD}/f_auto,q_auto,w_800/madrid-cannabis-guide/spanish-architecture-laws`,
+    alt: "Historic Spanish government architecture in Madrid representing cannabis laws and legal framework in Spain 2026",
+  },
+  {
+    emoji: "🔑",
+    title: "How to Join a Club",
+    description:
+      "Step-by-step instructions on finding a club, getting invited, membership requirements, and what to expect on your first visit.",
+    href: "/how-to-join-cannabis-club",
+    image: `${CLD}/f_auto,q_auto,w_800/madrid-cannabis-guide/people-social-gathering`,
+    alt: "Group of friends enjoying a social gathering showing how to join a cannabis club community in Madrid",
+  },
+  {
+    emoji: "📍",
+    title: "Best Neighborhoods",
+    description:
+      "Discover the best neighborhoods in Madrid for cannabis culture, where clubs are concentrated, and local atmosphere and vibe.",
+    href: "/best-neighborhoods-cannabis-madrid",
+    image: `${CLD}/f_auto,q_auto,w_800/madrid-cannabis-guide/madrid-colorful-street`,
+    alt: "Colorful street in Madrid neighborhood with traditional Spanish architecture and local shops near cannabis clubs",
+  },
+  {
+    emoji: "🤝",
+    title: "Club Etiquette",
+    description:
+      "Learn the unwritten rules of cannabis clubs: what's acceptable, how to behave, respect traditions, and make the most of your experience.",
+    href: "/cannabis-club-etiquette",
+    image: `${CLD}/f_auto,q_auto,w_800/madrid-cannabis-guide/cozy-etiquette-interior`,
+    alt: "Stylish interior of a private members club with ambient lighting representing cannabis club etiquette in Madrid",
+  },
+  {
+    emoji: "💰",
+    title: "Prices & What to Expect",
+    description:
+      "Complete pricing guide for cannabis in Madrid, membership costs, quality indicators, product types, and how to get the best value.",
+    href: "/prices-what-to-expect",
+    image: `${CLD}/f_auto,q_auto,w_800/madrid-cannabis-guide/euro-prices-money`,
+    alt: "Euro currency representing cannabis club membership prices and costs in Madrid Spain 2026",
+  },
+  {
+    emoji: "🌍",
+    title: "Madrid vs Amsterdam",
+    description:
+      "How cannabis culture in Madrid compares to Amsterdam. Key differences in laws, club culture, availability, and visitor experience.",
+    href: "/madrid-vs-amsterdam",
+    image: `${CLD}/f_auto,q_auto,w_800/madrid-cannabis-guide/madrid-plaza-comparison`,
+    alt: "Panoramic view of iconic Madrid plaza showcasing the city vibrant culture compared to Amsterdam cannabis scene",
+  },
+];
 
 // FAQ data for schema markup
 const faqData = [
@@ -39,7 +99,20 @@ export default function Home() {
       <main className="w-full">
         {/* HERO SECTION */}
         <section className="relative overflow-hidden py-20 px-4 sm:py-32 md:py-40">
-          {/* Gradient background overlay */}
+          {/* Hero background image */}
+          <div className="absolute inset-0 -z-20">
+            <Image
+              src={`${CLD}/f_auto,q_auto,w_1400/madrid-cannabis-guide/hero-madrid-gran-via`}
+              alt="Madrid Gran Via at night with illuminated buildings — cannabis guide hero"
+              fill
+              priority
+              className="object-cover"
+              sizes="100vw"
+            />
+          </div>
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 -z-10 bg-[var(--color-bg-primary)]/80" />
+          {/* Gradient accents */}
           <div className="absolute inset-0 -z-10 overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-cannabis-medium)] rounded-full mix-blend-screen opacity-5 blur-3xl" />
             <div className="absolute -bottom-32 left-0 w-96 h-96 bg-[var(--color-accent-amber)] rounded-full mix-blend-screen opacity-5 blur-3xl" />
@@ -98,119 +171,40 @@ export default function Home() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Card 1: Laws */}
-              <article className="group p-8 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] hover:border-[var(--color-cannabis-medium)] transition-all duration-300 hover-glow flex flex-col">
-                <div className="text-4xl mb-4">🏛️</div>
-                <h3 className="text-2xl font-bold mb-3 text-[var(--color-text-primary)]">
-                  Cannabis Laws in Spain
-                </h3>
-                <p className="text-[var(--color-text-secondary)] mb-6 flex-grow">
-                  Understand the legal landscape of cannabis in Spain, what's
-                  allowed and what's not, and how social clubs operate within
-                  the law.
-                </p>
-                <Link
-                  href="/cannabis-laws-spain"
-                  className="inline-flex items-center gap-2 text-[var(--color-cannabis-medium)] font-semibold hover:text-[var(--color-cannabis-light)] transition-colors"
+              {GUIDE_CARDS.map((card) => (
+                <article
+                  key={card.href}
+                  className="group rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] hover:border-[var(--color-cannabis-medium)] transition-all duration-300 hover-glow flex flex-col overflow-hidden"
                 >
-                  Read guide <span>→</span>
-                </Link>
-              </article>
-
-              {/* Card 2: How to Join */}
-              <article className="group p-8 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] hover:border-[var(--color-cannabis-medium)] transition-all duration-300 hover-glow flex flex-col">
-                <div className="text-4xl mb-4">🔑</div>
-                <h3 className="text-2xl font-bold mb-3 text-[var(--color-text-primary)]">
-                  How to Join a Club
-                </h3>
-                <p className="text-[var(--color-text-secondary)] mb-6 flex-grow">
-                  Step-by-step instructions on finding a club, getting invited,
-                  membership requirements, and what to expect on your first
-                  visit.
-                </p>
-                <Link
-                  href="/how-to-join-cannabis-club"
-                  className="inline-flex items-center gap-2 text-[var(--color-cannabis-medium)] font-semibold hover:text-[var(--color-cannabis-light)] transition-colors"
-                >
-                  Read guide <span>→</span>
-                </Link>
-              </article>
-
-              {/* Card 3: Neighborhoods */}
-              <article className="group p-8 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] hover:border-[var(--color-cannabis-medium)] transition-all duration-300 hover-glow flex flex-col">
-                <div className="text-4xl mb-4">📍</div>
-                <h3 className="text-2xl font-bold mb-3 text-[var(--color-text-primary)]">
-                  Best Neighborhoods
-                </h3>
-                <p className="text-[var(--color-text-secondary)] mb-6 flex-grow">
-                  Discover the best neighborhoods in Madrid for cannabis
-                  culture, where clubs are concentrated, and local atmosphere
-                  and vibe.
-                </p>
-                <Link
-                  href="/best-neighborhoods-madrid"
-                  className="inline-flex items-center gap-2 text-[var(--color-cannabis-medium)] font-semibold hover:text-[var(--color-cannabis-light)] transition-colors"
-                >
-                  Read guide <span>→</span>
-                </Link>
-              </article>
-
-              {/* Card 4: Etiquette */}
-              <article className="group p-8 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] hover:border-[var(--color-cannabis-medium)] transition-all duration-300 hover-glow flex flex-col">
-                <div className="text-4xl mb-4">🤝</div>
-                <h3 className="text-2xl font-bold mb-3 text-[var(--color-text-primary)]">
-                  Club Etiquette
-                </h3>
-                <p className="text-[var(--color-text-secondary)] mb-6 flex-grow">
-                  Learn the unwritten rules of cannabis clubs: what's acceptable,
-                  how to behave, respect traditions, and make the most of your
-                  experience.
-                </p>
-                <Link
-                  href="/cannabis-club-etiquette"
-                  className="inline-flex items-center gap-2 text-[var(--color-cannabis-medium)] font-semibold hover:text-[var(--color-cannabis-light)] transition-colors"
-                >
-                  Read guide <span>→</span>
-                </Link>
-              </article>
-
-              {/* Card 5: Prices */}
-              <article className="group p-8 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] hover:border-[var(--color-cannabis-medium)] transition-all duration-300 hover-glow flex flex-col">
-                <div className="text-4xl mb-4">💰</div>
-                <h3 className="text-2xl font-bold mb-3 text-[var(--color-text-primary)]">
-                  Prices & What to Expect
-                </h3>
-                <p className="text-[var(--color-text-secondary)] mb-6 flex-grow">
-                  Complete pricing guide for cannabis in Madrid, membership
-                  costs, quality indicators, product types, and how to get the
-                  best value.
-                </p>
-                <Link
-                  href="/prices-what-to-expect"
-                  className="inline-flex items-center gap-2 text-[var(--color-cannabis-medium)] font-semibold hover:text-[var(--color-cannabis-light)] transition-colors"
-                >
-                  Read guide <span>→</span>
-                </Link>
-              </article>
-
-              {/* Card 6: Madrid vs Amsterdam */}
-              <article className="group p-8 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] hover:border-[var(--color-cannabis-medium)] transition-all duration-300 hover-glow flex flex-col">
-                <div className="text-4xl mb-4">🌍</div>
-                <h3 className="text-2xl font-bold mb-3 text-[var(--color-text-primary)]">
-                  Madrid vs Amsterdam
-                </h3>
-                <p className="text-[var(--color-text-secondary)] mb-6 flex-grow">
-                  How cannabis culture in Madrid compares to Amsterdam. Key
-                  differences in laws, club culture, availability, and visitor
-                  experience.
-                </p>
-                <Link
-                  href="/madrid-vs-amsterdam"
-                  className="inline-flex items-center gap-2 text-[var(--color-cannabis-medium)] font-semibold hover:text-[var(--color-cannabis-light)] transition-colors"
-                >
-                  Read guide <span>→</span>
-                </Link>
-              </article>
+                  {/* Card Image */}
+                  <div className="relative h-48 w-full overflow-hidden">
+                    <Image
+                      src={card.image}
+                      alt={card.alt}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-secondary)] via-transparent to-transparent" />
+                    <div className="absolute bottom-3 left-4 text-3xl">{card.emoji}</div>
+                  </div>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h3 className="text-2xl font-bold mb-3 text-[var(--color-text-primary)]">
+                      {card.title}
+                    </h3>
+                    <p className="text-[var(--color-text-secondary)] mb-6 flex-grow">
+                      {card.description}
+                    </p>
+                    <Link
+                      href={card.href}
+                      className="inline-flex items-center gap-2 text-[var(--color-cannabis-medium)] font-semibold hover:text-[var(--color-cannabis-light)] transition-colors"
+                    >
+                      Read guide <span>→</span>
+                    </Link>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
         </section>
@@ -428,6 +422,17 @@ export default function Home() {
               {/* Right: Visual highlight */}
               <div className="p-8 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-cannabis-medium)]/10 to-[var(--color-accent-amber)]/5 -z-10" />
+                {/* Featured image */}
+                <div className="relative h-48 w-full rounded-lg overflow-hidden mb-6">
+                  <Image
+                    src={`${CLD}/f_auto,q_auto,w_800/madrid-cannabis-guide/social-lounge-atmosphere`}
+                    alt="Cozy social lounge interior with warm ambient lighting perfect for cannabis club atmosphere in Madrid"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 33vw"
+                    loading="lazy"
+                  />
+                </div>
                 <div className="space-y-6">
                   <div className="p-4 rounded-lg bg-[var(--color-bg-primary)]/50 border border-[var(--color-border)]">
                     <h4 className="font-semibold text-[var(--color-cannabis-medium)] mb-2">

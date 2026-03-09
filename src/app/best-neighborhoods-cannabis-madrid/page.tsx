@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { CTA } from '@/components/CTA';
 import { FAQSection } from '@/components/FAQSection';
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
       'Complete guide to cannabis clubs by neighborhood in Madrid. Find the best areas and clubs.',
     images: [
       {
-        url: 'https://madridcannabisguide.com/og-image.jpg',
+        url: 'https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/hero-madrid-gran-via',
         width: 1200,
         height: 630,
         alt: 'Cannabis Neighborhoods Madrid',
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     title: 'Best Cannabis Neighborhoods in Madrid',
     description:
       'Complete guide to cannabis clubs by neighborhood in Madrid.',
-    images: ['https://madridcannabisguide.com/og-image.jpg'],
+    images: ['https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/hero-madrid-gran-via'],
   },
   metadataBase: new URL('https://madridcannabisguide.com'),
 };
@@ -90,7 +91,7 @@ export default function BestNeighborhoodsCannabisPage() {
       <main className="w-full bg-gradient-to-b from-[#0a0f0d] via-[#0a0f0d] to-[#111916]">
         {/* Hero Section */}
         <section className="relative overflow-hidden px-4 py-16 sm:py-24 md:py-32">
-          <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 -z-20"><Image src="https://res.cloudinary.com/dhuc2wmhp/image/upload/f_auto,q_auto,w_1200/madrid-cannabis-guide/madrid-colorful-street" alt="Colorful street in Madrid neighborhood with traditional Spanish architecture near cannabis clubs" fill className="object-cover" sizes="100vw" priority /></div><div className="absolute inset-0 -z-15 bg-[#0a0f0d]/75" /><div className="absolute inset-0 -z-10">
             <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-600 rounded-full mix-blend-screen opacity-5 blur-3xl" />
             <div className="absolute -bottom-32 left-0 w-96 h-96 bg-amber-600 rounded-full mix-blend-screen opacity-5 blur-3xl" />
           </div>

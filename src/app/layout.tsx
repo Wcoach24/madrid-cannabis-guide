@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       "Discover the complete guide to cannabis clubs, laws, neighborhoods, and etiquette in Madrid.",
     images: [
       {
-        url: "https://madridcannabisguide.com/og-image.jpg",
+        url: "https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/hero-madrid-gran-via",
         width: 1200,
         height: 630,
         alt: "Madrid Cannabis Guide",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Madrid Cannabis Guide",
     description:
       "Your complete guide to cannabis in Madrid — clubs, laws, neighborhoods, and etiquette.",
-    images: ["https://madridcannabisguide.com/og-image.jpg"],
+    images: ["https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/hero-madrid-gran-via"],
   },
   robots: {
     index: true,

@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { FAQSection } from '@/components/FAQSection';
 import { CTA } from '@/components/CTA';
@@ -78,7 +79,7 @@ export default function MadridVsAmsterdamPage() {
 
       {/* HERO SECTION */}
       <section className="relative overflow-hidden py-16 px-4 sm:py-24 md:py-32">
-        <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute inset-0 -z-20"><Image src="https://res.cloudinary.com/dhuc2wmhp/image/upload/f_auto,q_auto,w_1200/madrid-cannabis-guide/madrid-plaza-comparison" alt="Panoramic view of Madrid plaza showcasing the city vibrant culture compared to Amsterdam" fill className="object-cover" sizes="100vw" priority /></div><div className="absolute inset-0 -z-15 bg-[#0a0f0d]/75" /><div className="absolute inset-0 -z-10 overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-600 rounded-full mix-blend-screen opacity-5 blur-3xl" />
           <div className="absolute -bottom-32 left-0 w-96 h-96 bg-amber-600 rounded-full mix-blend-screen opacity-5 blur-3xl" />
         </div>
