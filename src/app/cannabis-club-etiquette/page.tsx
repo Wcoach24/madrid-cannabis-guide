@@ -634,7 +634,7 @@ export default function CannabisClubEtiquettePage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="https://madridcannabisclubs.com"
+              href="https://www.weedmadrid.com/invite/vallehermoso-club-social-madrid"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-amber-500 text-[#0a0f0d] font-semibold hover:bg-amber-400 transition-colors"
             >
               Find Cannabis Clubs →

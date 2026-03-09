@@ -4,12 +4,12 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const NAV_LINKS = [
-  { label: "Laws", href: "#laws" },
-  { label: "How to Join", href: "#join" },
-  { label: "Neighborhoods", href: "#neighborhoods" },
-  { label: "Etiquette", href: "#etiquette" },
-  { label: "Prices", href: "#prices" },
-  { label: "Madrid vs Amsterdam", href: "#comparison" },
+  { label: "Laws", href: "/cannabis-laws-spain" },
+  { label: "How to Join", href: "/how-to-join-cannabis-club" },
+  { label: "Neighborhoods", href: "/best-neighborhoods-cannabis-madrid" },
+  { label: "Etiquette", href: "/cannabis-club-etiquette" },
+  { label: "Prices", href: "/prices-what-to-expect" },
+  { label: "Madrid vs Amsterdam", href: "/madrid-vs-amsterdam" },
 ];
 
 export default function Header() {
@@ -43,7 +43,7 @@ export default function Header() {
               viewBox="0 0 24 24"
               aria-label="Cannabis leaf"
             >
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
+              <path d="M12 22V12M12 12c0-3.5-2.5-6.5-6-8 1.5 2 2 4.5 1.5 7-.5 2.5-2 4-3.5 5 2.5 0 5-.5 7-2.5l1-.5M12 12c0-3.5 2.5-6.5 6-8-1.5 2-2 4.5-1.5 7 .5 2.5 2 4 3.5 5-2.5 0-5-.5-7-2.5l-1-.5M12 12c0-4.5-1-8-2-10 0 0 2 3.5 2 7M12 12c0-4.5 1-8 2-10 0 0-2 3.5-2 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" fill="none" />
             </svg>
             <span className="font-bold text-lg text-[var(--color-text-primary)] hidden sm:inline">
               Madrid Cannabis Guide
@@ -69,7 +69,9 @@ export default function Header() {
 
           {/* CTA Button - Desktop */}
           <Link
-            href="https://madridcannabisclubs.com"
+            href="https://www.weedmadrid.com/invite/vallehermoso-club-social-madrid"
+            target="_blank"
+            rel="noopener"
             className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-[var(--color-accent-amber)] text-[var(--color-bg-primary)] font-semibold rounded-lg hover:bg-[#f59e0b]/90 hover:shadow-lg hover:shadow-[var(--color-accent-amber)]/30 transition-all duration-200"
           >
             Get Invited
@@ -140,7 +142,9 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href="https://madridcannabisclubs.com"
+              href="https://www.weedmadrid.com/invite/vallehermoso-club-social-madrid"
+              target="_blank"
+              rel="noopener"
               className="block w-full mt-4 px-4 py-2.5 bg-[var(--color-accent-amber)] text-[var(--color-bg-primary)] font-semibold rounded-lg text-center hover:bg-[#f59e0b]/90 transition-colors duration-200"
             >
               Get Invited →

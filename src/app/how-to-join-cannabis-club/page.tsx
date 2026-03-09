@@ -251,7 +251,7 @@ export default function HowToJoinCannabisClubPage() {
                           </li>
                           <li className="flex gap-3">
                             <span className="text-emerald-400 flex-shrink-0">→</span>
-                            <span>Use referral services like {' '}<a href="https://madridcannabisclubs.com" className="text-amber-400 hover:text-amber-300">madridcannabisclubs.com</a> to get connected</span>
+                            <span>Use referral services like {' '}<a href="https://www.weedmadrid.com/invite/vallehermoso-club-social-madrid" className="text-amber-400 hover:text-amber-300" target="_blank" rel="noopener">weedmadrid.com</a> to get connected</span>
                           </li>
                         </ul>
                         <p className="text-sm leading-relaxed italic pt-2 border-t border-[#1a2420]">

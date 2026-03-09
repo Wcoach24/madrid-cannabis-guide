@@ -49,7 +49,7 @@ function InlineCTA({
 
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <a
-          href="https://madridcannabisclubs.com"
+          href="https://www.weedmadrid.com/invite/vallehermoso-club-social-madrid"
           className="inline-flex items-center justify-center rounded-md bg-amber-500 px-6 py-3 font-semibold text-slate-950 transition-all hover:bg-amber-400 active:scale-95"
           aria-label="Get your club invitation"
         >
@@ -108,7 +108,7 @@ function BannerCTA({
 
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
             <a
-              href="https://madridcannabisclubs.com"
+              href="https://www.weedmadrid.com/invite/vallehermoso-club-social-madrid"
               className="inline-flex items-center justify-center rounded-md bg-amber-500 px-8 py-4 font-semibold text-slate-950 transition-all hover:bg-amber-400 active:scale-95 text-base sm:text-lg"
             >
               Get Your Club Invitation

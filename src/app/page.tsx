@@ -75,7 +75,7 @@ export default function Home() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="https://madridcannabisclubs.com"
+                href="https://www.weedmadrid.com/invite/vallehermoso-club-social-madrid"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold bg-[var(--color-accent-amber)] text-[var(--color-bg-primary)] hover:bg-[#f5a820] transition-colors duration-200 hover-glow"
               >
                 Get Club Invitation <span>→</span>
@@ -326,7 +326,7 @@ export default function Home() {
                     a reputable club.
                   </p>
                   <a
-                    href="https://madridcannabisclubs.com"
+                    href="https://www.weedmadrid.com/invite/vallehermoso-club-social-madrid"
                     className="inline-flex items-center gap-2 text-[var(--color-cannabis-medium)] font-semibold hover:text-[var(--color-cannabis-light)] transition-colors"
                   >
                     Find Club <span>→</span>
@@ -577,7 +577,7 @@ export default function Home() {
                 who've discovered Madrid's thriving cannabis social club scene.
               </p>
               <a
-                href="https://madridcannabisclubs.com"
+                href="https://www.weedmadrid.com/invite/vallehermoso-club-social-madrid"
                 className="inline-flex items-center gap-2 px-10 py-5 rounded-lg font-semibold text-lg bg-[var(--color-accent-amber)] text-[var(--color-bg-primary)] hover:bg-[#f5a820] transition-colors duration-200 hover-glow"
               >
                 Explore Club Directory <span>→</span>

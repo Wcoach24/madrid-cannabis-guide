@@ -4,10 +4,10 @@ const FOOTER_SECTIONS = [
   {
     title: "Guides",
     links: [
-      { label: "Cannabis Laws in Madrid", href: "#laws" },
-      { label: "How to Join Cannabis Clubs", href: "#join" },
-      { label: "Best Neighborhoods", href: "#neighborhoods" },
-      { label: "Cannabis Etiquette Guide", href: "#etiquette" },
+      { label: "Cannabis Laws in Madrid", href: "/cannabis-laws-spain" },
+      { label: "How to Join Cannabis Clubs", href: "/how-to-join-cannabis-club" },
+      { label: "Best Neighborhoods", href: "/best-neighborhoods-cannabis-madrid" },
+      { label: "Cannabis Etiquette Guide", href: "/cannabis-club-etiquette" },
     ],
   },
   {
@@ -19,12 +19,12 @@ const FOOTER_SECTIONS = [
         external: true,
       },
       {
-        label: "Club Invitations",
-        href: "https://madridcannabisclubs.com",
+        label: "Get Club Invitation",
+        href: "https://www.weedmadrid.com/invite/vallehermoso-club-social-madrid",
         external: true,
       },
-      { label: "Prices & Strains", href: "#prices" },
-      { label: "Madrid vs Amsterdam", href: "#comparison" },
+      { label: "Prices & Strains", href: "/prices-what-to-expect" },
+      { label: "Madrid vs Amsterdam", href: "/madrid-vs-amsterdam" },
     ],
   },
   {
@@ -69,7 +69,7 @@ export default function Footer() {
                 viewBox="0 0 24 24"
                 aria-label="Cannabis leaf"
               >
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z" />
+                <path d="M12 22V12M12 12c0-3.5-2.5-6.5-6-8 1.5 2 2 4.5 1.5 7-.5 2.5-2 4-3.5 5 2.5 0 5-.5 7-2.5l1-.5M12 12c0-3.5 2.5-6.5 6-8-1.5 2-2 4.5-1.5 7 .5 2.5 2 4 3.5 5-2.5 0-5-.5-7-2.5l-1-.5M12 12c0-4.5-1-8-2-10 0 0 2 3.5 2 7M12 12c0-4.5 1-8 2-10 0 0-2 3.5-2 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" fill="none" />
               </svg>
               <div>
                 <p className="font-bold text-[var(--color-text-primary)]">
@@ -98,7 +98,7 @@ export default function Footer() {
                     <Link
                       href={link.href}
                       target={link.external ? "_blank" : undefined}
-                      rel={link.external ? "noopener noreferrer" : undefined}
+                      rel={link.external ? "noopener" : undefined}
                       className="text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-cannabis-light)] transition-colors duration-200 inline-flex items-center gap-1"
                     >
                       {link.label}
