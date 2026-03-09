@@ -45,7 +45,7 @@ export function ArticleSchema({
     '@type': 'Article',
     headline: title,
     description,
-    image: image || 'https://madridcannabisguide.com/og-image.jpg',
+    image: image || 'https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/hero-madrid-gran-via',
     datePublished,
     dateModified,
     author: {

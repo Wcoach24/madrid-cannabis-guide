@@ -1,25 +1,38 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FAQSection } from '@/components/FAQSection';
 import { CTA } from '@/components/CTA';
+import { ArticleSchema, BreadcrumbSchema } from '@/components/SchemaMarkup';
+
+const OG_IMAGE = 'https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/madrid-plaza-comparison';
 
 export const metadata: Metadata = {
   title: 'Madrid vs Amsterdam for Cannabis — Which City is Better in 2026?',
   description: 'Compare cannabis culture, prices, legal status, and experiences in Madrid and Amsterdam. Which city is better for cannabis tourism? Complete analysis.',
-  keywords: 'madrid vs amsterdam, cannabis europe, best weed city, legal cannabis comparison',
+  keywords: [
+    'madrid vs amsterdam',
+    'cannabis europe',
+    'best weed city',
+    'legal cannabis comparison',
+    'amsterdam vs madrid weed',
+  ],
+  authors: [{ name: 'Madrid Cannabis Guide' }],
   openGraph: {
     title: 'Madrid vs Amsterdam for Cannabis — Which City is Better in 2026?',
     description: 'Compare cannabis culture, prices, legal status, and experiences in Madrid and Amsterdam.',
     type: 'article',
     locale: 'es_ES',
     url: 'https://madridcannabisguide.com/madrid-vs-amsterdam',
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Madrid vs Amsterdam Cannabis Comparison' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Madrid vs Amsterdam for Cannabis',
     description: 'Which European city is better for cannabis tourism?',
+    images: [OG_IMAGE],
   },
+  metadataBase: new URL('https://madridcannabisguide.com'),
 };
 
 const faqItems = [
@@ -48,34 +61,18 @@ const faqItems = [
 export default function MadridVsAmsterdamPage() {
   return (
     <main className="w-full bg-[#0a0f0d]">
-      {/* JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Article',
-            headline: 'Madrid vs Amsterdam for Cannabis — Which City is Better in 2026?',
-            description: 'Compare cannabis culture, prices, legal status, and experiences in Madrid and Amsterdam.',
-            image: 'https://madridcannabisguide.com/og-madridamsterdam.jpg',
-            datePublished: '2026-03-09',
-            dateModified: '2026-03-09',
-            author: {
-              '@type': 'Organization',
-              name: 'Madrid Cannabis Guide',
-              url: 'https://madridcannabisguide.com',
-            },
-            publisher: {
-              '@type': 'Organization',
-              name: 'Madrid Cannabis Guide',
-              logo: {
-                '@type': 'ImageObject',
-                url: 'https://madridcannabisguide.com/logo.png',
-              },
-            },
-          }),
-        }}
+      <ArticleSchema
+        title="Madrid vs Amsterdam for Cannabis — Which City is Better in 2026?"
+        description="Compare cannabis culture, prices, legal status, and experiences in Madrid and Amsterdam."
+        datePublished="2026-03-09"
+        dateModified="2026-03-09"
+        image={OG_IMAGE}
+        url="https://madridcannabisguide.com/madrid-vs-amsterdam"
       />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Madrid vs Amsterdam', url: '/madrid-vs-amsterdam' },
+      ]} />
 
       {/* HERO SECTION */}
       <section className="relative overflow-hidden py-16 px-4 sm:py-24 md:py-32">

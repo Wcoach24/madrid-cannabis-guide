@@ -1,25 +1,38 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FAQSection } from '@/components/FAQSection';
 import { CTA } from '@/components/CTA';
+import { ArticleSchema, BreadcrumbSchema } from '@/components/SchemaMarkup';
+
+const OG_IMAGE = 'https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/price-menu-board-v2';
 
 export const metadata: Metadata = {
   title: 'Cannabis Club Prices in Madrid 2026 — What to Expect & Cost Guide',
   description: 'Complete pricing guide for cannabis in Madrid social clubs. Membership fees, gram prices, quality levels, and how to budget for your first visit. Updated 2026.',
-  keywords: 'weed prices madrid, cannabis club prices, cost guide, how much cannabis costs',
+  keywords: [
+    'weed prices madrid',
+    'cannabis club prices',
+    'cost guide',
+    'how much cannabis costs',
+    'madrid cannabis price list',
+  ],
+  authors: [{ name: 'Madrid Cannabis Guide' }],
   openGraph: {
     title: 'Cannabis Club Prices in Madrid 2026 — What to Expect & Cost Guide',
     description: 'Complete pricing guide for cannabis in Madrid social clubs. Membership fees, gram prices, and how to budget.',
     type: 'article',
     locale: 'es_ES',
     url: 'https://madridcannabisguide.com/prices-what-to-expect',
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Cannabis Club Prices in Madrid 2026' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Cannabis Club Prices in Madrid 2026',
     description: 'Complete pricing guide for cannabis in Madrid social clubs.',
+    images: [OG_IMAGE],
   },
+  metadataBase: new URL('https://madridcannabisguide.com'),
 };
 
 const faqItems = [
@@ -48,34 +61,18 @@ const faqItems = [
 export default function PricesWhatToExpectPage() {
   return (
     <main className="w-full bg-[#0a0f0d]">
-      {/* JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Article',
-            headline: 'Cannabis Club Prices in Madrid 2026 — What to Expect & Cost Guide',
-            description: 'Complete pricing guide for cannabis in Madrid social clubs.',
-            image: 'https://madridcannabisguide.com/og-prices.jpg',
-            datePublished: '2026-03-09',
-            dateModified: '2026-03-09',
-            author: {
-              '@type': 'Organization',
-              name: 'Madrid Cannabis Guide',
-              url: 'https://madridcannabisguide.com',
-            },
-            publisher: {
-              '@type': 'Organization',
-              name: 'Madrid Cannabis Guide',
-              logo: {
-                '@type': 'ImageObject',
-                url: 'https://madridcannabisguide.com/logo.png',
-              },
-            },
-          }),
-        }}
+      <ArticleSchema
+        title="Cannabis Club Prices in Madrid 2026 — What to Expect & Cost Guide"
+        description="Complete pricing guide for cannabis in Madrid social clubs."
+        datePublished="2026-03-09"
+        dateModified="2026-03-09"
+        image={OG_IMAGE}
+        url="https://madridcannabisguide.com/prices-what-to-expect"
       />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Prices & What to Expect', url: '/prices-what-to-expect' },
+      ]} />
 
       {/* HERO SECTION */}
       <section className="relative overflow-hidden py-16 px-4 sm:py-24 md:py-32">

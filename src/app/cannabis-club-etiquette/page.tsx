@@ -1,25 +1,38 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FAQSection } from '@/components/FAQSection';
 import { CTA } from '@/components/CTA';
+import { ArticleSchema, BreadcrumbSchema } from '@/components/SchemaMarkup';
+
+const OG_IMAGE = 'https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/cozy-etiquette-interior';
 
 export const metadata: Metadata = {
   title: 'Cannabis Club Etiquette in Madrid — Rules, Tips & What to Expect (2026)',
   description: 'Learn the essential rules and etiquette for cannabis social clubs in Madrid. Don\'t make these mistakes on your first visit. Complete guide to club culture and social norms.',
-  keywords: 'cannabis club etiquette, Madrid cannabis rules, social club tips, what to expect cannabis club',
+  keywords: [
+    'cannabis club etiquette',
+    'Madrid cannabis rules',
+    'social club tips',
+    'what to expect cannabis club',
+    'cannabis club behavior',
+  ],
+  authors: [{ name: 'Madrid Cannabis Guide' }],
   openGraph: {
     title: 'Cannabis Club Etiquette in Madrid — Rules, Tips & What to Expect (2026)',
     description: 'Learn the essential rules and etiquette for cannabis social clubs in Madrid. Don\'t make these mistakes on your first visit.',
     type: 'article',
     locale: 'es_ES',
     url: 'https://madridcannabisguide.com/cannabis-club-etiquette',
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Cannabis Club Etiquette in Madrid' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Cannabis Club Etiquette in Madrid',
     description: 'Learn the essential rules and etiquette for cannabis social clubs in Madrid.',
+    images: [OG_IMAGE],
   },
+  metadataBase: new URL('https://madridcannabisguide.com'),
 };
 
 const faqItems = [
@@ -48,34 +61,18 @@ const faqItems = [
 export default function CannabisClubEtiquettePage() {
   return (
     <main className="w-full bg-[#0a0f0d]">
-      {/* JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Article',
-            headline: 'Cannabis Club Etiquette in Madrid — Rules, Tips & What to Expect (2026)',
-            description: 'Learn the essential rules and etiquette for cannabis social clubs in Madrid.',
-            image: 'https://madridcannabisguide.com/og-etiquette.jpg',
-            datePublished: '2026-03-09',
-            dateModified: '2026-03-09',
-            author: {
-              '@type': 'Organization',
-              name: 'Madrid Cannabis Guide',
-              url: 'https://madridcannabisguide.com',
-            },
-            publisher: {
-              '@type': 'Organization',
-              name: 'Madrid Cannabis Guide',
-              logo: {
-                '@type': 'ImageObject',
-                url: 'https://madridcannabisguide.com/logo.png',
-              },
-            },
-          }),
-        }}
+      <ArticleSchema
+        title="Cannabis Club Etiquette in Madrid — Rules, Tips & What to Expect (2026)"
+        description="Learn the essential rules and etiquette for cannabis social clubs in Madrid."
+        datePublished="2026-03-09"
+        dateModified="2026-03-09"
+        image={OG_IMAGE}
+        url="https://madridcannabisguide.com/cannabis-club-etiquette"
       />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: '/' },
+        { name: 'Cannabis Club Etiquette', url: '/cannabis-club-etiquette' },
+      ]} />
 
       {/* HERO SECTION */}
       <section className="relative overflow-hidden py-16 px-4 sm:py-24 md:py-32">
