@@ -11,8 +11,8 @@ const GUIDE_CARDS = [
     description:
       "Understand the legal landscape of cannabis in Spain, what's allowed and what's not, and how social clubs operate within the law.",
     href: "/cannabis-laws-spain",
-    image: `${CLD}/f_auto,q_auto,w_800/madrid-cannabis-guide/spanish-architecture-laws`,
-    alt: "Historic Spanish government architecture in Madrid representing cannabis laws and legal framework in Spain 2026",
+    image: `${CLD}/f_auto,q_auto,w_800/madrid-cannabis-guide/spanish-congress-laws-v2`,
+    alt: "Spanish Congress of Deputies in Madrid with neoclassical columns representing cannabis legislation and legal framework in Spain 2026",
   },
   {
     emoji: "🔑",
@@ -20,8 +20,8 @@ const GUIDE_CARDS = [
     description:
       "Step-by-step instructions on finding a club, getting invited, membership requirements, and what to expect on your first visit.",
     href: "/how-to-join-cannabis-club",
-    image: `${CLD}/f_auto,q_auto,w_800/madrid-cannabis-guide/people-social-gathering`,
-    alt: "Group of friends enjoying a social gathering showing how to join a cannabis club community in Madrid",
+    image: `${CLD}/f_auto,q_auto,w_800/madrid-cannabis-guide/friends-welcome-join-v2`,
+    alt: "Diverse group of friends welcoming new member at a social club gathering in Madrid showing how to join a cannabis club",
   },
   {
     emoji: "📍",
@@ -47,8 +47,8 @@ const GUIDE_CARDS = [
     description:
       "Complete pricing guide for cannabis in Madrid, membership costs, quality indicators, product types, and how to get the best value.",
     href: "/prices-what-to-expect",
-    image: `${CLD}/f_auto,q_auto,w_800/madrid-cannabis-guide/euro-prices-money`,
-    alt: "Euro currency representing cannabis club membership prices and costs in Madrid Spain 2026",
+    image: `${CLD}/f_auto,q_auto,w_800/madrid-cannabis-guide/price-menu-board-v2`,
+    alt: "Stylish menu board with warm lighting representing cannabis club pricing and membership costs in Madrid Spain 2026",
   },
   {
     emoji: "🌍",

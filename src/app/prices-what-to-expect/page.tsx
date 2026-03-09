@@ -79,7 +79,7 @@ export default function PricesWhatToExpectPage() {
 
       {/* HERO SECTION */}
       <section className="relative overflow-hidden py-16 px-4 sm:py-24 md:py-32">
-        <div className="absolute inset-0 -z-20"><Image src="https://res.cloudinary.com/dhuc2wmhp/image/upload/f_auto,q_auto,w_1200/madrid-cannabis-guide/euro-prices-money" alt="Euro currency representing cannabis club membership prices and costs in Madrid Spain" fill className="object-cover" sizes="100vw" priority /></div><div className="absolute inset-0 -z-15 bg-[#0a0f0d]/75" /><div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute inset-0 -z-20"><Image src="https://res.cloudinary.com/dhuc2wmhp/image/upload/f_auto,q_auto,w_1200/madrid-cannabis-guide/price-menu-board-v2" alt="Stylish menu board with warm lighting representing cannabis club pricing and membership costs in Madrid Spain 2026" fill className="object-cover" sizes="100vw" priority /></div><div className="absolute inset-0 -z-15 bg-[#0a0f0d]/75" /><div className="absolute inset-0 -z-10 overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-600 rounded-full mix-blend-screen opacity-5 blur-3xl" />
           <div className="absolute -bottom-32 left-0 w-96 h-96 bg-amber-600 rounded-full mix-blend-screen opacity-5 blur-3xl" />
         </div>
