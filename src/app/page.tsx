@@ -94,6 +94,28 @@ const faqData = [
 export default function Home() {
   return (
     <>
+      {/* WebSite Schema for sitelinks searchbox */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Madrid Cannabis Guide",
+            url: "https://madridcannabisguide.com",
+            description: "Complete guide to cannabis clubs, laws, neighborhoods, and etiquette in Madrid, Spain.",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: {
+                "@type": "EntryPoint",
+                urlTemplate: "https://madridcannabisguide.com/?q={search_term_string}",
+              },
+              "query-input": "required name=search_term_string",
+            },
+          }),
+        }}
+      />
+
       {/* FAQ Schema Markup */}
       <FAQSchema items={faqData} />
 

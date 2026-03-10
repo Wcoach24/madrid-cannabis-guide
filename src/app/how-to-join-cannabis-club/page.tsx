@@ -6,7 +6,7 @@ import { FAQSection } from '@/components/FAQSection';
 import { ArticleSchema, BreadcrumbSchema } from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
-  title: 'How to Join a Cannabis Club in Madrid — Step-by-Step Guide (2026)',
+  title: 'How to Join a Cannabis Club in Madrid (2026)',
   description:
     'Complete step-by-step guide to joining a cannabis social club in Madrid in 2026. Learn about membership requirements, the invitation process, and what to expect on your first visit.',
   keywords: [
@@ -17,10 +17,14 @@ export const metadata: Metadata = {
     'madrid cannabis club requirements',
   ],
   authors: [{ name: 'Madrid Cannabis Guide' }],
+  alternates: {
+    canonical: 'https://madridcannabisguide.com/how-to-join-cannabis-club',
+  },
   openGraph: {
     type: 'article',
     url: 'https://madridcannabisguide.com/how-to-join-cannabis-club',
-    title: 'How to Join a Cannabis Club in Madrid — Step-by-Step Guide',
+    locale: 'en_US',
+    title: 'How to Join a Cannabis Club in Madrid (2026)',
     description:
       'Complete guide to joining a cannabis social club in Madrid. Learn membership requirements and the full process.',
     images: [
@@ -34,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'How to Join Cannabis Club Madrid',
+    title: 'Join Cannabis Club Madrid 2026',
     description: 'Step-by-step guide to joining a cannabis club in Madrid.',
     images: ['https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/friends-welcome-join-v2'],
   },
@@ -86,6 +90,57 @@ export default function HowToJoinCannabisClubPage() {
         url="https://madridcannabisguide.com/how-to-join-cannabis-club"
       />
       <BreadcrumbSchema items={breadcrumbs} />
+
+      {/* HowTo Schema for rich results */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: "How to Join a Cannabis Club in Madrid",
+            description: "Step-by-step guide to joining a cannabis social club in Madrid, Spain as a tourist or resident.",
+            totalTime: "PT1H",
+            estimatedCost: {
+              "@type": "MonetaryAmount",
+              currency: "EUR",
+              value: "20",
+            },
+            step: [
+              {
+                "@type": "HowToStep",
+                position: 1,
+                name: "Research and Choose a Club",
+                text: "Browse online platforms and trusted directories to find a reputable cannabis club in Madrid that fits your preferences for location, atmosphere, and product selection.",
+              },
+              {
+                "@type": "HowToStep",
+                position: 2,
+                name: "Get an Invitation",
+                text: "Request an invitation through the club's website or from an existing member. Fill in your basic information and preferred visit date.",
+              },
+              {
+                "@type": "HowToStep",
+                position: 3,
+                name: "Prepare Your Documents",
+                text: "Gather your valid photo ID (passport, national ID, or driver's license), proof you are 18+, and cash for the membership fee (€15-30).",
+              },
+              {
+                "@type": "HowToStep",
+                position: 4,
+                name: "Visit the Club",
+                text: "Bring your invitation and ID to the club. Complete the short onboarding process, pay your membership fee, and receive your membership card.",
+              },
+              {
+                "@type": "HowToStep",
+                position: 5,
+                name: "Enjoy Responsibly",
+                text: "Follow club etiquette, respect other members' privacy, consume only within the club premises, and never take products outside.",
+              },
+            ],
+          }),
+        }}
+      />
 
       <main className="w-full bg-gradient-to-b from-[#0a0f0d] via-[#0a0f0d] to-[#111916]">
         {/* Hero Section */}

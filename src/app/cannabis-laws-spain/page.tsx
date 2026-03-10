@@ -6,7 +6,7 @@ import { FAQSection } from '@/components/FAQSection';
 import { ArticleSchema, BreadcrumbSchema } from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
-  title: 'Cannabis Laws in Spain 2026 — What Tourists Need to Know',
+  title: 'Cannabis Laws Spain 2026 — Tourist Legal Guide',
   description:
     'Complete guide to cannabis laws in Spain 2026. Learn what\'s legal, penalties for violations, differences by region, and what tourists can and cannot do.',
   keywords: [
@@ -17,10 +17,14 @@ export const metadata: Metadata = {
     'cannabis social clubs legal spain',
   ],
   authors: [{ name: 'Madrid Cannabis Guide' }],
+  alternates: {
+    canonical: 'https://madridcannabisguide.com/cannabis-laws-spain',
+  },
   openGraph: {
     type: 'article',
     url: 'https://madridcannabisguide.com/cannabis-laws-spain',
-    title: 'Cannabis Laws in Spain 2026 — What Tourists Need to Know',
+    locale: 'en_US',
+    title: 'Cannabis Laws Spain 2026 — Tourist Legal Guide',
     description:
       'Complete guide to cannabis laws in Spain 2026. Learn what\'s legal, penalties for violations, and more.',
     images: [
@@ -34,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cannabis Laws in Spain 2026',
+    title: 'Cannabis Laws Spain 2026',
     description:
       'Complete guide to cannabis laws in Spain 2026. Learn what\'s legal and what\'s not.',
     images: ['https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/spanish-congress-laws-v2'],
@@ -154,7 +158,7 @@ export default function CannabisCannabisLawsPage() {
                 </div>
 
                 <p className="leading-relaxed">
-                  Spain decriminalized cannabis for personal use in the 1990s, and courts have consistently ruled that private consumption in spaces where third parties can't access cannabis (your home, a private club) isn't prosecutable. This is the foundation of the cannabis social club scene.
+                  Spain decriminalized cannabis for personal use in the 1990s under the <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2015-3439" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2">Ley Orgánica 4/2015 (Citizen Security Law)</a>, and courts have consistently ruled that private consumption in spaces where third parties can't access cannabis (your home, a private club) isn't prosecutable. This is the foundation of the cannabis social club scene.
                 </p>
               </div>
             </section>
@@ -291,7 +295,7 @@ export default function CannabisCannabisLawsPage() {
 
               <div className="space-y-6 text-[#e8ece9]/80">
                 <p className="leading-relaxed">
-                  Spain treats cannabis violations as administrative infractions, not criminal offenses (unless dealing/trafficking). Here's what you need to know:
+                  Under the <a href="https://en.wikipedia.org/wiki/Cannabis_in_Spain" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2">Spanish drug policy framework</a>, cannabis violations are treated as administrative infractions, not criminal offenses (unless dealing/trafficking). Here's what you need to know:
                 </p>
 
                 <div className="overflow-x-auto">

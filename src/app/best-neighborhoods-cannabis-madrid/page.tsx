@@ -6,7 +6,7 @@ import { FAQSection } from '@/components/FAQSection';
 import { ArticleSchema, BreadcrumbSchema } from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
-  title: 'Best Neighborhoods for Cannabis Clubs in Madrid — District Guide (2026)',
+  title: 'Best Neighborhoods for Cannabis Clubs Madrid (2026)',
   description:
     'Complete district guide to cannabis clubs in Madrid. Find the best neighborhoods, top clubs by area, transport tips, and how to choose based on your location.',
   keywords: [
@@ -17,10 +17,14 @@ export const metadata: Metadata = {
     'vallehermoso chamberí cannabis',
   ],
   authors: [{ name: 'Madrid Cannabis Guide' }],
+  alternates: {
+    canonical: 'https://madridcannabisguide.com/best-neighborhoods-cannabis-madrid',
+  },
   openGraph: {
     type: 'article',
     url: 'https://madridcannabisguide.com/best-neighborhoods-cannabis-madrid',
-    title: 'Best Neighborhoods for Cannabis Clubs in Madrid — District Guide',
+    locale: 'en_US',
+    title: 'Best Neighborhoods for Cannabis Clubs Madrid (2026)',
     description:
       'Complete guide to cannabis clubs by neighborhood in Madrid. Find the best areas and clubs.',
     images: [
@@ -34,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Cannabis Neighborhoods in Madrid',
+    title: 'Best Cannabis Neighborhoods Madrid',
     description:
       'Complete guide to cannabis clubs by neighborhood in Madrid.',
     images: ['https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/madrid-colorful-street'],

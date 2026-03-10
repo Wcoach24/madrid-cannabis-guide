@@ -8,7 +8,7 @@ import { ArticleSchema, BreadcrumbSchema } from '@/components/SchemaMarkup';
 const OG_IMAGE = 'https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/madrid-plaza-comparison';
 
 export const metadata: Metadata = {
-  title: 'Madrid vs Amsterdam for Cannabis — Which City is Better in 2026?',
+  title: 'Madrid vs Amsterdam Cannabis — Comparison (2026)',
   description: 'Compare cannabis culture, prices, legal status, and experiences in Madrid and Amsterdam. Which city is better for cannabis tourism? Complete analysis.',
   keywords: [
     'madrid vs amsterdam',
@@ -18,17 +18,20 @@ export const metadata: Metadata = {
     'amsterdam vs madrid weed',
   ],
   authors: [{ name: 'Madrid Cannabis Guide' }],
+  alternates: {
+    canonical: 'https://madridcannabisguide.com/madrid-vs-amsterdam',
+  },
   openGraph: {
-    title: 'Madrid vs Amsterdam for Cannabis — Which City is Better in 2026?',
+    title: 'Madrid vs Amsterdam Cannabis — Comparison (2026)',
     description: 'Compare cannabis culture, prices, legal status, and experiences in Madrid and Amsterdam.',
     type: 'article',
-    locale: 'es_ES',
+    locale: 'en_US',
     url: 'https://madridcannabisguide.com/madrid-vs-amsterdam',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Madrid vs Amsterdam Cannabis Comparison' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Madrid vs Amsterdam for Cannabis',
+    title: 'Madrid vs Amsterdam Cannabis',
     description: 'Which European city is better for cannabis tourism?',
     images: [OG_IMAGE],
   },
@@ -156,7 +159,7 @@ export default function MadridVsAmsterdamPage() {
               <div className="p-4 rounded-lg bg-[#111916] border border-[#1a2420]">
                 <h4 className="font-semibold text-[#e8ece9] mb-2">Legal Status</h4>
                 <p className="text-[#e8ece9]/70 text-sm">
-                  Cannabis is decriminalized. Coffeeshops operate under explicit government tolerance and licensing. Sales are technically illegal but regulated and taxed.
+                  Cannabis is decriminalized. Coffeeshops operate under the <a href="https://www.government.nl/topics/drugs/toleration-policy-regarding-soft-drugs-and-coffee-shops" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2">Dutch gedoogbeleid (tolerance policy)</a> with explicit government licensing. Sales are technically illegal but regulated and taxed.
                 </p>
               </div>
 

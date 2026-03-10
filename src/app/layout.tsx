@@ -19,21 +19,25 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Madrid Cannabis Guide — Your Complete Guide to Cannabis in Madrid (2026)",
+  title: "Cannabis Clubs Madrid — Complete Guide (2026)",
   description:
     "Discover the complete guide to cannabis clubs, laws, neighborhoods, and etiquette in Madrid. Learn how to join clubs, find the best dispensaries, and navigate cannabis culture in Spain's capital.",
   keywords: [
-    "cannabis guide Madrid",
     "cannabis clubs Madrid",
+    "weed madrid",
     "how to join cannabis clubs",
     "Madrid cannabis laws",
     "cannabis neighborhoods Madrid",
   ],
   authors: [{ name: "Madrid Cannabis Guide" }],
+  alternates: {
+    canonical: "https://madridcannabisguide.com",
+  },
   openGraph: {
     type: "website",
     url: "https://madridcannabisguide.com",
-    title: "Madrid Cannabis Guide — Your Complete Guide to Cannabis in Madrid",
+    locale: "en_US",
+    title: "Cannabis Clubs Madrid — Complete Guide (2026)",
     description:
       "Discover the complete guide to cannabis clubs, laws, neighborhoods, and etiquette in Madrid.",
     images: [
@@ -47,7 +51,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Madrid Cannabis Guide",
+    title: "Cannabis Clubs Madrid — Guide 2026",
     description:
       "Your complete guide to cannabis in Madrid — clubs, laws, neighborhoods, and etiquette.",
     images: ["https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/hero-madrid-gran-via"],

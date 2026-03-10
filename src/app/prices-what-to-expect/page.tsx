@@ -8,7 +8,7 @@ import { ArticleSchema, BreadcrumbSchema } from '@/components/SchemaMarkup';
 const OG_IMAGE = 'https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/price-menu-board-v2';
 
 export const metadata: Metadata = {
-  title: 'Cannabis Club Prices in Madrid 2026 — What to Expect & Cost Guide',
+  title: 'Cannabis Prices Madrid 2026 — Cost Guide',
   description: 'Complete pricing guide for cannabis in Madrid social clubs. Membership fees, gram prices, quality levels, and how to budget for your first visit. Updated 2026.',
   keywords: [
     'weed prices madrid',
@@ -18,17 +18,20 @@ export const metadata: Metadata = {
     'madrid cannabis price list',
   ],
   authors: [{ name: 'Madrid Cannabis Guide' }],
+  alternates: {
+    canonical: 'https://madridcannabisguide.com/prices-what-to-expect',
+  },
   openGraph: {
-    title: 'Cannabis Club Prices in Madrid 2026 — What to Expect & Cost Guide',
+    title: 'Cannabis Prices Madrid 2026 — Cost Guide',
     description: 'Complete pricing guide for cannabis in Madrid social clubs. Membership fees, gram prices, and how to budget.',
     type: 'article',
-    locale: 'es_ES',
+    locale: 'en_US',
     url: 'https://madridcannabisguide.com/prices-what-to-expect',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Cannabis Club Prices in Madrid 2026' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cannabis Club Prices in Madrid 2026',
+    title: 'Cannabis Prices Madrid 2026',
     description: 'Complete pricing guide for cannabis in Madrid social clubs.',
     images: [OG_IMAGE],
   },
@@ -137,7 +140,7 @@ export default function PricesWhatToExpectPage() {
             <div className="p-6 rounded-lg bg-[#111916] border border-[#1a2420]">
               <h3 className="text-xl font-semibold text-emerald-400 mb-3">The "Contribution" Model</h3>
               <p>
-                Cannabis clubs don't sell cannabis—they sell "contributions." This <Link href="/cannabis-laws-spain" className="text-emerald-400 underline underline-offset-2 hover:text-emerald-300 transition-colors">legal distinction</Link> is important. When you pay €10 for a gram, you're technically making a "contribution" to the club's operating costs, not purchasing a product. This gray area legal structure allows clubs to operate. Understanding this model helps explain why prices are what they are.
+                Cannabis clubs don't sell cannabis—they sell "contributions." This <Link href="/cannabis-laws-spain" className="text-emerald-400 underline underline-offset-2 hover:text-emerald-300 transition-colors">legal distinction</Link> under <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2015-3439" target="_blank" rel="noopener noreferrer" className="text-emerald-400 underline underline-offset-2 hover:text-emerald-300 transition-colors">Spanish law</a> is important. When you pay €10 for a gram, you're technically making a "contribution" to the club's operating costs, not purchasing a product. This gray area legal structure allows clubs to operate. Understanding this model helps explain why prices are what they are.
               </p>
             </div>
 

@@ -8,7 +8,7 @@ import { ArticleSchema, BreadcrumbSchema } from '@/components/SchemaMarkup';
 const OG_IMAGE = 'https://res.cloudinary.com/dhuc2wmhp/image/upload/f_jpg,q_80,w_1200,h_630,c_fill/madrid-cannabis-guide/cozy-etiquette-interior';
 
 export const metadata: Metadata = {
-  title: 'Cannabis Club Etiquette in Madrid — Rules, Tips & What to Expect (2026)',
+  title: 'Cannabis Club Etiquette Madrid — Rules & Tips (2026)',
   description: 'Learn the essential rules and etiquette for cannabis social clubs in Madrid. Don\'t make these mistakes on your first visit. Complete guide to club culture and social norms.',
   keywords: [
     'cannabis club etiquette',
@@ -18,17 +18,20 @@ export const metadata: Metadata = {
     'cannabis club behavior',
   ],
   authors: [{ name: 'Madrid Cannabis Guide' }],
+  alternates: {
+    canonical: 'https://madridcannabisguide.com/cannabis-club-etiquette',
+  },
   openGraph: {
-    title: 'Cannabis Club Etiquette in Madrid — Rules, Tips & What to Expect (2026)',
+    title: 'Cannabis Club Etiquette Madrid — Rules & Tips (2026)',
     description: 'Learn the essential rules and etiquette for cannabis social clubs in Madrid. Don\'t make these mistakes on your first visit.',
     type: 'article',
-    locale: 'es_ES',
+    locale: 'en_US',
     url: 'https://madridcannabisguide.com/cannabis-club-etiquette',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Cannabis Club Etiquette in Madrid' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cannabis Club Etiquette in Madrid',
+    title: 'Cannabis Club Etiquette Madrid',
     description: 'Learn the essential rules and etiquette for cannabis social clubs in Madrid.',
     images: [OG_IMAGE],
   },
@@ -137,7 +140,7 @@ export default function CannabisClubEtiquettePage() {
             <div className="p-6 rounded-lg bg-[#111916] border border-emerald-900/30">
               <h3 className="text-lg font-semibold text-emerald-300 mb-3">The Core Principle</h3>
               <p>
-                Cannabis clubs operate in a <Link href="/cannabis-laws-spain" className="text-emerald-400 underline underline-offset-2 hover:text-emerald-300 transition-colors">legal gray area</Link>. They work because members act responsibly and maintain discretion. Breaking etiquette rules puts the entire club at risk. When you join, you're part of a community that has to police itself and self-regulate.
+                Cannabis clubs operate as <a href="https://en.wikipedia.org/wiki/Cannabis_social_club" target="_blank" rel="noopener noreferrer" className="text-emerald-400 underline underline-offset-2 hover:text-emerald-300 transition-colors">cannabis social clubs</a> in a <Link href="/cannabis-laws-spain" className="text-emerald-400 underline underline-offset-2 hover:text-emerald-300 transition-colors">legal gray area</Link>. They work because members act responsibly and maintain discretion. Breaking etiquette rules puts the entire club at risk. When you join, you're part of a community that has to police itself and self-regulate.
               </p>
             </div>
 
