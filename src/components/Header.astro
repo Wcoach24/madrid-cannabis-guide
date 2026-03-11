@@ -1,0 +1,115 @@
+---
+const navLinks = [
+  { href: '#legal', label: 'Legal Rules' },
+  { href: '#street-vs-clubs', label: 'Street vs. Clubs' },
+  { href: '#tourist-requirements', label: 'Requirements' },
+  { href: '#avoid-scams', label: 'Avoid Scams' },
+];
+---
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo" aria-label="Madrid Cannabis Guide home">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <path d="M14 2C14 2 8 8 8 14c0 3 1.5 5.5 4 7v3h4v-3c2.5-1.5 4-4 4-7 0-6-6-12-6-12z" fill="#10b981" opacity="0.9"/>
+        <path d="M14 6c0 0-3 4-3 8s1.5 4.5 3 5.5c1.5-1 3-1.5 3-5.5s-3-8-3-8z" fill="#34d399" opacity="0.7"/>
+      </svg>
+      <span>Madrid Cannabis Guide</span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Main navigation">
+      {navLinks.map(({ href, label }) => (
+        <a href={href} class="nav-link">{label}</a>
+      ))}
+    </nav>
+
+    <a
+      href="https://weedmadrid.com/invite"
+      rel="sponsored noopener"
+      target="_blank"
+      class="header-cta"
+    >
+      Get Invitation
+    </a>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(10, 15, 13, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #1f2622;
+  }
+
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.85rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #e8ece9;
+  }
+
+  .nav-desktop {
+    display: none;
+    gap: 0.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .nav-desktop {
+      display: flex;
+    }
+  }
+
+  .nav-link {
+    color: #b8bdb8;
+    text-decoration: none;
+    font-size: 0.875rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    transition: color 0.2s, background 0.2s;
+  }
+
+  .nav-link:hover {
+    color: #e8ece9;
+    background: rgba(16, 185, 129, 0.08);
+  }
+
+  .header-cta {
+    display: none;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    white-space: nowrap;
+  }
+
+  @media (min-width: 768px) {
+    .header-cta {
+      display: inline-flex;
+    }
+  }
+
+  .header-cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+  }
+</style>
