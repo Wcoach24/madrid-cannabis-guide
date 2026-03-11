@@ -13,7 +13,7 @@ const {
   title,
   description,
   canonical = Astro.url.href,
-  ogImage = 'https://res.cloudinary.com/dhljdz53n/image/upload/v1749375825/madrid-cannabis-hero_jlmzap.webp',
+  ogImage = 'https://res.cloudinary.com/dhuc2wmhp/image/upload/f_auto,q_auto,w_1200/madrid-cannabis-guide/hero-madrid-gran-via.jpg',
   type = 'website',
   publishedDate,
   modifiedDate,
@@ -21,8 +21,9 @@ const {
 
 const siteName = 'Madrid Cannabis Guide';
 const siteUrl = 'https://madridcannabisguide.com';
+const heroImage = 'https://res.cloudinary.com/dhuc2wmhp/image/upload/f_auto,q_auto,w_1400/madrid-cannabis-guide/hero-madrid-gran-via.jpg';
 
-// FAQ structured data for homepage
+// FAQ structured data
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -40,7 +41,7 @@ const faqSchema = {
       name: 'How can tourists access a cannabis social club in Madrid?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Tourists need a verified invitation from an existing member, a valid passport or EU ID proving they are 21+, and must pay a one-time membership fee (typically \u20ac20\u2013\u20ac50). Walk-ins are not accepted at legitimate clubs. The invitation process exists because Spanish law only permits private, members-only associations.',
+        text: 'Tourists need a verified invitation from an existing member, a valid passport or EU ID proving they are 21+, and must pay a one-time membership fee (typically \u20ac20\u2013\u20ac50). Walk-ins are not accepted at legitimate clubs.',
       },
     },
     {
@@ -48,7 +49,23 @@ const faqSchema = {
       name: 'What are the fines for buying cannabis on the street in Madrid?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Buying or possessing cannabis in public spaces in Madrid carries administrative fines between \u20ac601 and \u20ac30,000 under Spain\'s Citizen Safety Law (Ley Mordaza). Street dealers often sell adulterated products and specifically target tourists. Police in tourist areas actively enforce these laws, especially around Sol, Gran V\u00eda, and Malasa\u00f1a.',
+        text: 'Buying or possessing cannabis in public spaces in Madrid carries administrative fines between \u20ac601 and \u20ac30,000 under Spain\'s Citizen Safety Law (Ley Mordaza). Police in tourist areas actively enforce these laws.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I bring cannabis from a Madrid social club to my hotel?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Transporting cannabis outside the club premises is illegal in Spain, even if you obtained it legally inside a licensed social club. Consumption must happen within the private club space. Carrying cannabis on public streets constitutes public possession and can result in fines starting at \u20ac601.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does it cost to join a cannabis social club in Madrid?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'One-time membership fees typically range from \u20ac20 to \u20ac50 at legitimate Madrid social clubs. Inside the club, product contributions vary but are generally comparable to or lower than street prices \u2014 with the critical difference of verified quality and full legal protection.',
       },
     },
   ],
@@ -68,7 +85,55 @@ const organizationSchema = {
   '@type': 'Organization',
   name: siteName,
   url: siteUrl,
-  logo: `${siteUrl}/logo.svg`,
+  logo: `${siteUrl}/favicon.svg`,
+};
+
+// Article schema for main guide
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Madrid Cannabis Guide 2026: Legal Rules & Tourist Safety',
+  description: description,
+  image: ogImage,
+  datePublished: '2026-03-09',
+  dateModified: '2026-03-11',
+  author: {
+    '@type': 'Organization',
+    name: siteName,
+    url: siteUrl,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: siteName,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/favicon.svg`,
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': siteUrl,
+  },
+};
+
+// Breadcrumb schema
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: siteUrl,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Madrid Cannabis Guide 2026',
+      item: siteUrl,
+    },
+  ],
 };
 ---
 
@@ -77,6 +142,9 @@ const organizationSchema = {
 <title>{title}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonical} />
+
+<!-- LCP Preload: Hero image -->
+<link rel="preload" as="image" href={heroImage} fetchpriority="high" />
 
 <!-- Open Graph -->
 <meta property="og:type" content={type} />
@@ -105,3 +173,5 @@ const organizationSchema = {
 <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
 <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
 <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
