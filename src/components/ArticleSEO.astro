@@ -32,7 +32,12 @@ const articleSchema = {
   image: ogImage,
   datePublished: publishedDate,
   dateModified: modifiedDate,
-  author: { '@type': 'Organization', name: siteName, url: siteUrl },
+  author: {
+    '@type': 'Organization',
+    name: 'Madrid Cannabis Guide Editorial Team',
+    url: siteUrl,
+    description: 'Madrid-based writers covering Spanish cannabis policy, club culture, and tourist safety.',
+  },
   publisher: {
     '@type': 'Organization',
     name: siteName,

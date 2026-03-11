@@ -3,6 +3,7 @@ import ArticleSEO from '../components/ArticleSEO.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import PremiumClubCTA from '../components/PremiumClubCTA.astro';
+import AuthorBio from '../components/AuthorBio.astro';
 import '../styles/global.css';
 
 interface TocItem {
@@ -103,6 +104,11 @@ const opt = 'f_auto,q_auto';
           </nav>
         )}
 
+        <!-- Author Byline (E-E-A-T) -->
+        <div class="container">
+          <AuthorBio compact />
+        </div>
+
         <!-- Article Content -->
         <div class="article__body container">
           <slot />
@@ -125,13 +131,23 @@ const opt = 'f_auto,q_auto';
           </aside>
         )}
 
+        <!-- Author Bio (E-E-A-T) -->
+        <div class="container">
+          <AuthorBio />
+        </div>
+
         <!-- Final CTA -->
         <div class="container">
           <PremiumClubCTA variant="banner" />
         </div>
 
-        <!-- Last Updated (E-E-A-T) -->
-        <p class="last-updated container">Last updated: <time datetime={modifiedDate}>{new Date(modifiedDate + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time></p>
+        <!-- Dates (E-E-A-T) -->
+        <p class="last-updated container">
+          Published: <time datetime={publishedDate}>{new Date(publishedDate + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+          {publishedDate !== modifiedDate && (
+            <> · Last updated: <time datetime={modifiedDate}>{new Date(modifiedDate + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time></>
+          )}
+        </p>
 
       </article>
     </main>

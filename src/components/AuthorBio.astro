@@ -1,0 +1,77 @@
+---
+/**
+ * AuthorBio – E-E-A-T signal component
+ * Displays author credentials and "About the Author" section
+ * for trust signals that Google values in YMYL-adjacent content.
+ */
+interface Props {
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+---
+
+{compact ? (
+  <div class="author-byline">
+    <span class="author-byline__text">
+      Written by the <strong>Madrid Cannabis Guide</strong> editorial team — Madrid-based writers covering cannabis policy, club culture, and tourist safety since 2024.
+    </span>
+  </div>
+) : (
+  <aside class="author-bio" aria-label="About the editorial team">
+    <h3 class="author-bio__title">About This Guide</h3>
+    <p class="author-bio__text">
+      This article is written and maintained by the <strong>Madrid Cannabis Guide</strong> editorial team. We are Madrid-based writers who cover Spanish cannabis policy, social club culture, and tourist safety. Our information is cross-referenced with the <em>Boletín Oficial del Estado</em> (Spain's official gazette), the <em>Ley Orgánica 4/2015</em> (Citizen Safety Law), and first-hand reporting from Madrid's cannabis association community.
+    </p>
+    <p class="author-bio__text">
+      We update this content regularly as regulations change. If you spot an error or outdated detail, <a href="mailto:info@madridcannabisguide.com">let us know</a>.
+    </p>
+    <p class="author-bio__disclaimer">
+      <strong>Disclaimer:</strong> This guide is for informational purposes only and does not constitute legal advice. Cannabis laws vary and are subject to change. Consult a qualified Spanish lawyer for legal guidance specific to your situation.
+    </p>
+  </aside>
+)}
+
+<style>
+  .author-byline {
+    padding: 0.75rem 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #1f2622;
+    font-size: 0.85rem;
+    color: #9ca3af;
+  }
+  .author-byline__text strong {
+    color: #b8bdb8;
+  }
+  .author-bio {
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid #1f2622;
+    border-radius: 10px;
+    background: rgba(16, 185, 129, 0.03);
+  }
+  .author-bio__title {
+    font-size: 1rem;
+    color: #e8ece9;
+    margin: 0 0 0.75rem;
+  }
+  .author-bio__text {
+    font-size: 0.9rem;
+    color: #b8bdb8;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+  .author-bio__text:last-of-type {
+    margin-bottom: 0.75rem;
+  }
+  .author-bio__disclaimer {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-bottom: 0;
+    padding-top: 0.75rem;
+    border-top: 1px solid #1f2622;
+  }
+  .author-bio__disclaimer strong {
+    color: #9ca3af;
+  }
+</style>
