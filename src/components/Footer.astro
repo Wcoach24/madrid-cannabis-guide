@@ -1,0 +1,63 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-disclaimer">
+      <p><strong>Legal Disclaimer:</strong> This website provides general information about cannabis regulations in Madrid, Spain. It does not constitute legal advice. Cannabis laws change frequently \u2014 always verify current regulations with local authorities. Public consumption and street purchases are illegal in Spain.</p>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {currentYear} Madrid Cannabis Guide. All rights reserved.</p>
+      <p class="footer-note">Informational purposes only. We do not sell, distribute, or promote the sale of any controlled substance.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid #1f2622;
+    background: #080c0a;
+    padding: 2.5rem 1.5rem;
+    margin-top: 4rem;
+  }
+
+  .footer-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .footer-disclaimer {
+    background: rgba(245, 158, 11, 0.06);
+    border: 1px solid rgba(245, 158, 11, 0.15);
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-disclaimer p {
+    color: #b8bdb8;
+    font-size: 0.8rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .footer-disclaimer strong {
+    color: #f59e0b;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    color: #6b7280;
+    font-size: 0.75rem;
+    margin: 0.25rem 0;
+  }
+
+  .footer-note {
+    font-style: italic;
+  }
+</style>

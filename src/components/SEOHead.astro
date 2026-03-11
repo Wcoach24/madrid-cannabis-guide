@@ -1,0 +1,107 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  type?: 'website' | 'article';
+  publishedDate?: string;
+  modifiedDate?: string;
+}
+
+const {
+  title,
+  description,
+  canonical = Astro.url.href,
+  ogImage = 'https://res.cloudinary.com/dhljdz53n/image/upload/v1749375825/madrid-cannabis-hero_jlmzap.webp',
+  type = 'website',
+  publishedDate,
+  modifiedDate,
+} = Astro.props;
+
+const siteName = 'Madrid Cannabis Guide';
+const siteUrl = 'https://madridcannabisguide.com';
+
+// FAQ structured data for homepage
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is cannabis legal in Madrid for tourists?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Cannabis is decriminalized for private use in Spain. Public consumption and purchase remain illegal with fines up to \u20ac600. Tourists can legally consume cannabis only inside licensed private social clubs through a valid membership invitation. Street purchases are always illegal regardless of nationality.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How can tourists access a cannabis social club in Madrid?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Tourists need a verified invitation from an existing member, a valid passport or EU ID proving they are 21+, and must pay a one-time membership fee (typically \u20ac20\u2013\u20ac50). Walk-ins are not accepted at legitimate clubs. The invitation process exists because Spanish law only permits private, members-only associations.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are the fines for buying cannabis on the street in Madrid?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Buying or possessing cannabis in public spaces in Madrid carries administrative fines between \u20ac601 and \u20ac30,000 under Spain\'s Citizen Safety Law (Ley Mordaza). Street dealers often sell adulterated products and specifically target tourists. Police in tourist areas actively enforce these laws, especially around Sol, Gran V\u00eda, and Malasa\u00f1a.',
+      },
+    },
+  ],
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: siteName,
+  url: siteUrl,
+  description: 'The Official 2026 Guide to Cannabis Rules in Madrid for Tourists',
+  inLanguage: 'en',
+};
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: siteName,
+  url: siteUrl,
+  logo: `${siteUrl}/logo.svg`,
+};
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+
+<!-- Open Graph -->
+<meta property="og:type" content={type} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+
+{publishedDate && <meta property="article:published_time" content={publishedDate} />}
+{modifiedDate && <meta property="article:modified_time" content={modifiedDate} />}
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<!-- Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
