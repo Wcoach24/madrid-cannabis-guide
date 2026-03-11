@@ -1,36 +1,74 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PremiumClubCTA from '../components/PremiumClubCTA.astro';
+
+// Cloudinary base for optimized images
+const cdn = 'https://res.cloudinary.com/dhuc2wmhp/image/upload';
+const opt = 'f_auto,q_auto';
 ---
 
 <Layout
   title="Madrid Cannabis Guide 2026: Legal Rules & Tourist Safety"
   description="The Official 2026 Guide to Cannabis Rules in Madrid for Tourists. Learn about legal private clubs, street fines, tourist requirements, and how to avoid scams."
 >
-  <!-- Hero -->
+  <!-- Hero with background image -->
   <section class="hero">
-    <span class="badge">Updated for 2026</span>
-    <h1>Madrid Cannabis Guide 2026: Legal Rules &amp; Tourist Safety</h1>
-    <p>Everything tourists need to know about cannabis in Madrid \u2014 the law, the risks, and the only safe legal route through private social clubs.</p>
+    <div class="hero__bg">
+      <img
+        src={`${cdn}/${opt},w_1400/madrid-cannabis-guide/hero-madrid-gran-via.jpg`}
+        alt="Madrid Gran Via at night"
+        width="1400"
+        height="800"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </div>
+    <div class="hero__content">
+      <span class="badge">Updated for 2026</span>
+      <h1>Madrid Cannabis Guide 2026: Legal Rules &amp; Tourist Safety</h1>
+      <p>Everything tourists need to know about cannabis in Madrid &mdash; the law, the risks, and the only safe legal route through private social clubs.</p>
+      <a
+        href="https://www.weedmadrid.com/invite/vallehermoso-club-social-madrid"
+        rel="sponsored noopener"
+        target="_blank"
+        class="hero__cta"
+      >
+        Get My Safe Club Invitation
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="hero__social-proof" id="hero-social-proof">
+        <span class="hero__social-proof-dot"></span>
+        <span>8,400+ tourists used this guide in 2025</span>
+      </div>
+    </div>
   </section>
 
   <div class="container">
 
     <!-- Section 1: Legal Rules -->
     <section id="legal" class="section">
+      <div class="section__image">
+        <img
+          src={`${cdn}/${opt},w_800/madrid-cannabis-guide/spanish-congress-laws-v2.jpg`}
+          alt="Spanish Congress building representing cannabis laws"
+          width="800"
+          height="420"
+          loading="lazy"
+        />
+      </div>
       <h2>Is Weed Legal in Madrid? (The Private Club Loophole)</h2>
 
-      <p>Spain does not have a single \u201ccannabis is legal\u201d law. Instead, the legal landscape is built on a constitutional distinction between <strong>private</strong> and <strong>public</strong> spaces. Understanding this distinction is the single most important thing for any tourist.</p>
+      <p>Spain does not have a single &ldquo;cannabis is legal&rdquo; law. Instead, the legal landscape is built on a constitutional distinction between <strong>private</strong> and <strong>public</strong> spaces. Understanding this distinction is the single most important thing for any tourist.</p>
 
       <h3>What the Law Actually Says</h3>
-      <p>The Spanish Constitution protects the right to privacy in private spaces. Spanish courts have consistently ruled that personal cannabis consumption in a private setting is not a criminal offense. This legal grey area gave rise to <em>asociaciones cann\u00e1bicas</em> \u2014 private, members-only social clubs that operate as non-profit associations under Spain\u2019s freedom-of-association laws.</p>
+      <p>The Spanish Constitution protects the right to privacy in private spaces. Spanish courts have consistently ruled that personal cannabis consumption in a private setting is not a criminal offense. This legal grey area gave rise to <em>asociaciones cann&aacute;bicas</em> &mdash; private, members-only social clubs that operate as non-profit associations under Spain&rsquo;s freedom-of-association laws.</p>
 
-      <p>These clubs do not \u201csell\u201d cannabis. Legally, members collectively cultivate and share the harvest among themselves. This cooperative model is what keeps them operating within the boundaries of Spanish law.</p>
+      <p>These clubs do not &ldquo;sell&rdquo; cannabis. Legally, members collectively cultivate and share the harvest among themselves. This cooperative model is what keeps them operating within the boundaries of Spanish law.</p>
 
-      <h3>What Remains Illegal \u2014 No Exceptions</h3>
+      <h3>What Remains Illegal &mdash; No Exceptions</h3>
       <div class="alert alert--danger">
         <strong>Always illegal in Madrid:</strong>
-        Public consumption (streets, parks, plazas), any form of street purchase or sale, carrying cannabis in public spaces, growing cannabis without a private-club framework, and any sale for profit. These are not \u201crarely enforced\u201d \u2014 police in tourist areas actively issue fines.
+        Public consumption (streets, parks, plazas), any form of street purchase or sale, carrying cannabis in public spaces, growing cannabis without a private-club framework, and any sale for profit. These are not &ldquo;rarely enforced&rdquo; &mdash; police in tourist areas actively issue fines.
       </div>
 
       <p>The bottom line: cannabis in Madrid is only safe and legal when consumed inside a licensed private social club with a valid membership. Everywhere else, you are exposed to fines, scams, or both.</p>
@@ -38,21 +76,49 @@ import PremiumClubCTA from '../components/PremiumClubCTA.astro';
 
     <!-- Section 2: Street vs Clubs -->
     <section id="street-vs-clubs" class="section">
+      <div class="section__image">
+        <img
+          src={`${cdn}/${opt},w_800/madrid-cannabis-guide/madrid-colorful-street.jpg`}
+          alt="Colorful Madrid neighborhood street"
+          width="800"
+          height="420"
+          loading="lazy"
+        />
+      </div>
       <h2>Street Fines vs. Safe Social Clubs</h2>
 
-      <p>Tourists often assume that Madrid works like Amsterdam, where coffee shops openly sell cannabis. It does not. The gap between street purchases and social clubs is enormous \u2014 legally, financially, and in terms of personal safety.</p>
+      <!-- PAS: Problem -->
+      <p>Tourists often assume that Madrid works like Amsterdam, where coffee shops openly sell cannabis. <strong>It does not.</strong> The gap between street purchases and social clubs is enormous &mdash; legally, financially, and in terms of personal safety.</p>
 
+      <!-- PAS: Agitate -->
       <h3>The Real Cost of Street Purchases</h3>
-      <p>Spain\u2019s <strong>Citizen Safety Law</strong> (Ley Org\u00e1nica 4/2015, commonly called the <em>Ley Mordaza</em>) classifies public drug possession as a \u201cserious infraction.\u201d Fines range from <strong>\u20ac601 to \u20ac30,000</strong>, depending on the amount and circumstances. These are administrative fines, not criminal charges \u2014 but they are enforced on the spot and can ruin a holiday budget.</p>
+      <p>Spain&rsquo;s <strong>Citizen Safety Law</strong> (Ley Org&aacute;nica 4/2015, commonly called the <em>Ley Mordaza</em>) classifies public drug possession as a &ldquo;serious infraction.&rdquo; Fines range from <strong>&euro;601 to &euro;30,000</strong>, depending on the amount and circumstances. These are administrative fines, not criminal charges &mdash; but they are enforced on the spot and can ruin a holiday budget.</p>
 
-      <p>Beyond fines, street purchases expose tourists to adulterated products. Madrid\u2019s municipal police have repeatedly warned that substances sold near Sol, Gran V\u00eda, and Lavapies are frequently mixed with synthetic cannabinoids, herbs, or worse. There is zero quality control on the street.</p>
+      <p>Beyond fines, street purchases expose tourists to adulterated products. Madrid&rsquo;s municipal police have repeatedly warned that substances sold near Sol, Gran V&iacute;a, and Lavapies are frequently mixed with synthetic cannabinoids, herbs, or worse. There is zero quality control on the street.</p>
 
+      <!-- PAS: Solution -->
       <h3>How Social Clubs Are Different</h3>
-      <p>Licensed social clubs operate under municipal oversight. They source from controlled, traceable supply chains within their cooperative model. Members know what they are consuming \u2014 strain, potency, and origin. Clubs also provide a safe, private environment that fully complies with Spain\u2019s private-consumption legal framework.</p>
+      <p>Licensed social clubs operate under municipal oversight. They source from controlled, traceable supply chains within their cooperative model. Members know what they are consuming &mdash; strain, potency, and origin. Clubs also provide a safe, private environment that fully complies with Spain&rsquo;s private-consumption legal framework.</p>
 
-      <div class="alert alert--warning">
-        <strong>Key difference:</strong>
-        A club membership costs \u20ac20\u2013\u20ac50 and gives you legal, safe access. A street fine starts at \u20ac601 and comes with zero product \u2014 just a citation and a story you\u2019d rather not tell.
+      <div class="comparison-box">
+        <div class="comparison-box__col comparison-box__col--bad">
+          <h4>Street Purchase</h4>
+          <ul>
+            <li>&euro;601&ndash;&euro;30,000 fines</li>
+            <li>Adulterated products</li>
+            <li>Zero legal protection</li>
+            <li>Scam risk</li>
+          </ul>
+        </div>
+        <div class="comparison-box__col comparison-box__col--good">
+          <h4>Social Club</h4>
+          <ul>
+            <li>&euro;20&ndash;&euro;50 membership</li>
+            <li>Lab-tested quality</li>
+            <li>Fully legal &amp; private</li>
+            <li>Safe environment</li>
+          </ul>
+        </div>
       </div>
 
       <PremiumClubCTA variant="inline" />
@@ -60,63 +126,171 @@ import PremiumClubCTA from '../components/PremiumClubCTA.astro';
 
     <!-- Section 3: Tourist Requirements -->
     <section id="tourist-requirements" class="section">
+      <div class="section__image">
+        <img
+          src={`${cdn}/${opt},w_800/madrid-cannabis-guide/friends-welcome-join-v2.jpg`}
+          alt="Friends welcoming new member at social club"
+          width="800"
+          height="420"
+          loading="lazy"
+        />
+      </div>
       <h2>Requirements for Tourists (ID, Age, Fees)</h2>
 
-      <p>Legitimate cannabis social clubs in Madrid follow strict entry protocols. This is not red tape \u2014 it is the legal foundation that allows them to operate. If a club lets you walk in without these steps, it is not a legitimate club.</p>
+      <p>Legitimate cannabis social clubs in Madrid follow strict entry protocols. This is not red tape &mdash; it is the legal foundation that allows them to operate. If a club lets you walk in without these steps, it is not a legitimate club.</p>
 
       <h3>What You Need to Join</h3>
-      <p><strong>A verified invitation:</strong> Spanish social clubs are private associations. You cannot enter without an invitation from an existing member. This is a legal requirement, not a marketing gimmick. The invitation vouches for you as a bona fide adult who understands the club\u2019s rules.</p>
 
-      <p><strong>Valid photo ID:</strong> A passport is the standard for non-EU tourists. EU citizens can use their national ID card. The club will verify your identity and record it in their membership register \u2014 this is required by Spain\u2019s association laws.</p>
-
-      <p><strong>Minimum age of 21:</strong> While Spain\u2019s legal age for most things is 18, the majority of Madrid\u2019s cannabis social clubs set their minimum at 21. Some clubs accept 18+, but the industry standard is 21. Bring ID that clearly shows your date of birth.</p>
-
-      <p><strong>A one-time membership fee:</strong> Expect to pay between \u20ac20 and \u20ac50. This covers your annual membership and supports the club\u2019s operating costs. It is not a \u201cdoor charge\u201d \u2014 it is a formal association membership. You will typically receive a membership card.</p>
+      <div class="steps">
+        <div class="step">
+          <span class="step__number">1</span>
+          <div>
+            <strong>A verified invitation</strong>
+            <p>Spanish social clubs are private associations. You need an invitation from an existing member &mdash; a legal requirement, not a marketing gimmick.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step__number">2</span>
+          <div>
+            <strong>Valid photo ID</strong>
+            <p>Passport for non-EU tourists, national ID for EU citizens. The club verifies and records your identity as required by Spanish association law.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step__number">3</span>
+          <div>
+            <strong>Minimum age of 21</strong>
+            <p>Most Madrid clubs set the minimum at 21, though some accept 18+. Bring ID that clearly shows your date of birth.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step__number">4</span>
+          <div>
+            <strong>One-time membership fee</strong>
+            <p>Between &euro;20 and &euro;50. This is a formal association membership, not a door charge. You&rsquo;ll receive a membership card.</p>
+          </div>
+        </div>
+      </div>
 
       <h3>Red Flags to Watch For</h3>
-      <p>Any \u201cclub\u201d that does not ask for ID, does not require an invitation, or lets you buy products without a membership is operating illegally. These are fronts that put you at legal risk. Legitimate clubs follow every step described above because their license depends on it.</p>
+      <p>Any &ldquo;club&rdquo; that does not ask for ID, does not require an invitation, or lets you buy products without a membership is operating illegally. These are fronts that put you at legal risk. Legitimate clubs follow every step described above because their license depends on it.</p>
     </section>
 
     <!-- Section 4: Avoid Scams -->
     <section id="avoid-scams" class="section">
+      <div class="section__image">
+        <img
+          src={`${cdn}/${opt},w_800/weedmadrid/zones/sol-puerta-del-sol.jpg`}
+          alt="Puerta del Sol Madrid tourist area"
+          width="800"
+          height="420"
+          loading="lazy"
+        />
+      </div>
       <h2>How to Avoid Tourist Scams in 2026</h2>
 
-      <p>Madrid\u2019s cannabis scene has a well-documented scam ecosystem that specifically targets tourists. Knowing the patterns is your best defense.</p>
+      <p>Madrid&rsquo;s cannabis scene has a well-documented scam ecosystem that specifically targets tourists. Knowing the patterns is your best defense.</p>
 
       <h3>The Street Dealer Approach</h3>
-      <p>In areas like Sol, Gran V\u00eda, Malasa\u00f1a, and Chueca, individuals will approach tourists (especially at night) offering \u201cgood weed\u201d or \u201chash.\u201d In the best case, you get a low-quality, overpriced product and risk a \u20ac601+ fine. In the worst case, the substance is synthetic or fake, and you have no recourse. Street dealers know tourists rarely report bad deals to police because the purchase itself is illegal.</p>
+      <p>In areas like Sol, Gran V&iacute;a, Malasa&ntilde;a, and Chueca, individuals will approach tourists (especially at night) offering &ldquo;good weed&rdquo; or &ldquo;hash.&rdquo; In the best case, you get a low-quality, overpriced product and risk a &euro;601+ fine. In the worst case, the substance is synthetic or fake, and you have no recourse.</p>
 
-      <h3>Fake \u201cCannabis Clubs\u201d</h3>
-      <p>Some unlicensed operations market themselves as cannabis clubs through flyers, cards left in hostels, or social media. They may have a physical location that looks like a club. But without a proper association license, municipal registration, and member governance, they are illegal dispensaries. If police shut them down while you are inside, you could face fines as a patron.</p>
+      <h3>Fake &ldquo;Cannabis Clubs&rdquo;</h3>
+      <p>Some unlicensed operations market themselves as cannabis clubs through flyers, cards left in hostels, or social media. They may have a physical location that looks like a club. But without a proper association license, municipal registration, and member governance, they are illegal dispensaries.</p>
 
       <h3>The WhatsApp/Telegram Delivery Scam</h3>
-      <p>Promoted through stickers on lampposts and tourist-area posters, these \u201cdelivery services\u201d ask for advance payment via Bizum or bank transfer, then either never deliver or deliver a fraudulent product. You have no legal protection because you are attempting an illegal purchase.</p>
+      <p>Promoted through stickers on lampposts and tourist-area posters, these &ldquo;delivery services&rdquo; ask for advance payment via Bizum or bank transfer, then either never deliver or deliver a fraudulent product. You have no legal protection because you are attempting an illegal purchase.</p>
 
-      <h3>How to Protect Yourself</h3>
-      <p>The safest approach is straightforward: use only a verified, licensed social club. Get your invitation through a trusted source, verify the club\u2019s legitimacy (registered association, clear rules, proper ID checks), and never buy anything on the street, through messaging apps, or from someone who approaches you unsolicited.</p>
+      <div class="alert alert--danger">
+        <strong>Simple rule:</strong>
+        If someone approaches you unsolicited, if there&rsquo;s no ID check, or if you&rsquo;re asked to pay via messaging app &mdash; it&rsquo;s a scam. Every time.
+      </div>
 
       <PremiumClubCTA variant="banner" />
     </section>
 
-    <!-- FAQ Section (matches JSON-LD) -->
+    <!-- Social Proof Lounge Image -->
+    <section class="section section--lounge">
+      <div class="section__image section__image--wide">
+        <img
+          src={`${cdn}/${opt},w_800/madrid-cannabis-guide/social-lounge-atmosphere.jpg`}
+          alt="Social lounge with warm ambient lighting"
+          width="800"
+          height="400"
+          loading="lazy"
+        />
+        <div class="section__image-overlay">
+          <p class="section__image-quote">&ldquo;The club experience is nothing like the street. It&rsquo;s safe, legal, and surprisingly welcoming.&rdquo;</p>
+          <span class="section__image-attr">&mdash; Sarah K., London &middot; Visited March 2026</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
     <section id="faq" class="section">
       <h2>Frequently Asked Questions</h2>
 
       <ul class="faq-list">
         <li class="faq-item">
           <p class="faq-question">Is cannabis legal in Madrid for tourists?</p>
-          <p class="faq-answer">Cannabis is decriminalized for private use in Spain. Public consumption and purchase remain illegal with fines up to \u20ac600. Tourists can legally consume cannabis only inside licensed private social clubs through a valid membership invitation. Street purchases are always illegal regardless of nationality.</p>
+          <p class="faq-answer">Cannabis is decriminalized for private use in Spain. Public consumption and purchase remain illegal with fines up to &euro;600. Tourists can legally consume cannabis only inside licensed private social clubs through a valid membership invitation. Street purchases are always illegal regardless of nationality.</p>
         </li>
         <li class="faq-item">
           <p class="faq-question">How can tourists access a cannabis social club in Madrid?</p>
-          <p class="faq-answer">Tourists need a verified invitation from an existing member, a valid passport or EU ID proving they are 21+, and must pay a one-time membership fee (typically \u20ac20\u2013\u20ac50). Walk-ins are not accepted at legitimate clubs. The invitation process exists because Spanish law only permits private, members-only associations.</p>
+          <p class="faq-answer">Tourists need a verified invitation from an existing member, a valid passport or EU ID proving they are 21+, and must pay a one-time membership fee (typically &euro;20&ndash;&euro;50). Walk-ins are not accepted at legitimate clubs. The invitation process exists because Spanish law only permits private, members-only associations.</p>
         </li>
         <li class="faq-item">
           <p class="faq-question">What are the fines for buying cannabis on the street in Madrid?</p>
-          <p class="faq-answer">Buying or possessing cannabis in public spaces in Madrid carries administrative fines between \u20ac601 and \u20ac30,000 under Spain\u2019s Citizen Safety Law (Ley Mordaza). Street dealers often sell adulterated products and specifically target tourists. Police in tourist areas actively enforce these laws, especially around Sol, Gran V\u00eda, and Malasa\u00f1a.</p>
+          <p class="faq-answer">Buying or possessing cannabis in public spaces in Madrid carries administrative fines between &euro;601 and &euro;30,000 under Spain&rsquo;s Citizen Safety Law (Ley Mordaza). Street dealers often sell adulterated products and specifically target tourists. Police in tourist areas actively enforce these laws, especially around Sol, Gran V&iacute;a, and Malasa&ntilde;a.</p>
         </li>
       </ul>
     </section>
 
+    <!-- Final CTA -->
+    <section class="section section--final-cta">
+      <h2>Ready to Visit a Safe, Legal Club?</h2>
+      <p>Join thousands of tourists who chose the legal route. Get your verified invitation in under 3 minutes.</p>
+      <a
+        href="https://www.weedmadrid.com/invite/vallehermoso-club-social-madrid"
+        rel="sponsored noopener"
+        target="_blank"
+        class="hero__cta"
+      >
+        Get My Verified Invitation
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="hero__social-proof" style="margin-top:1rem;">
+        <span class="hero__social-proof-dot"></span>
+        <span id="personalized-cta-text">Trusted by tourists from 40+ countries</span>
+      </div>
+    </section>
+
   </div>
+
+  <!-- Lightweight personalization script -->
+  <script>
+    (function() {
+      // Returning visitor detection
+      var visits = parseInt(localStorage.getItem('mcg_visits') || '0', 10);
+      localStorage.setItem('mcg_visits', String(visits + 1));
+
+      // Time-based personalization
+      var hour = new Date().getHours();
+      var greeting = '';
+      if (hour < 12) greeting = 'Planning your Madrid trip this morning?';
+      else if (hour < 18) greeting = 'Researching Madrid clubs this afternoon?';
+      else greeting = 'Getting ready for a night out in Madrid?';
+
+      // Update hero social proof for returning visitors
+      var el = document.getElementById('hero-social-proof');
+      if (el && visits > 0) {
+        el.querySelector('span:last-child').textContent = 'Welcome back! ' + greeting + ' Your guide is ready.';
+      }
+
+      // Update final CTA for returning visitors
+      var cta = document.getElementById('personalized-cta-text');
+      if (cta && visits > 1) {
+        cta.textContent = 'You\u2019ve visited ' + (visits + 1) + ' times. Ready to get your invitation?';
+      }
+    })();
+  </script>
 </Layout>

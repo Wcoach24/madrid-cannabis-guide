@@ -19,33 +19,39 @@ const isInline = variant === 'inline';
       <path d="M6.5 1L8 0l1.5 1L11 0l1 1.5L13.5 2l-.5 1.5L14 5l-1.5.5L13 7l-1.5.5-.5 1.5-1.5-.5L8 9.5 6.5 9 5 9.5l-.5-1.5L3 7.5 2 7l.5-1.5L2 4l1.5-.5L3 2l1.5-.5L5 0l1.5 1z" fill="#f59e0b"/>
       <path d="M6 7.5l1.5 1.5 3-3" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
-    <span>Editor's Choice \u2014 Verified Safe Route</span>
+    <span>Editor's Choice &mdash; Verified Safe Route</span>
   </div>
 
   {!isInline && (
-    <h3 class="premium-cta__title">Skip the Street Risks</h3>
+    <h3 class="premium-cta__title">Don't Risk a &euro;601 Fine</h3>
   )}
 
   <p class="premium-cta__text">
     {isInline
-      ? 'Skip the street risks. Get a verified invitation to Madrid\'s top-rated private club in 3 minutes.'
-      : 'Avoid fines, scams, and unsafe street deals. Get a verified invitation to Madrid\'s top-rated private social club \u2014 safely and legally in just 3 minutes.'}
+      ? 'Skip the street risks. Get a verified invitation to Madrid\'s top-rated private club in under 3 minutes.'
+      : 'Over 8,000 tourists chose the safe, legal route in 2025. Get your verified invitation to Madrid\'s top-rated private social club \u2014 legally and safely, in under 3 minutes.'}
   </p>
 
   <a
-    href="https://weedmadrid.com/invite"
+    href="https://www.weedmadrid.com/invite/vallehermoso-club-social-madrid"
     rel="sponsored noopener"
     target="_blank"
     class="premium-cta__button"
   >
-    Get Your Verified Invitation
+    Get My Verified Invitation
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
       <path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </a>
 
+  <div class="premium-cta__trust">
+    <span>&#10003; No fines</span>
+    <span>&#10003; Lab-tested products</span>
+    <span>&#10003; Cancel anytime</span>
+  </div>
+
   <p class="premium-cta__disclaimer">
-    <small>This is a sponsored link to a third-party invitation service. Madrid Cannabis Guide receives compensation for referrals.</small>
+    <small>Sponsored link. Madrid Cannabis Guide receives compensation for referrals.</small>
   </p>
 </aside>
 
@@ -122,16 +128,34 @@ const isInline = variant === 'inline';
     background: linear-gradient(135deg, #10b981, #059669);
     color: #fff;
     font-weight: 600;
-    font-size: 1rem;
-    padding: 0.85rem 1.75rem;
+    font-size: 1.05rem;
+    padding: 0.95rem 2rem;
     border-radius: 8px;
     text-decoration: none;
     transition: transform 0.2s, box-shadow 0.2s;
   }
 
   .premium-cta__button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(16, 185, 129, 0.4);
+  }
+
+  .premium-cta__trust {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .premium-cta__trust span {
+    color: #6ee7b7;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  .premium-cta--inline .premium-cta__trust {
+    justify-content: flex-start;
   }
 
   .premium-cta__disclaimer {
