@@ -1,0 +1,46 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import PremiumClubCTA from '../../components/PremiumClubCTA.astro';
+
+const cdn = 'https://res.cloudinary.com/dhuc2wmhp/image/upload';
+const opt = 'f_auto,q_auto';
+---
+
+<ArticleLayout
+  title="Tourist Scams to Avoid When Looking for Cannabis in Madrid (2026)"
+  description="How to identify and avoid the most common cannabis scams targeting tourists in Madrid. Street dealers, fake clubs, delivery scams, and what to do if you get scammed."
+  publishedDate="2026-03-11"
+  modifiedDate="2026-03-11"
+  heroImage="madrid-cannabis-guide/madrid-plaza-comparison.jpg"
+  heroAlt="Busy Madrid plaza where tourist scams frequently occur"
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Blog', url: '/blog/' },
+    { name: 'Tourist Scams', url: '/blog/tourist-scams-cannabis-madrid/' },
+  ]}
+  toc={[
+    { id: 'overview', label: 'Why Madrid Cannabis Scams Are So Common' },
+    { id: 'street-dealers', label: 'Scam #1: Street Dealers' },
+    { id: 'fake-clubs', label: 'Scam #2: Fake Cannabis Clubs' },
+    { id: 'delivery-scams', label: 'Scam #3: WhatsApp & Telegram Delivery' },
+    { id: 'online-scams', label: 'Scam #4: Social Media & Online Offers' },
+    { id: 'how-to-verify', label: 'How to Verify a Legitimate Club' },
+    { id: 'got-scammed', label: 'What to Do If You Got Scammed' },
+  ]}
+  relatedArticles={[
+    { href: '/is-weed-legal-in-madrid/', title: 'Is Weed Legal in Madrid?' },
+    { href: '/how-to-join/', title: 'How to Join a Cannabis Club' },
+    { href: '/cannabis-clubs-madrid/', title: 'Cannabis Clubs in Madrid: Overview' },
+    { href: '/blog/cannabis-club-prices-madrid/', title: 'Cannabis Club Prices' },
+  ]}
+  faq={[
+    { question: 'How do I know if a cannabis club in Madrid is legitimate?', answer: 'Legitimate clubs require a verified invitation, check your ID, have you sign a membership form, issue a membership card, and are registered as non-profit associations. They never approach you on the street or advertise openly.' },
+    { question: 'Is it safe to buy cannabis from a street dealer in Madrid?', answer: 'No. Street dealers in Madrid frequently sell adulterated, synthetic, or fake products. You also face administrative fines of €601-€30,000 for public possession. Police actively patrol tourist areas like Sol, Gran Vía, and Malasaña.' },
+    { question: 'Are cannabis delivery services in Madrid real?', answer: 'Cannabis delivery is illegal in Spain. Services advertised via stickers on lampposts, WhatsApp groups, or Telegram channels are scams. They typically take advance payment and either never deliver or deliver fake products.' },
+    { question: 'What should I do if I get scammed trying to buy cannabis in Madrid?', answer: 'Do not contact police, as you were attempting an illegal purchase. Cut your losses, block the contact, and use the experience as a lesson. The safe route is always through a verified cannabis social club with proper membership.' },
+  ]}
+>
+  <p style="font-weight: 600; font-size: 1.1em; margin-bottom: 1.5em; color: #d32f2f;">
+    <strong>Direct answer:</strong> Yes, cannabis scams are extremely common in Madrid. Tourist scammers operate in Sol, Gran Vía, Malasaña, and every major hostel.
+  </p>
+</ArticleLayout>

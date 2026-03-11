@@ -1,0 +1,45 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import PremiumClubCTA from '../components/PremiumClubCTA.astro';
+
+const cdn = 'https://res.cloudinary.com/dhuc2wmhp/image/upload';
+const opt = 'f_auto,q_auto';
+---
+
+<ArticleLayout
+  title="How to Join a Cannabis Club in Madrid: Step-by-Step Guide"
+  description="Complete step-by-step guide to joining a cannabis social club in Madrid as a tourist or resident in 2026. Requirements, process, costs, and what to expect."
+  publishedDate="2026-03-11"
+  modifiedDate="2026-03-11"
+  heroImage="madrid-cannabis-guide/passport-id-requirements.jpg"
+  heroAlt="Passport and travel documents for cannabis club membership verification"
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'How to Join a Cannabis Club', url: '/how-to-join/' },
+  ]}
+  toc={[
+    { id: 'overview', label: 'How Cannabis Clubs Work' },
+    { id: 'requirements', label: 'Requirements to Join' },
+    { id: 'step-by-step', label: 'Step-by-Step Process' },
+    { id: 'what-to-expect', label: 'What to Expect on Your First Visit' },
+    { id: 'tourists-vs-residents', label: 'Tourists vs Residents' },
+    { id: 'red-flags', label: 'Red Flags: Fake Clubs to Avoid' },
+    { id: 'tips', label: 'Insider Tips for a Smooth Experience' },
+  ]}
+  relatedArticles={[
+    { href: '/is-weed-legal-in-madrid/', title: 'Is Weed Legal in Madrid? 2026 Laws' },
+    { href: '/cannabis-clubs-madrid/', title: 'Cannabis Clubs in Madrid: Overview' },
+    { href: '/blog/cannabis-club-prices-madrid/', title: 'Cannabis Club Prices in Madrid' },
+    { href: '/blog/tourist-scams-cannabis-madrid/', title: 'Tourist Scams to Avoid' },
+  ]}
+  faq={[
+    { question: 'Can tourists join a cannabis club in Madrid?', answer: 'Yes. Tourists can join cannabis clubs in Madrid with a valid passport, a verified invitation from an existing member, and payment of a one-time membership fee (€20–€50). You must be at least 21 years old at most clubs.' },
+    { question: 'How long does it take to join a cannabis club?', answer: 'With a verified invitation, the entire process takes 10–15 minutes. You present your invitation, show ID, fill out a brief membership form, pay the fee, and receive your membership card.' },
+    { question: 'Do I need a Spanish address to join?', answer: 'Legitimate clubs accept tourists with a passport. You do not need a Spanish address or NIE number. Some clubs may ask for your hotel address for their records, but residency is not required.' },
+    { question: 'Can I visit multiple cannabis clubs in Madrid?', answer: 'Yes. You can be a member of multiple clubs simultaneously. Each club has its own membership process, fee, and rules. However, most visitors find one quality club sufficient for their stay.' },
+  ]}
+>
+  <p style="font-size: 1.1em; line-height: 1.8; margin-bottom: 2em;">
+    <strong>To join a cannabis club in Madrid, you need three things: a valid passport or national ID, a verified invitation from an existing member, and €20–€50 for the membership fee.</strong> Once you have an invitation, the actual joining process takes 10–15 minutes—you'll show your ID at the door, fill out a short membership form, pay the fee, and walk out with your member card ready to purchase. This guide walks you through every step, from getting your first invitation to understanding what happens when you actually arrive at the club.
+  </p>
+</ArticleLayout>

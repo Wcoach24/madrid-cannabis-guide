@@ -1,0 +1,46 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import PremiumClubCTA from '../components/PremiumClubCTA.astro';
+
+const cdn = 'https://res.cloudinary.com/dhuc2wmhp/image/upload';
+const opt = 'f_auto,q_auto';
+---
+
+<ArticleLayout
+  title="Cannabis Clubs in Madrid: How They Work, What to Expect"
+  description="Everything you need to know about cannabis social clubs in Madrid. How they operate, what's inside, club culture, etiquette, and how they differ from Amsterdam coffee shops."
+  publishedDate="2026-03-11"
+  modifiedDate="2026-03-11"
+  heroImage="madrid-cannabis-guide/social-lounge-atmosphere.jpg"
+  heroAlt="Modern interior of a Madrid cannabis social club lounge"
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Cannabis Clubs Madrid', url: '/cannabis-clubs-madrid/' },
+  ]}
+  toc={[
+    { id: 'what-are-clubs', label: 'What Are Cannabis Social Clubs?' },
+    { id: 'how-they-work', label: 'How They Actually Work' },
+    { id: 'inside-a-club', label: 'What It Looks Like Inside' },
+    { id: 'not-amsterdam', label: 'Why Madrid Is Not Amsterdam' },
+    { id: 'club-culture', label: 'Club Culture & Etiquette' },
+    { id: 'what-is-available', label: 'Products & Menus' },
+    { id: 'choosing-a-club', label: 'How to Choose the Right Club' },
+    { id: 'safety', label: 'Safety & Quality Standards' },
+  ]}
+  relatedArticles={[
+    { href: '/is-weed-legal-in-madrid/', title: 'Is Weed Legal in Madrid? 2026 Laws' },
+    { href: '/how-to-join/', title: 'How to Join a Cannabis Club' },
+    { href: '/blog/cannabis-club-prices-madrid/', title: 'Cannabis Club Prices in Madrid' },
+    { href: '/blog/tourist-scams-cannabis-madrid/', title: 'Tourist Scams to Avoid' },
+  ]}
+  faq={[
+    { question: 'What is a cannabis social club in Madrid?', answer: 'A cannabis social club (asociación cannábica) is a private, members-only non-profit association where members collectively cultivate and share cannabis. They operate under Spain\'s freedom-of-association laws and the constitutional right to privacy in private spaces.' },
+    { question: 'Are cannabis clubs in Madrid the same as Amsterdam coffee shops?', answer: 'No. Madrid clubs are private member associations, not public businesses. You need an invitation and membership to enter. They are not visible from the street and do not advertise openly. Coffee shops in Amsterdam are licensed retail establishments open to the public.' },
+    { question: 'What do cannabis clubs in Madrid look like inside?', answer: 'Most clubs resemble upscale lounges or private bars. They typically have comfortable seating areas, a counter where members access products, and sometimes additional amenities like games, music, food, or event spaces. The atmosphere is relaxed and social.' },
+    { question: 'Can I eat or drink at a cannabis club in Madrid?', answer: 'Many clubs offer beverages (non-alcoholic and sometimes alcoholic) and light snacks or food. Some have full kitchens. Policies vary by club. Most allow you to bring your own food and drinks as well.' },
+  ]}
+>
+  <h2 id="what-are-clubs">What Are Cannabis Social Clubs?</h2>
+
+  <p>A cannabis social club in Madrid, formally known as an <em>asociación cannábica</em>, is a private, members-only non-profit association where members collectively cultivate, distribute, and consume cannabis in a shared space.</p>
+</ArticleLayout>

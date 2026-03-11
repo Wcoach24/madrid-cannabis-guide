@@ -1,0 +1,41 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import PremiumClubCTA from '../../components/PremiumClubCTA.astro';
+
+const cdn = 'https://res.cloudinary.com/dhuc2wmhp/image/upload';
+const opt = 'f_auto,q_auto';
+---
+
+<ArticleLayout
+  title="Cannabis Club Prices in Madrid: Membership Fees & Product Costs (2026)"
+  description="Transparent breakdown of cannabis club costs in Madrid for 2026. Membership fees, product prices per gram, and how the contribution system works."
+  publishedDate="2026-03-11"
+  modifiedDate="2026-03-11"
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Blog', url: '/blog/' },
+    { name: 'Cannabis Club Prices', url: '/blog/cannabis-club-prices-madrid/' },
+  ]}
+  toc={[
+    { id: 'membership-fees', label: 'Membership Fees' },
+    { id: 'product-prices', label: 'Product Prices (Per Gram)' },
+    { id: 'contribution-model', label: 'How the Contribution Model Works' },
+    { id: 'hidden-costs', label: 'Are There Hidden Costs?' },
+    { id: 'street-vs-club-value', label: 'Street Prices vs Club Prices' },
+    { id: 'budget-tips', label: 'Budget Tips for Tourists' },
+  ]}
+  relatedArticles={[
+    { href: '/how-to-join/', title: 'How to Join a Cannabis Club' },
+    { href: '/cannabis-clubs-madrid/', title: 'Cannabis Clubs in Madrid: Overview' },
+    { href: '/is-weed-legal-in-madrid/', title: 'Is Weed Legal in Madrid?' },
+    { href: '/blog/tourist-scams-cannabis-madrid/', title: 'Tourist Scams to Avoid' },
+  ]}
+  faq={[
+    { question: 'How much does it cost to join a cannabis club in Madrid?', answer: 'One-time membership fees at legitimate Madrid cannabis clubs range from €20 to €50. This is a formal association membership fee, not a door charge. Some clubs offer annual memberships that include the initial fee.' },
+    { question: 'How much does cannabis cost inside a Madrid club?', answer: 'Cannabis flower contributions typically range from €8-€15 per gram depending on strain and quality. Hash runs €6-€12 per gram. Pre-rolled joints are usually €5-€10. Edibles and concentrates vary more widely, from €10-€30 per item.' },
+    { question: 'Is it cheaper to buy on the street or at a club?', answer: 'Street prices may appear similar (€8-€15/g) but you are paying for an unknown, unverified product with zero quality control plus risking fines of €601-€30,000. Club prices include verified quality, a safe environment, and full legal protection.' },
+    { question: 'Do Madrid cannabis clubs accept card payments?', answer: 'Most clubs are cash-only for product contributions due to the legal grey area of cannabis in Spain. Membership fees can sometimes be paid by card. Always bring cash (euros) when visiting a club.' },
+  ]}
+>
+  <p><strong>Cannabis club membership in Madrid costs €20–€50 one-time, while product contributions range from €6–€15 per gram for flower.</strong> This makes legal club access roughly comparable to street prices, but with verified quality, no legal risk, and a safe environment.</p>
+</ArticleLayout>

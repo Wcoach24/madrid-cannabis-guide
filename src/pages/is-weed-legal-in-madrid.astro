@@ -1,0 +1,48 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import PremiumClubCTA from '../components/PremiumClubCTA.astro';
+
+const cdn = 'https://res.cloudinary.com/dhuc2wmhp/image/upload';
+const opt = 'f_auto,q_auto';
+---
+
+<ArticleLayout
+  title="Is Weed Legal in Madrid? 2026 Laws Explained for Tourists"
+  description="Complete guide to cannabis laws in Madrid for tourists in 2026. Learn what's legal, what's not, fine amounts, the private club loophole, and how to stay safe."
+  publishedDate="2026-03-11"
+  modifiedDate="2026-03-11"
+  heroImage="madrid-cannabis-guide/spanish-congress-laws-v2.jpg"
+  heroAlt="Wooden judge gavel representing Spanish cannabis legislation"
+  breadcrumbs={[
+    { name: 'Home', url: '/' },
+    { name: 'Is Weed Legal in Madrid?', url: '/is-weed-legal-in-madrid/' },
+  ]}
+  toc={[
+    { id: 'short-answer', label: 'The Short Answer' },
+    { id: 'constitutional-basis', label: 'The Constitutional Basis' },
+    { id: 'what-is-legal', label: 'What Is Actually Legal' },
+    { id: 'what-is-illegal', label: 'What Remains Illegal' },
+    { id: 'fines-penalties', label: 'Fines & Penalties Breakdown' },
+    { id: 'private-club-loophole', label: 'The Private Club Loophole' },
+    { id: 'tourist-specific', label: 'Tourist-Specific Concerns' },
+    { id: 'recent-changes', label: 'Recent Legal Changes (2025-2026)' },
+  ]}
+  relatedArticles={[
+    { href: '/how-to-join/', title: 'How to Join a Cannabis Club in Madrid' },
+    { href: '/cannabis-clubs-madrid/', title: 'Cannabis Clubs in Madrid: Complete Overview' },
+    { href: '/blog/cannabis-club-prices-madrid/', title: 'Cannabis Club Prices in Madrid' },
+    { href: '/blog/tourist-scams-cannabis-madrid/', title: 'Tourist Scams to Avoid' },
+  ]}
+  faq={[
+    { question: 'Is cannabis legal in Spain?', answer: 'Cannabis is not fully legal in Spain. Private consumption in private spaces is decriminalized, but public consumption, possession, and sale remain illegal with administrative fines from €601 to €30,000.' },
+    { question: 'Can tourists smoke weed in Madrid legally?', answer: 'Tourists can only consume cannabis legally inside licensed private social clubs with a valid membership. Street purchases, public smoking, and hotel room consumption are all illegal.' },
+    { question: 'What happens if police catch me with cannabis in Madrid?', answer: 'You will receive an administrative fine between €601 and €30,000 depending on the amount and circumstances. It is not a criminal charge but the fine is enforced immediately and can be paid on the spot or contested within 15 days.' },
+    { question: 'Is it legal to bring cannabis from a club to my hotel?', answer: 'No. Transporting cannabis outside club premises is illegal. Consumption must happen within the private club space. Carrying cannabis on public streets constitutes public possession.' },
+  ]}
+>
+  <h2 id="short-answer">The Short Answer</h2>
+
+  <p>Cannabis is not legal in Madrid or anywhere in Spain. However, private consumption of cannabis in private spaces is decriminalized and protected by constitutional right to privacy. This legal grey area has created a thriving network of private cannabis social clubs where tourists can legally join and consume. Public consumption, possession of more than personal amounts, and any form of sale remain strictly illegal and subject to administrative fines ranging from €601 to €30,000.</p>
+
+  <p>For tourists, the safest and legal way to consume cannabis in Madrid is through membership in a licensed private social club. Street purchases, public smoking, and hotel room consumption are all illegal and carry substantial penalties.</p>
+</ArticleLayout>

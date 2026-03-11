@@ -1,0 +1,313 @@
+---
+import ArticleSEO from '../components/ArticleSEO.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PremiumClubCTA from '../components/PremiumClubCTA.astro';
+import '../styles/global.css';
+
+interface TocItem {
+  id: string;
+  label: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  publishedDate: string;
+  modifiedDate: string;
+  heroImage?: string;
+  heroAlt?: string;
+  breadcrumbs: { name: string; url: string }[];
+  toc: TocItem[];
+  relatedArticles?: { href: string; title: string }[];
+  faq?: { question: string; answer: string }[];
+}
+
+const {
+  title,
+  description,
+  publishedDate,
+  modifiedDate,
+  heroImage,
+  heroAlt,
+  breadcrumbs,
+  toc,
+  relatedArticles = [],
+  faq,
+} = Astro.props;
+
+const cdn = 'https://res.cloudinary.com/dhuc2wmhp/image/upload';
+const opt = 'f_auto,q_auto';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <ArticleSEO
+      title={`${title} | Madrid Cannabis Guide`}
+      description={description}
+      publishedDate={publishedDate}
+      modifiedDate={modifiedDate}
+      breadcrumbs={breadcrumbs}
+      faq={faq}
+    />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <Header />
+    <main id="main-content">
+      <article class="article" itemscope itemtype="https://schema.org/Article">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs container" aria-label="Breadcrumbs">
+          {breadcrumbs.map((bc, i) => (
+            <>
+              {i > 0 && <span class="breadcrumbs__sep" aria-hidden="true">/</span>}
+              {i < breadcrumbs.length - 1 ? (
+                <a href={bc.url} class="breadcrumbs__link">{bc.name}</a>
+              ) : (
+                <span class="breadcrumbs__current" aria-current="page">{bc.name}</span>
+              )}
+            </>
+          ))}
+        </nav>
+
+        <!-- Article Header -->
+        <header class="article__header container">
+          <span class="badge">Updated {modifiedDate}</span>
+          <h1 itemprop="headline">{title}</h1>
+          <p class="article__subtitle">{description}</p>
+        </header>
+
+        {heroImage && (
+          <div class="article__hero container">
+            <img
+              src={`${cdn}/${opt},w_800/${heroImage}`}
+              alt={heroAlt || title}
+              width="800"
+              height="420"
+              loading="eager"
+              fetchpriority="high"
+            />
+          </div>
+        )}
+
+        <!-- Table of Contents -->
+        {toc.length > 0 && (
+          <nav class="toc container" aria-label="Table of contents">
+            <h2 class="toc__title">In This Guide</h2>
+            <ol class="toc__list">
+              {toc.map((item) => (
+                <li><a href={`#${item.id}`}>{item.label}</a></li>
+              ))}
+            </ol>
+          </nav>
+        )}
+
+        <!-- Article Content -->
+        <div class="article__body container">
+          <slot />
+
+          <!-- Mid-article CTA (placed via slot, but also a fallback) -->
+        </div>
+
+        <!-- Related Articles -->
+        {relatedArticles.length > 0 && (
+          <aside class="related container">
+            <h2 class="related__title">Related Guides</h2>
+            <div class="related__grid">
+              {relatedArticles.map((a) => (
+                <a href={a.href} class="related__card">
+                  <span class="related__card-arrow">→</span>
+                  <span>{a.title}</span>
+                </a>
+              ))}
+            </div>
+          </aside>
+        )}
+
+        <!-- Final CTA -->
+        <div class="container">
+          <PremiumClubCTA variant="banner" />
+        </div>
+
+        <!-- Last Updated (E-E-A-T) -->
+        <p class="last-updated container">Last updated: <time datetime={modifiedDate}>{new Date(modifiedDate + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time></p>
+
+      </article>
+    </main>
+    <Footer />
+
+    <style>
+      /* === Breadcrumbs === */
+      .breadcrumbs {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding-top: 1.5rem;
+        padding-bottom: 0;
+        font-size: 0.8rem;
+        flex-wrap: wrap;
+      }
+
+      .breadcrumbs__link {
+        color: #6b7280;
+        text-decoration: none;
+      }
+
+      .breadcrumbs__link:hover {
+        color: #34d399;
+      }
+
+      .breadcrumbs__sep {
+        color: #4b5563;
+      }
+
+      .breadcrumbs__current {
+        color: #9ca3af;
+      }
+
+      /* === Article Header === */
+      .article__header {
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
+      }
+
+      .article__header .badge {
+        margin-bottom: 1rem;
+      }
+
+      .article__header h1 {
+        margin-bottom: 1rem;
+        font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+      }
+
+      .article__subtitle {
+        font-size: 1.1rem;
+        color: #9ca3af;
+        max-width: 640px;
+        line-height: 1.6;
+      }
+
+      /* === Hero Image === */
+      .article__hero {
+        margin-bottom: 2rem;
+      }
+
+      .article__hero img {
+        border-radius: 12px;
+        border: 1px solid #1f2622;
+        width: 100%;
+        height: auto;
+      }
+
+      /* === Table of Contents === */
+      .toc {
+        background: rgba(16, 185, 129, 0.04);
+        border: 1px solid #1f2622;
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .toc__title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #e8ece9;
+        margin: 0 0 0.75rem;
+      }
+
+      .toc__list {
+        list-style: none;
+        counter-reset: toc;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0;
+        margin: 0;
+      }
+
+      .toc__list li {
+        counter-increment: toc;
+      }
+
+      .toc__list li::before {
+        content: counter(toc) ".";
+        color: #10b981;
+        font-weight: 600;
+        margin-right: 0.5rem;
+        font-size: 0.85rem;
+      }
+
+      .toc__list a {
+        color: #b8bdb8;
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
+
+      .toc__list a:hover {
+        color: #34d399;
+      }
+
+      /* === Article Body === */
+      .article__body {
+        padding-bottom: 2rem;
+      }
+
+      .article__body :global(h2) {
+        margin-top: 3rem;
+      }
+
+      .article__body :global(h3) {
+        margin-top: 2rem;
+      }
+
+      /* === Related Articles === */
+      .related {
+        padding: 2rem 0;
+        border-top: 1px solid #1f2622;
+      }
+
+      .related__title {
+        font-size: 1.2rem;
+        margin: 0 0 1.25rem;
+        color: #e8ece9;
+      }
+
+      .related__grid {
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      @media (min-width: 640px) {
+        .related__grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .related__card {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 1.25rem;
+        background: rgba(16, 185, 129, 0.04);
+        border: 1px solid #1f2622;
+        border-radius: 8px;
+        color: #b8bdb8;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: border-color 0.2s, color 0.2s;
+      }
+
+      .related__card:hover {
+        border-color: #10b981;
+        color: #e8ece9;
+      }
+
+      .related__card-arrow {
+        color: #10b981;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+    </style>
+  </body>
+</html>

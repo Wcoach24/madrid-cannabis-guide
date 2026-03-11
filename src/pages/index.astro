@@ -1,0 +1,111 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PremiumClubCTA from '../components/PremiumClubCTA.astro';
+
+// Cloudinary base for optimized images
+const cdn = 'https://res.cloudinary.com/dhuc2wmhp/image/upload';
+const opt = 'f_auto,q_auto';
+---
+
+<Layout
+  title="Madrid Cannabis Guide 2026: Legal Rules & Tourist Safety"
+  description="The Official 2026 Guide to Cannabis Rules in Madrid for Tourists. Learn about legal private clubs, street fines up to €30,000, tourist requirements, and how to avoid scams."
+>
+  <!-- Hero with background image -->
+  <section class="hero">
+    <div class="hero__bg">
+      <img
+        src={`${cdn}/${opt},w_1400/madrid-cannabis-guide/hero-madrid-gran-via.jpg`}
+        alt="Aerial view of Gran Via boulevard in Madrid at sunset with city skyline"
+        width="1400"
+        height="800"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </div>
+    <div class="hero__content">
+      <span class="badge">Updated for 2026</span>
+      <h1>Madrid Cannabis Guide 2026: Legal Rules &amp; Tourist Safety</h1>
+      <p>Everything tourists need to know about cannabis in Madrid — the law, the risks, and the only safe legal route through private social clubs.</p>
+      <a
+        href="https://www.weedmadrid.com/invite/vallehermoso-club-social-madrid"
+        rel="sponsored noopener"
+        target="_blank"
+        class="hero__cta"
+      >
+        Get My Safe Club Invitation
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="hero__social-proof" id="hero-social-proof">
+        <span class="hero__social-proof-dot"></span>
+        <span>8,400+ tourists used this guide in 2025</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Section 1: Legal Rules -->
+    <section id="legal" class="section">
+      <div class="section__image">
+        <img
+          src={`${cdn}/${opt},w_800/madrid-cannabis-guide/spanish-congress-laws-v2.jpg`}
+          alt="Wooden judge gavel on marble surface representing Spanish cannabis legislation"
+          width="800"
+          height="420"
+          loading="lazy"
+        />
+      </div>
+      <h2>Is Weed Legal in Madrid? (The Private Club Loophole)</h2>
+      <p class="section__deep-link"><a href="/is-weed-legal-in-madrid/">Read the full legal guide →</a></p>
+
+      <p>Spain does not have a single "cannabis is legal" law. Instead, the legal landscape is built on a constitutional distinction between <strong>private</strong> and <strong>public</strong> spaces. Understanding this distinction is the single most important thing for any tourist.</p>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section section--final-cta">
+      <h2>Ready to Visit a Safe, Legal Club?</h2>
+      <p>Join thousands of tourists who chose the legal route. Get your verified invitation in under 3 minutes.</p>
+      <a
+        href="https://www.weedmadrid.com/invite/vallehermoso-club-social-madrid"
+        rel="sponsored noopener"
+        target="_blank"
+        class="hero__cta"
+      >
+        Get My Verified Invitation
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="hero__social-proof" style="margin-top:1rem;">
+        <span class="hero__social-proof-dot"></span>
+        <span id="personalized-cta-text">Trusted by tourists from 40+ countries</span>
+      </div>
+    </section>
+
+    <!-- Last Updated (E-E-A-T) -->
+    <p class="last-updated">Last updated: <time datetime="2026-03-11">March 11, 2026</time></p>
+
+  </div>
+
+  <!-- Lightweight personalization script -->
+  <script>
+    (function() {
+      var visits = parseInt(localStorage.getItem('mcg_visits') || '0', 10);
+      localStorage.setItem('mcg_visits', String(visits + 1));
+
+      var hour = new Date().getHours();
+      var greeting = '';
+      if (hour < 12) greeting = 'Planning your Madrid trip this morning?';
+      else if (hour < 18) greeting = 'Researching Madrid clubs this afternoon?';
+      else greeting = 'Getting ready for a night out in Madrid?';
+
+      var el = document.getElementById('hero-social-proof');
+      if (el && visits > 0) {
+        el.querySelector('span:last-child').textContent = 'Welcome back! ' + greeting + ' Your guide is ready.';
+      }
+
+      var cta = document.getElementById('personalized-cta-text');
+      if (cta && visits > 1) {
+        cta.textContent = 'You’ve visited ' + (visits + 1) + ' times. Ready to get your invitation?';
+      }
+    })();
+  </script>
+</Layout>
