@@ -5,8 +5,18 @@ const currentYear = new Date().getFullYear();
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-disclaimer">
-      <p><strong>Legal Disclaimer:</strong> This website provides general information about cannabis regulations in Madrid, Spain. It does not constitute legal advice. Cannabis laws change frequently \u2014 always verify current regulations with local authorities. Public consumption and street purchases are illegal in Spain.</p>
+      <p><strong>Legal Disclaimer:</strong> This website provides general information about cannabis regulations in Madrid, Spain. It does not constitute legal advice. Cannabis laws change frequently — always verify current regulations with local authorities. Public consumption and street purchases are illegal in Spain.</p>
     </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="/about/">About Us</a>
+      <span aria-hidden="true">·</span>
+      <a href="/blog/">Blog</a>
+      <span aria-hidden="true">·</span>
+      <a href="/is-weed-legal-in-madrid/">Legal Guide</a>
+      <span aria-hidden="true">·</span>
+      <a href="/how-to-join/">How to Join</a>
+    </nav>
 
     <div class="footer-bottom">
       <p>&copy; {currentYear} Madrid Cannabis Guide. All rights reserved.</p>
@@ -59,5 +69,27 @@ const currentYear = new Date().getFullYear();
 
   .footer-note {
     font-style: italic;
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .footer-nav a {
+    color: #9ca3af;
+    text-decoration: none;
+  }
+
+  .footer-nav a:hover {
+    color: #34d399;
+  }
+
+  .footer-nav span {
+    color: #4b5563;
   }
 </style>

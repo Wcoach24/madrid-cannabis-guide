@@ -330,6 +330,49 @@ p {
   }
 }
 
+/* Tables inside comparison boxes */
+.comparison-box table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.comparison-box thead th {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: #e8ece9;
+  font-weight: 600;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.comparison-box tbody td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  color: #b8bdb8;
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.comparison-box tbody td strong {
+  color: #e8ece9;
+}
+
+.comparison-box tbody tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 480px) {
+  .comparison-box table {
+    font-size: 0.78rem;
+  }
+  .comparison-box thead th,
+  .comparison-box tbody td {
+    padding: 0.4rem 0.5rem;
+  }
+}
+
 /* === Steps === */
 .steps {
   display: flex;

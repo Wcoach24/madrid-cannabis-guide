@@ -1,0 +1,101 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const articles = [
+  {
+    href: '/blog/tourist-scams-cannabis-madrid/',
+    title: 'Tourist Scams to Avoid When Buying Cannabis in Madrid',
+    description: 'Real scam tactics we've documented — fake clubs, street dealers, and how to protect yourself as a tourist in Madrid.',
+    date: '2026-03-11',
+  },
+  {
+    href: '/blog/cannabis-club-prices-madrid/',
+    title: 'Cannabis Club Prices in Madrid: Membership Fees & Product Costs (2026)',
+    description: 'Transparent breakdown of cannabis club costs in Madrid for 2026. Membership fees, product prices per gram, and how the contribution system works.',
+    date: '2026-03-11',
+  },
+];
+---
+
+<Layout
+  title="Blog — Madrid Cannabis Guide"
+  description="Articles and guides about cannabis clubs, prices, scams, and tourist safety in Madrid. Written by Madrid-based locals with first-hand experience."
+>
+  <section class="container" style="padding-top:2.5rem;">
+    <nav class="breadcrumbs" aria-label="Breadcrumbs">
+      <a href="/" class="breadcrumbs__link">Home</a>
+      <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+      <span class="breadcrumbs__current" aria-current="page">Blog</span>
+    </nav>
+
+    <h1 style="margin-top:1.5rem;">Blog</h1>
+    <p style="color:#9ca3af;max-width:600px;margin-bottom:2.5rem;">Deep dives on cannabis club culture, tourist safety, pricing, and legal nuances in Madrid — written from first-hand experience, not recycled SEO filler.</p>
+
+    <div class="article-grid">
+      {articles.map((a) => (
+        <a href={a.href} class="article-card">
+          <time datetime={a.date} class="article-card__date">{new Date(a.date + 'T00:00:00').toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</time>
+          <h2 class="article-card__title">{a.title}</h2>
+          <p class="article-card__desc">{a.description}</p>
+          <span class="article-card__link">Read article →</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <style>
+    .breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+    }
+    .breadcrumbs__link { color: #6b7280; text-decoration: none; }
+    .breadcrumbs__link:hover { color: #34d399; }
+    .breadcrumbs__sep { color: #4b5563; }
+    .breadcrumbs__current { color: #9ca3af; }
+
+    .article-grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+    @media (min-width: 640px) {
+      .article-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .article-card {
+      display: block;
+      padding: 1.5rem;
+      background: rgba(16,185,129,0.04);
+      border: 1px solid #1f2622;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+    .article-card:hover { border-color: #10b981; }
+
+    .article-card__date {
+      display: block;
+      font-size: 0.75rem;
+      color: #6b7280;
+      margin-bottom: 0.5rem;
+    }
+    .article-card__title {
+      font-size: 1.1rem;
+      color: #e8ece9;
+      margin: 0 0 0.5rem;
+      line-height: 1.4;
+    }
+    .article-card__desc {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      line-height: 1.5;
+      margin: 0 0 0.75rem;
+    }
+    .article-card__link {
+      font-size: 0.85rem;
+      color: #10b981;
+      font-weight: 600;
+    }
+  </style>
+</Layout>

@@ -1,0 +1,153 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="About Us — Madrid Cannabis Guide"
+  description="Meet the Madrid-based editorial team behind Madrid Cannabis Guide. Our methodology, sources, and commitment to accurate cannabis tourism information."
+>
+  <section class="container about">
+    <nav class="breadcrumbs" aria-label="Breadcrumbs">
+      <a href="/" class="breadcrumbs__link">Home</a>
+      <span class="breadcrumbs__sep" aria-hidden="true">/</span>
+      <span class="breadcrumbs__current" aria-current="page">About</span>
+    </nav>
+
+    <h1>About Madrid Cannabis Guide</h1>
+
+    <p class="about__lead">We're a small editorial team based in Madrid, covering cannabis policy, club culture, and tourist safety since 2024. Our content is built on first-hand visits, legal research, and real conversations with club operators and tourists.</p>
+
+    <h2>Who We Are</h2>
+
+    <p>Madrid Cannabis Guide is run by a team of Madrid-based writers and researchers who regularly visit cannabis social clubs across the city. We are not affiliated with any individual club, distributor, or cannabis brand. Our only commercial relationship is a referral partnership with <a href="https://www.weedmadrid.com" rel="sponsored noopener" target="_blank">WeedMadrid.com</a> for verified club invitations, which we disclose on every page where that link appears.</p>
+
+    <p>Our team includes contributors with backgrounds in Spanish law, tourism journalism, and harm reduction. We don't claim to be lawyers — but we do cite specific legislation (Ley Orgánica 4/2015, Código Penal Art. 368-369, STC 53/1985) rather than making vague legal claims.</p>
+
+    <h2>Our Methodology</h2>
+
+    <p>Every article on this site follows a consistent editorial process:</p>
+
+    <div class="method-grid">
+      <div class="method-card">
+        <span class="method-card__num">1</span>
+        <h3>First-Hand Verification</h3>
+        <p>We visit clubs ourselves before writing about them. We verify membership processes, product quality, pricing, and safety measures through in-person experience — not third-party reviews or press releases.</p>
+      </div>
+      <div class="method-card">
+        <span class="method-card__num">2</span>
+        <h3>Legal Source Citation</h3>
+        <p>All legal claims cite specific Spanish legislation published in the Boletín Oficial del Estado (BOE). We reference article numbers, law names, and court rulings rather than generalizing about "Spanish law."</p>
+      </div>
+      <div class="method-card">
+        <span class="method-card__num">3</span>
+        <h3>Price Tracking</h3>
+        <p>Product pricing data comes from our ongoing visits to 20+ Madrid clubs. We track prices quarterly and update our guides when significant changes occur. All price ranges reflect actual observed prices, not estimates.</p>
+      </div>
+      <div class="method-card">
+        <span class="method-card__num">4</span>
+        <h3>Tourist Feedback</h3>
+        <p>We collect feedback from tourists who use our guides. Scam reports, club experiences, and legal encounters inform our safety recommendations. We update content based on real incidents, not hypothetical scenarios.</p>
+      </div>
+    </div>
+
+    <h2>What We Don't Do</h2>
+
+    <p>We don't sell cannabis, facilitate purchases, or operate as a dispensary directory. We don't accept payment from clubs to feature or recommend them. We don't provide legal advice — our legal content is informational and based on publicly available legislation. When in doubt, we recommend consulting a Spanish lawyer (abogado) specializing in administrative law.</p>
+
+    <h2>Sources We Reference</h2>
+
+    <p>Our guides cite the following primary sources:</p>
+
+    <ul class="source-list">
+      <li><strong>Ley Orgánica 4/2015, de 30 de marzo, de Protección de la Seguridad Ciudadana</strong> — The primary law governing cannabis possession and consumption penalties in Spain</li>
+      <li><strong>Código Penal Español, Articles 368-369</strong> — Criminal penalties for trafficking and distribution</li>
+      <li><strong>STC 53/1985 (Sentencia del Tribunal Constitucional)</strong> — Constitutional basis for privacy rights in personal consumption</li>
+      <li><strong>Article 18.1, Spanish Constitution</strong> — Right to personal and family privacy</li>
+      <li><strong>Boletín Oficial del Estado (BOE)</strong> — Official state gazette where all Spanish laws are published</li>
+    </ul>
+
+    <h2>Contact</h2>
+
+    <p>For corrections, updates, or editorial inquiries: <a href="mailto:info@madridcannabisguide.com">info@madridcannabisguide.com</a></p>
+
+    <p style="margin-top:2rem;"><a href="/" style="color:#10b981;text-decoration:none;font-weight:600;">← Back to the guide</a></p>
+  </section>
+
+  <style>
+    .breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      padding-top: 1.5rem;
+    }
+    .breadcrumbs__link { color: #6b7280; text-decoration: none; }
+    .breadcrumbs__link:hover { color: #34d399; }
+    .breadcrumbs__sep { color: #4b5563; }
+    .breadcrumbs__current { color: #9ca3af; }
+
+    .about { padding-bottom: 3rem; }
+    .about h1 { margin-top: 1.5rem; }
+    .about h2 { margin-top: 2.5rem; color: #e8ece9; }
+    .about__lead {
+      font-size: 1.1rem;
+      color: #9ca3af;
+      line-height: 1.7;
+      max-width: 640px;
+      margin-bottom: 2rem;
+    }
+    .about p { line-height: 1.7; }
+    .about a { color: #34d399; }
+
+    .method-grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+    @media (min-width: 640px) {
+      .method-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .method-card {
+      padding: 1.25rem;
+      background: rgba(16,185,129,0.04);
+      border: 1px solid #1f2622;
+      border-radius: 10px;
+    }
+    .method-card__num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: rgba(16,185,129,0.15);
+      color: #10b981;
+      border-radius: 50%;
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+    .method-card h3 {
+      font-size: 1rem;
+      color: #e8ece9;
+      margin: 0.25rem 0 0.5rem;
+    }
+    .method-card p {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .source-list {
+      padding-left: 1.25rem;
+      margin-top: 0.75rem;
+    }
+    .source-list li {
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #b8bdb8;
+    }
+    .source-list strong { color: #e8ece9; }
+  </style>
+</Layout>
