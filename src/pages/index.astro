@@ -2,16 +2,15 @@
 import Layout from '../layouts/Layout.astro';
 import PremiumClubCTA from '../components/PremiumClubCTA.astro';
 
-// Cloudinary base for optimized images
 const cdn = 'https://res.cloudinary.com/dhuc2wmhp/image/upload';
 const opt = 'f_auto,q_auto';
 ---
 
 <Layout
-  title="Madrid Cannabis Guide 2026: Legal Rules & Tourist Safety"
-  description="The Official 2026 Guide to Cannabis Rules in Madrid for Tourists. Learn about legal private clubs, street fines up to €30,000, tourist requirements, and how to avoid scams."
+  title="Madrid Cannabis Guide 2026: Legal Rules, Clubs & Tourist Safety"
+  description="The definitive 2026 guide to cannabis in Madrid. Legal status, how private social clubs work, membership fees, tourist requirements, scam prevention, and neighborhood tips from Madrid locals."
 >
-  <!-- Hero with background image -->
+  <!-- Hero -->
   <section class="hero">
     <div class="hero__bg">
       <img
@@ -25,8 +24,8 @@ const opt = 'f_auto,q_auto';
     </div>
     <div class="hero__content">
       <span class="badge">Updated for 2026</span>
-      <h1>Madrid Cannabis Guide 2026: Legal Rules &amp; Tourist Safety</h1>
-      <p>Everything tourists need to know about cannabis in Madrid — the law, the risks, and the only safe legal route through private social clubs.</p>
+      <h1>Madrid Cannabis Guide 2026: Legal Rules, Clubs &amp; Tourist Safety</h1>
+      <p>The definitive guide for tourists navigating cannabis in Madrid — Spanish law, private social clubs, real prices, and how to avoid every common scam. Written by Madrid-based locals who visit these clubs every week.</p>
       <a
         href="https://www.weedmadrid.com/invite/vallehermoso-club-social-madrid"
         rel="sponsored noopener"
@@ -44,27 +43,485 @@ const opt = 'f_auto,q_auto';
   </section>
 
   <div class="container">
-    <!-- Section 1: Legal Rules -->
-    <section id="legal" class="section">
+
+    <!-- Table of Contents -->
+    <nav class="pillar-toc" aria-label="Table of contents">
+      <p class="pillar-toc__label">In this guide</p>
+      <ol class="pillar-toc__list">
+        <li><a href="#legal-status">Is Cannabis Legal in Madrid?</a></li>
+        <li><a href="#how-clubs-work">How Cannabis Social Clubs Work</a></li>
+        <li><a href="#joining">How to Join as a Tourist</a></li>
+        <li><a href="#prices">Prices &amp; Costs</a></li>
+        <li><a href="#scams">Tourist Scams to Avoid</a></li>
+        <li><a href="#neighborhoods">Best Neighborhoods for Clubs</a></li>
+        <li><a href="#what-to-expect">What to Expect Inside a Club</a></li>
+        <li><a href="#safety">Safety Tips for Tourists</a></li>
+        <li><a href="#vs-amsterdam">Madrid vs. Amsterdam</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+      </ol>
+    </nav>
+
+    <!-- 1. Legal Status -->
+    <section id="legal-status" class="section">
       <div class="section__image">
         <img
           src={`${cdn}/${opt},w_800/madrid-cannabis-guide/spanish-congress-laws-v2.jpg`}
-          alt="Wooden judge gavel on marble surface representing Spanish cannabis legislation"
+          alt="Wooden judge gavel representing Spanish cannabis legislation"
           width="800"
           height="420"
           loading="lazy"
         />
       </div>
-      <h2>Is Weed Legal in Madrid? (The Private Club Loophole)</h2>
-      <p class="section__deep-link"><a href="/is-weed-legal-in-madrid/">Read the full legal guide →</a></p>
+      <h2>Is Cannabis Legal in Madrid? The Private vs. Public Distinction</h2>
 
-      <p>Spain does not have a single "cannabis is legal" law. Instead, the legal landscape is built on a constitutional distinction between <strong>private</strong> and <strong>public</strong> spaces. Understanding this distinction is the single most important thing for any tourist.</p>
+      <p>Spain does not have a single law that says "cannabis is legal." Instead, the legal framework rests on a constitutional distinction between <strong>private</strong> and <strong>public</strong> spaces — and understanding this distinction is the single most important thing for any tourist visiting Madrid in 2026.</p>
+
+      <p>Under Article 18.1 of the Spanish Constitution, personal activities within private spaces are protected. The Constitutional Tribunal confirmed this principle in its landmark ruling STC 53/1985. When it comes to cannabis specifically, Spain never criminalized personal possession or consumption — only public acts.</p>
+
+      <h3>What Is Legal</h3>
+      <ul class="pillar-list">
+        <li>Consuming cannabis inside a <strong>licensed private social club</strong> that operates as a non-profit association</li>
+        <li>Growing small quantities of cannabis plants for personal use on private property (not visible from public spaces)</li>
+        <li>Being a member of a registered cannabis association under Spain's right to free association</li>
+      </ul>
+
+      <h3>What Is Illegal (With Real Fines)</h3>
+      <ul class="pillar-list">
+        <li><strong>Public possession:</strong> Administrative fines from <strong>€601 to €30,000</strong> under the Ley de Seguridad Ciudadana (LO 4/2015), commonly known as the Ley Mordaza</li>
+        <li><strong>Public consumption:</strong> Same fine range. Smoking a joint on a terrace, park bench, or sidewalk will get you fined</li>
+        <li><strong>Street purchases:</strong> Buying from any street dealer is illegal regardless of amount. Police in Puerta del Sol, Plaza Mayor, and Gran Via actively enforce this</li>
+        <li><strong>Trafficking:</strong> Selling cannabis carries criminal penalties under Article 368 of the Penal Code — up to 3 years in prison</li>
+        <li><strong>Transporting outside a club:</strong> Even if you purchased legally inside a club, carrying cannabis on public streets constitutes public possession</li>
+      </ul>
+
+      <div class="pillar-callout pillar-callout--warning">
+        <strong>Tourist reality check:</strong> Police in central Madrid tourist zones have been increasing enforcement since late 2025. We have personally witnessed fines being issued at Puerta del Sol, Retiro Park entrances, and near Santiago Bernabeu on match days. The fine starts at €601 — there is no warning system.
+      </div>
+
+      <p class="section__deep-link"><a href="/is-weed-legal-in-madrid/">Read our complete legal guide with fine amounts, recent court rulings, and what to do if stopped →</a></p>
     </section>
+
+    <!-- 2. How Clubs Work -->
+    <section id="how-clubs-work" class="section">
+      <div class="section__image">
+        <img
+          src={`${cdn}/${opt},w_800/madrid-cannabis-guide/social-lounge-atmosphere.jpg`}
+          alt="Interior of a cannabis social club lounge in Madrid"
+          width="800"
+          height="420"
+          loading="lazy"
+        />
+      </div>
+      <h2>How Cannabis Social Clubs Work in Madrid</h2>
+
+      <p>Cannabis social clubs (CSCs) in Madrid operate as private, non-profit associations under Spanish law. They are not coffee shops, dispensaries, or retail stores. The model is fundamentally different from anything in Amsterdam, California, or Thailand — and misunderstanding this causes most tourist problems.</p>
+
+      <h3>The Legal Structure</h3>
+      <p>Each club registers as an <em>asociacion</em> (association) under the Spanish Organic Law on Associations. Members pool resources to collectively cultivate cannabis for shared personal use. No profit is generated — the money you pay inside is technically a "contribution" to the association, not a purchase. This legal framework is what keeps the clubs operating within Spain's constitutional privacy protections.</p>
+
+      <h3>What Happens Inside</h3>
+      <p>Legitimate Madrid cannabis clubs typically feature a reception/check-in area where your membership card is verified, a lounge with seating, tables, and often a bar serving non-alcoholic drinks and snacks, a dispensing counter where members select products and make their contributions, and sometimes entertainment like pool tables, PlayStation consoles, board games, or occasional live music.</p>
+
+      <p>The atmosphere varies dramatically between clubs. Some feel like upscale cocktail lounges with dim lighting and curated playlists. Others are more casual — think neighborhood bar with a Spanish football match on TV. A few cater specifically to international tourists with English-speaking staff and menus.</p>
+
+      <h3>Product Quality vs. Street</h3>
+      <p>The quality difference between club products and street-purchased cannabis is significant. Clubs source from regulated cultivation operations, test for contaminants, and label strains accurately. Street cannabis in Madrid is frequently adulterated — we have documented cases of flower sprayed with synthetic cannabinoids, hash cut with henna or tire rubber, and vape cartridges filled with vitamin E acetate. The health risk alone makes clubs the only rational choice.</p>
+
+      <p class="section__deep-link"><a href="/cannabis-clubs-madrid/">Full guide to cannabis clubs: what is inside, etiquette, product menus, and how to choose the right club →</a></p>
+    </section>
+
+    <!-- 3. How to Join -->
+    <section id="joining" class="section">
+      <div class="section__image">
+        <img
+          src={`${cdn}/${opt},w_800/madrid-cannabis-guide/passport-id-requirements.jpg`}
+          alt="Passport and ID documents needed for Madrid cannabis club membership"
+          width="800"
+          height="420"
+          loading="lazy"
+        />
+      </div>
+      <h2>How to Join a Cannabis Club as a Tourist in Madrid</h2>
+
+      <p>You cannot walk into a legitimate cannabis club off the street. Every real club requires an invitation from an existing member, identity verification, and a membership process. This is not a bureaucratic hurdle — it is the legal foundation that keeps clubs operating. Any club that lets you walk in without these steps is either breaking the law or is a scam targeting tourists.</p>
+
+      <h3>The 5-Step Process</h3>
+      <ol class="pillar-steps">
+        <li>
+          <strong>Get a verified invitation</strong> — You need an invitation link or referral from a current member. The most reliable way for tourists is through verified invitation platforms like WeedMadrid.com, which connects you to clubs that specifically accept international visitors.
+        </li>
+        <li>
+          <strong>Present valid ID</strong> — Bring your passport (required for non-EU tourists) or EU national ID card. Spanish law requires clubs to verify you are at least 21 years old. Some clubs accept 18+, but most legitimate ones set the bar at 21.
+        </li>
+        <li>
+          <strong>Complete registration</strong> — You will fill out a membership form at the club. This includes your full name, nationality, date of birth, and a signature confirming you understand the club rules. This paperwork exists to protect both you and the club legally.
+        </li>
+        <li>
+          <strong>Pay the membership fee</strong> — One-time fees range from €20 to €50 depending on the club. This covers your registration and annual membership. It is separate from any product contributions you make inside.
+        </li>
+        <li>
+          <strong>Receive your membership card</strong> — You will get a physical or digital card that you must present each time you visit. Without it, you cannot re-enter — even as a paying member.
+        </li>
+      </ol>
+
+      <div class="pillar-callout">
+        <strong>Tourist vs. Resident requirements:</strong> Tourists can join most clubs, but the process takes slightly longer (ID verification of foreign documents). Some clubs also require tourists to show proof of accommodation in Madrid — a hotel booking confirmation or Airbnb receipt. Residents with NIE/TIE have a faster registration process.
+      </div>
+
+      <p class="section__deep-link"><a href="/how-to-join/">Complete joining guide: step-by-step walkthrough, what documents to bring, and red flags to watch for →</a></p>
+    </section>
+
+    <!-- 4. Prices -->
+    <section id="prices" class="section">
+      <h2>Cannabis Club Prices in Madrid (2026)</h2>
+
+      <p>One of the most common tourist questions is "how much does weed cost in Madrid?" The answer depends entirely on whether you buy through a legal club or take the risky street route. Here is a transparent breakdown based on our regular visits to Madrid clubs throughout 2025 and early 2026.</p>
+
+      <div class="comparison-box">
+        <table>
+          <thead>
+            <tr>
+              <th>Cost</th>
+              <th>Budget Club</th>
+              <th>Mid-Range</th>
+              <th>Premium</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Membership fee</td>
+              <td>€20</td>
+              <td>€30</td>
+              <td>€40 – €50</td>
+            </tr>
+            <tr>
+              <td>Flower (per gram)</td>
+              <td>€6 – €8</td>
+              <td>€8 – €12</td>
+              <td>€12 – €16</td>
+            </tr>
+            <tr>
+              <td>Hash (per gram)</td>
+              <td>€5 – €8</td>
+              <td>€8 – €14</td>
+              <td>€14 – €22</td>
+            </tr>
+            <tr>
+              <td>Pre-rolls</td>
+              <td>€3 – €5</td>
+              <td>€5 – €8</td>
+              <td>€8 – €12</td>
+            </tr>
+            <tr>
+              <td>Edibles</td>
+              <td>€5 – €8</td>
+              <td>€8 – €15</td>
+              <td>€12 – €20</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>3-Day Tourist Budget Calculator</h3>
+      <p>For a typical 3-day Madrid visit consuming moderately (about 1-2 grams per day), budget approximately <strong>€80 to €140 total</strong> — that includes the one-time membership fee, your product contributions, and a couple of drinks or snacks at the club. Compare that to street purchases where you risk €601+ in fines, potentially dangerous product, and zero legal protection.</p>
+
+      <h3>Street Prices vs. Club Prices</h3>
+      <p>Street dealers near Sol, Lavapies, and Malasana typically quote €8-€15 per gram for flower. But the actual product is frequently underweight (0.6-0.8g sold as "a gram"), of unknown origin, and sometimes adulterated. When you factor in the fine risk and the quality difference, club prices are objectively the better value — even before considering the legal safety.</p>
+
+      <p class="section__deep-link"><a href="/blog/cannabis-club-prices-madrid/">Full pricing guide: tier-by-tier breakdown, hidden costs, and the complete tourist budget calculator →</a></p>
+    </section>
+
+    <!-- 5. Scams -->
+    <section id="scams" class="section">
+      <div class="section__image">
+        <img
+          src={`${cdn}/${opt},w_800/madrid-cannabis-guide/madrid-plaza-comparison.jpg`}
+          alt="Madrid plaza showing tourist area where cannabis scams commonly occur"
+          width="800"
+          height="420"
+          loading="lazy"
+        />
+      </div>
+      <h2>Cannabis Tourist Scams in Madrid: What We Have Documented</h2>
+
+      <p>Madrid has a growing problem with cannabis-related tourist scams. We have personally investigated and documented the most common ones operating in 2025-2026. Knowing these tactics before you arrive can save you hundreds of euros and a lot of frustration.</p>
+
+      <h3>The 4 Most Common Scams</h3>
+      <ol class="pillar-steps">
+        <li>
+          <strong>The street handshake dealer</strong> — Men approach tourists near Sol, Opera, and Lavapies with a friendly handshake that leaves a small piece of hash in your palm, then demand €20-€50 payment. The product is almost always fake (oregano, henna, or paraffin). If you refuse to pay, they become aggressive. Our advice: never accept anything placed in your hand.
+        </li>
+        <li>
+          <strong>Fake "cannabis clubs"</strong> — Unlicensed operations that call themselves clubs but are really just apartments or back rooms. They charge inflated membership fees (€80-€150), sell poor-quality product, and have zero legal standing. If raided, you have no legal protection as a "member." Red flag: any club that advertises openly on the street or on social media with a visible address.
+        </li>
+        <li>
+          <strong>WhatsApp delivery services</strong> — Social media ads and hostel flyers promoting WhatsApp numbers for "cannabis delivery." These are always illegal street dealers using a digital front. Products are unregulated, deliveries often do not show up after payment, and you have given a stranger your phone number and hotel location.
+        </li>
+        <li>
+          <strong>The "free sample" trap</strong> — Someone offers you a free sample outside a metro station or in a park, then their associate appears claiming to be police demanding an on-the-spot fine (which is not how Spanish law works). This is pure extortion.
+        </li>
+      </ol>
+
+      <div class="pillar-callout pillar-callout--warning">
+        <strong>5 signs of a legitimate club:</strong> registered association number (CIF), proper membership paperwork, no street advertising, staff who check ID every visit, and a physical location that does not change frequently. If any of these are missing, leave.
+      </div>
+
+      <p class="section__deep-link"><a href="/blog/tourist-scams-cannabis-madrid/">Complete scam prevention guide with photos, exact locations, and what to do if you get scammed →</a></p>
+    </section>
+
+    <!-- 6. Neighborhoods -->
+    <section id="neighborhoods" class="section">
+      <h2>Best Madrid Neighborhoods for Cannabis Clubs</h2>
+
+      <p>Cannabis clubs are scattered across Madrid, but they concentrate in certain neighborhoods. Where you stay affects how easily you can access a club — and how many scams you will encounter along the way.</p>
+
+      <div class="comparison-box">
+        <table>
+          <thead>
+            <tr>
+              <th>Neighborhood</th>
+              <th>Club Density</th>
+              <th>Tourist-Friendly</th>
+              <th>Scam Risk</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Malasana</strong></td>
+              <td>High</td>
+              <td>Very High</td>
+              <td>Medium</td>
+            </tr>
+            <tr>
+              <td><strong>Lavapies</strong></td>
+              <td>High</td>
+              <td>Medium</td>
+              <td>High</td>
+            </tr>
+            <tr>
+              <td><strong>Chueca</strong></td>
+              <td>Medium</td>
+              <td>High</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <td><strong>La Latina</strong></td>
+              <td>Medium</td>
+              <td>Medium</td>
+              <td>Medium</td>
+            </tr>
+            <tr>
+              <td><strong>Chamberi</strong></td>
+              <td>Low-Medium</td>
+              <td>High</td>
+              <td>Very Low</td>
+            </tr>
+            <tr>
+              <td><strong>Vallecas</strong></td>
+              <td>Medium</td>
+              <td>Low</td>
+              <td>Low</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Malasana</strong> is the sweet spot for most tourists. It has the highest concentration of tourist-friendly clubs, is well-connected by metro (Tribunal, Noviciado), and has a vibrant nightlife scene that pairs well with club visits. The scam risk is moderate because of the tourist foot traffic, but if you have a verified invitation you can bypass the street approaches entirely.</p>
+
+      <p><strong>Chamberi</strong> is our recommendation for tourists who want a quieter, more local experience. Fewer clubs, but the ones there tend to be well-established and less crowded. Almost zero street scam activity because it is not a typical tourist zone.</p>
+
+      <p><strong>Lavapies</strong> has many clubs but also the highest scam density. Street dealers are aggressive here, particularly around Tirso de Molina metro. If you visit a club in Lavapies, go directly to the club address — do not linger or engage with anyone on the street.</p>
+    </section>
+
+    <!-- 7. What to Expect -->
+    <section id="what-to-expect" class="section">
+      <h2>What to Expect Inside a Madrid Cannabis Club</h2>
+
+      <p>If you have never been to a cannabis social club before, here is exactly what the experience looks like from the moment you walk in.</p>
+
+      <h3>Arrival &amp; Check-In</h3>
+      <p>You ring a doorbell or intercom (most clubs have unmarked entrances — this is intentional, not suspicious). Staff will ask for your membership card or invitation link. First-time visitors go through the registration process at the reception desk. This takes 10-20 minutes depending on how busy the club is.</p>
+
+      <h3>Browsing the Menu</h3>
+      <p>Once inside, you approach the dispensing counter. Most clubs display their current menu on a board, screen, or printed sheet. Menus typically list 4-12 flower strains, 2-6 hash varieties, pre-rolls, and sometimes edibles or concentrates. Staff can help you choose based on your preferences — do not hesitate to ask for recommendations if you are unfamiliar with the products.</p>
+
+      <h3>Making Your Contribution</h3>
+      <p>You select your products and make your financial contribution. Most clubs are <strong>cash only</strong> — bring euros. A few larger clubs have started accepting card payments in 2026, but do not count on it. The contribution covers your share of the collective cultivation costs.</p>
+
+      <h3>The Lounge Experience</h3>
+      <p>Find a seat in the lounge area and consume at your pace. Most clubs provide rolling papers, tips, grinders, and sometimes bongs or vaporizers for on-site use. You can order drinks (non-alcoholic in most clubs, though some serve beer and wine) and snacks. Stay as long as you like — there is no time pressure.</p>
+
+      <h3>Etiquette Rules</h3>
+      <ul class="pillar-list">
+        <li>Do not take photos or videos inside (this is a strict rule at every legitimate club)</li>
+        <li>Do not bring outside cannabis into the club</li>
+        <li>Do not share your membership card with non-members</li>
+        <li>Keep noise levels reasonable — other members are there to relax too</li>
+        <li>Tip staff if service is good (not required but appreciated)</li>
+        <li>Do not attempt to take product out of the club</li>
+      </ul>
+
+      <p class="section__deep-link"><a href="/cannabis-clubs-madrid/">Detailed club guide: product types, Amsterdam comparison, and choosing the right club for your style →</a></p>
+    </section>
+
+    <!-- 8. Safety Tips -->
+    <section id="safety" class="section">
+      <h2>Cannabis Safety Tips for Madrid Tourists</h2>
+
+      <p>Beyond the legal and scam considerations, there are practical safety tips that will make your experience smoother and safer.</p>
+
+      <h3>Before Your Trip</h3>
+      <ul class="pillar-list">
+        <li><strong>Arrange your club invitation before arriving in Madrid.</strong> Do not wait until you are on the ground. The registration process is faster if you have a verified invitation link ready.</li>
+        <li><strong>Bring your passport everywhere.</strong> You need it for club registration, and if police stop you for any reason, having ID avoids complications.</li>
+        <li><strong>Download offline maps.</strong> Club addresses are often in side streets without obvious signage. Google Maps or CityMapper with offline Madrid maps will save you from wandering.</li>
+        <li><strong>Carry cash in euros.</strong> ATMs at the airport charge 5-8% fees. Withdraw from city-center ATMs (Santander, BBVA, CaixaBank) for better rates.</li>
+      </ul>
+
+      <h3>During Your Visit</h3>
+      <ul class="pillar-list">
+        <li><strong>Consume only inside the club.</strong> Do not smoke on the walk back to your hotel. Do not keep leftovers in your pocket "for later." The legal protection exists only within the club walls.</li>
+        <li><strong>Start low, go slow.</strong> Spanish cannabis — especially club-grade product — tends to be stronger than what many tourists are accustomed to. Communicate your experience level to staff and start with a lower-THC strain if unsure.</li>
+        <li><strong>Do not mix with alcohol excessively.</strong> Madrid nightlife encourages mixing, but overconsumption of cannabis plus alcohol is the number one cause of tourist medical incidents we have tracked.</li>
+        <li><strong>Know your metro route home.</strong> Madrid Metro runs until 1:30 AM (2:00 AM on weekends). After that, night buses (buhos) run from Cibeles. Plan your exit strategy before consuming.</li>
+      </ul>
+
+      <h3>If Something Goes Wrong</h3>
+      <p>If you feel unwell after consuming, tell club staff immediately — experienced clubs have dealt with this before and can help. If you are approached by police on the street, remain calm, show your ID, and do not consent to a search if you have nothing on you. If you are fined, do not pay on the spot — fines are processed administratively and you can appeal. For medical emergencies, call <strong>112</strong> (Spain's universal emergency number).</p>
+    </section>
+
+    <!-- 9. Madrid vs Amsterdam -->
+    <section id="vs-amsterdam" class="section">
+      <h2>Madrid vs. Amsterdam: Cannabis Tourism Compared</h2>
+
+      <p>Many tourists considering Madrid for cannabis have Amsterdam as their reference point. The two experiences are fundamentally different — and depending on what you are looking for, Madrid might actually be the better choice in 2026.</p>
+
+      <div class="comparison-box">
+        <table>
+          <thead>
+            <tr>
+              <th>Factor</th>
+              <th>Madrid</th>
+              <th>Amsterdam</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Access model</td>
+              <td>Private clubs (invitation required)</td>
+              <td>Public coffee shops (walk-in)</td>
+            </tr>
+            <tr>
+              <td>Tourist ban risk</td>
+              <td>None currently</td>
+              <td>Ongoing wietpas debate</td>
+            </tr>
+            <tr>
+              <td>Product quality</td>
+              <td>High (club-cultivated)</td>
+              <td>Variable (tourist shops declining)</td>
+            </tr>
+            <tr>
+              <td>Price per gram</td>
+              <td>€6 – €16</td>
+              <td>€10 – €20</td>
+            </tr>
+            <tr>
+              <td>Public consumption</td>
+              <td>Strictly illegal</td>
+              <td>Tolerated in some areas</td>
+            </tr>
+            <tr>
+              <td>Atmosphere</td>
+              <td>Private, local, exclusive</td>
+              <td>Busy, touristy, commercialized</td>
+            </tr>
+            <tr>
+              <td>Food scene</td>
+              <td>World-class tapas + late dining</td>
+              <td>Good but less variety</td>
+            </tr>
+            <tr>
+              <td>Weather</td>
+              <td>300+ sunny days/year</td>
+              <td>Frequent rain</td>
+            </tr>
+            <tr>
+              <td>Flight costs (from London)</td>
+              <td>€30 – €80 return</td>
+              <td>€50 – €120 return</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>The biggest advantage of Madrid is the experience itself. Amsterdam coffee shops have become overcrowded tourist traps — especially in the Red Light District area. Madrid clubs offer a more authentic, relaxed atmosphere because they are not designed as tourist attractions. You sit in a lounge with local Spaniards, not a room full of British stag parties. The trade-off is that access requires more planning (you need an invitation in advance), but many tourists prefer that barrier because it creates a better environment inside.</p>
+
+      <p>Amsterdam still wins on convenience — you can walk into a coffee shop with no preparation. But with the ongoing Dutch political discussions about restricting tourist access to coffee shops (the wietpas system that has been debated since 2012), Madrid is increasingly positioned as the more stable long-term destination for cannabis tourism in Europe.</p>
+    </section>
+
+    <!-- 10. FAQ -->
+    <section id="faq" class="section">
+      <h2>Frequently Asked Questions About Cannabis in Madrid</h2>
+
+      <details class="faq-item">
+        <summary>Is cannabis legal in Madrid for tourists?</summary>
+        <p>Cannabis is decriminalized for private use in Spain. Public consumption and street purchases remain illegal with fines starting at €601. Tourists can legally consume cannabis only inside licensed private social clubs through a valid membership invitation. You must be 21+ with a valid passport.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How do I get into a cannabis club in Madrid?</summary>
+        <p>You need a verified invitation from an existing club member, a valid passport or EU ID proving you are 21+, and must complete the registration process at the club (including paying a one-time membership fee of €20-€50). The most reliable way for tourists to get an invitation is through verified platforms like WeedMadrid.com.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What are the fines for buying cannabis on the street?</summary>
+        <p>Fines range from €601 to €30,000 under the Ley de Seguridad Ciudadana (LO 4/2015). Police in central Madrid tourist areas actively enforce these laws. There is no warning system — the minimum fine is €601 on first offense.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can I take cannabis from a club back to my hotel?</summary>
+        <p>No. Transporting cannabis outside club premises is illegal. Even if you obtained it legally inside a licensed club, carrying it on public streets constitutes public possession. Consumption must happen within the private club space. Some tourists attempt this and risk fines starting at €601.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How much does a cannabis club cost in Madrid?</summary>
+        <p>One-time membership fees range from €20 to €50. Inside the club, flower contributions run €6-€16 per gram depending on the club tier and strain. Hash is €5-€22 per gram. Pre-rolls cost €3-€12. For a typical 3-day tourist visit, budget €80-€140 total including membership, products, and drinks.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Are Madrid cannabis clubs safe for tourists?</summary>
+        <p>Legitimate clubs with proper registration (CIF number), membership processes, and staff who verify ID are safe. The key is getting in through a verified invitation — not through street promoters, social media ads, or WhatsApp delivery services. Clubs that follow proper protocols provide legal protection for members consuming on premises.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What is the best neighborhood for cannabis clubs in Madrid?</summary>
+        <p>Malasana offers the highest concentration of tourist-friendly clubs with good metro connections (Tribunal, Noviciado). Chamberi is ideal for a quieter, more local experience with very low scam risk. Avoid lingering in Lavapies near Tirso de Molina metro where street dealer activity is highest.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do I need to speak Spanish to join a cannabis club?</summary>
+        <p>Most tourist-friendly clubs in central Madrid have English-speaking staff. Registration forms may be in Spanish but staff will guide you through them. Having a translation app is helpful but not essential if you choose a club that caters to international visitors.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can I smoke cannabis in my Madrid hotel room?</summary>
+        <p>This is a gray area. Legally, your hotel room is a private space — but hotel policies almost universally prohibit smoking of any kind. If you trigger a smoke alarm or another guest complains, the hotel can charge you a cleaning fee (€100-€300) and potentially report you. We strongly advise against it.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is Madrid better than Amsterdam for cannabis tourism?</summary>
+        <p>It depends on what you value. Amsterdam offers walk-in convenience with no invitation needed. Madrid offers higher product quality, lower prices, a more authentic atmosphere, better food and weather, and no current threat of tourist bans. Madrid requires more planning but delivers a better overall experience for many travelers.</p>
+      </details>
+    </section>
+
+    <!-- Mid-page CTA -->
+    <PremiumClubCTA />
 
     <!-- Final CTA -->
     <section class="section section--final-cta">
-      <h2>Ready to Visit a Safe, Legal Club?</h2>
-      <p>Skip the street hassle. Get a verified club invitation in under 3 minutes.</p>
+      <h2>Ready to Visit a Safe, Legal Club in Madrid?</h2>
+      <p>Skip the street hassle. Get a verified club invitation and complete your registration before you land in Madrid. The process takes under 3 minutes.</p>
       <a
         href="https://www.weedmadrid.com/invite/vallehermoso-club-social-madrid"
         rel="sponsored noopener"
@@ -80,9 +537,92 @@ const opt = 'f_auto,q_auto';
       </div>
     </section>
 
-    <!-- Last Updated (E-E-A-T) -->
-    <p class="last-updated">Last updated: <time datetime="2026-03-11">March 11, 2026</time></p>
+    <p class="last-updated">Last updated: <time datetime="2026-03-12">March 12, 2026</time></p>
 
   </div>
+
+  <style>
+    .pillar-toc {
+      background: rgba(16, 185, 129, 0.04);
+      border: 1px solid #1f2622;
+      border-radius: 10px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .pillar-toc__label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #10b981;
+      margin: 0 0 0.75rem;
+    }
+    .pillar-toc__list {
+      margin: 0;
+      padding-left: 1.2rem;
+      display: grid;
+      gap: 0.4rem;
+    }
+    @media (min-width: 640px) {
+      .pillar-toc__list {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.35rem 2rem;
+      }
+    }
+    .pillar-toc__list li {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .pillar-toc__list a {
+      color: #b8bdb8;
+      text-decoration: none;
+    }
+    .pillar-toc__list a:hover {
+      color: #34d399;
+    }
+
+    .pillar-list {
+      padding-left: 1.25rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .pillar-list li {
+      margin-bottom: 0.6rem;
+      color: #b8bdb8;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .pillar-steps {
+      padding-left: 1.25rem;
+      margin: 1rem 0 1.5rem;
+      counter-reset: step;
+    }
+    .pillar-steps li {
+      margin-bottom: 1rem;
+      color: #b8bdb8;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .pillar-callout {
+      background: rgba(16, 185, 129, 0.06);
+      border-left: 3px solid #10b981;
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #b8bdb8;
+    }
+    .pillar-callout--warning {
+      background: rgba(245, 158, 11, 0.06);
+      border-left-color: #f59e0b;
+    }
+    .pillar-callout strong {
+      color: #e8ece9;
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+  </style>
 
 </Layout>
